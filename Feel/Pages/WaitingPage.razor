@@ -1,0 +1,16 @@
+﻿@page "/waiting"
+@inject IJSRuntime JS
+
+<h3>Aggiornamento in corso, attendere…</h3>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Invoca la logica JS che manda il messaggio SKIP_WAITING
+            // e, al cambio di controller, ricarica la radice "/"
+            await JS.InvokeVoidAsync("skipAndReload");
+        }
+    }
+}

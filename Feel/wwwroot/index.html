@@ -1,3 +1,4 @@
+<!-- wwwroot/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feel</title>
     <base href="/" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="lib/bootstrap-icons">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/app.css" />
+    <!--Css-->
+    <link rel="stylesheet" href="css/style.css?v=1" />
+
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="Feel.styles.css" rel="stylesheet" />
     <link href="manifest.webmanifest" rel="manifest" />
     <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png" />
@@ -17,20 +21,70 @@
 
 <body>
     <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
+        <!--Qui ci va il loading-->
     </div>
 
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="." class="reload">Reload</a>
-        <span class="dismiss">🗙</span>
-    </div>
+    <!--Javascript dell’app Blazor-->
+    <script src="js/app.js?v=1"></script>
     <script src="_framework/blazor.webassembly.js"></script>
-    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <!--Bootstrap JS-->
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Logica per aggiornamenti PWA -->
+    <script>
+        (function () {
+            if (!('serviceWorker' in navigator)) return;
+
+            window.addEventListener('load', async () => {
+                try {
+                    const reg = await navigator.serviceWorker.register('service-worker.js');
+
+                    // 1) Cold start
+                    if (reg.waiting) {
+                        return redirectToWaiting();
+                    }
+
+                    // 2) In-session update
+                    reg.addEventListener('updatefound', () => {
+                        const w = reg.installing;
+                        w.addEventListener('statechange', () => {
+                            if (w.state === 'installed' && navigator.serviceWorker.controller) {
+                                redirectToWaiting();
+                            }
+                        });
+                    });
+                } catch (e) {
+                    console.error('SW registration failed:', e);
+                }
+            });
+
+            function redirectToWaiting() {
+                // evita il redirect se sei già su /waiting
+                if (window.location.pathname !== '/waiting') {
+                    window.location.href = '/waiting';
+                }
+            }
+        })();
+    </script>
+
+
+    <!-- Funzione per skipWaiting e reload, usata in Waiting.razor -->
+    <script>
+        window.skipAndReload = async () => {
+            const reg = await navigator.serviceWorker.getRegistration();
+            if (reg?.waiting) {
+                // 1) Attacca il listener PRIMA
+                navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    window.location.href = '/';
+                });
+                // 2) Manda lo skip
+                reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+            } else {
+                window.location.reload();
+            }
+        };
+    </script>
+
 </body>
 
 </html>

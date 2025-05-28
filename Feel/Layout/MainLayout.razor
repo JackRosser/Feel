@@ -1,16 +1,17 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
+@if (MainTheme is not null)
+{
+    <CascadingValue Value="MainTheme">
+        <main class="@($"bg-{MainTheme}-sfondo")">
+            <div class="main-gradient" />
+            <div class="main-content">
+                <section class="main-section">
+                    @Body
+                </section>
+                <NavMenu />
+            </div>
+        </main>
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+    </CascadingValue>
+}

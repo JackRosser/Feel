@@ -1,0 +1,14 @@
+﻿@if(Pointer)
+{  
+    <span class="text-@Color" style="cursor: pointer;"><i class="@Element"></i></span>
+}
+else
+{
+    <span class="text-@Color"><i class="@Element"></i></span>
+}
+
+@code {
+    [Parameter, EditorRequired] public string? Element { get; set; }
+    [Parameter] public string Color { get; set; } = "primary";
+    [Parameter] public bool Pointer { get; set; } = false;
+}
