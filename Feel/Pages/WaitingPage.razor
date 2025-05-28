@@ -1,0 +1,16 @@
+﻿@page "/waiting"
+@inject IJSRuntime JS
+
+@* Questa pagina serve per far attendere l'utente durante l'aggiornamento dell'app *@
+
+<h3>Aggiornamento in corso, attendere…</h3>
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            await JS.InvokeVoidAsync("sendSkipWaiting");
+        }
+    }
+}

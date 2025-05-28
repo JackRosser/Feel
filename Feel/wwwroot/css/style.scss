@@ -1,0 +1,48 @@
+﻿@import "../lib/bootstrap/scss/functions";
+
+//breakpoint
+$mobile: "max-width: 575px";
+$tablet: "min-width: 576px";
+
+
+@mixin dispositivo($media) {
+    @media only screen and ($media) {
+        @content
+    }
+}
+
+
+// Override colori
+$primary: #FF5A1E;
+$custom: #FF5A1E;
+
+
+@import "../lib/bootstrap/scss/_variables.scss";
+
+
+// Merge nel theme-colors dei nuovi colori
+$theme-colors: map-merge( $theme-colors, ( "custom": $custom ) );
+
+
+
+a {
+    text-decoration: none !important;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+h1:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+// qui importo i miei partials
+@import "partials/_fonts.scss";
+
+    @import "../lib/bootstrap/scss/mixins";
+    @import "../lib/bootstrap/scss/bootstrap";
