@@ -6,12 +6,31 @@
     display: flex;
     flex-direction: column;
 
+    & .main-gradient {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        background-image: linear-gradient(to top, white, transparent), url("/css/images/bg.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        mix-blend-mode: overlay;
+        pointer-events: none;
+    }
+
     & .main-section {
+        position: relative;
+        z-index: 12;
         width: 100%;
         height: calc(100vh - 3.5rem);
+        padding: 1.2rem;
+        overflow: auto;
     }
 
     & .navmenu {
+        position: relative;
+        z-index: 12;
         width: 100%;
         height: 3.5rem;
         display: flex;

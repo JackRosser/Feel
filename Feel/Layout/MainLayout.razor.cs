@@ -2,9 +2,7 @@
 {
     public partial class MainLayout
     {
-
-
-        private string? MainTheme { get; set; }
+        public string? MainTheme { get; set; }
 
         protected override void OnInitialized()
         {

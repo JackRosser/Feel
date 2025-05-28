@@ -1,0 +1,76 @@
+﻿.progress-card-box {
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+
+    & .progress-card {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        & .progress-card-title {
+            font-size: $titolo-card-size;
+            padding: 0.5rem;
+            text-align: center;
+            font-weight: 700;
+            width: 100%;
+        }
+
+        & .progress-card-body {
+            background-color: $light-gray;
+            padding: 1rem;
+            width: 95%;
+            height: 100%;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            gap: 1rem;
+
+            & .pill-box {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1.2rem;
+
+                & .data-box {
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: end;
+                    line-height: 0;
+                    gap: 1rem;
+                }
+
+                & .progress-card-bg-bar {
+                    background-color: $light-gray;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 40px;
+                    min-height: 50px;
+                    outline: 2px solid $acqua;
+                    outline-offset: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: end;
+                    overflow: hidden;
+                    // Va riempita questa
+
+                    & .progress-bar-fill {
+                        width: 100%;
+                        height: 70%;
+                    }
+                }
+            }
+        }
+    }
+}

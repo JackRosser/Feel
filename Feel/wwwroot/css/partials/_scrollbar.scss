@@ -1,0 +1,55 @@
+﻿/*// SCROLLBAR ARANCIONE*/
+
+/* Scrollbar per Chrome, Edge, Safari */
+/*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: none;*/ /* rimuove sfondo */
+/*}
+
+::-webkit-scrollbar-track {
+    background: none;*/ /* nessuno sfondo */
+/*}
+
+::-webkit-scrollbar-thumb {
+    background: $primary;*/ /* colore barra */
+    /*border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darken($primary, 10%);*/ /* colore barra on hover */
+/*}*/
+
+/* Rimuove le freccette (increment/decrement buttons) */
+/*::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+}*/
+
+/* Scrollbar per Firefox */
+/** {
+    scrollbar-width: thin;
+    scrollbar-color: $primary transparent;*/ /* barra $primary, sfondo trasparente */
+/*}*/
+
+// SCROLLBAR NASCOSTA
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    display: none;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: none; /* nasconde la scrollbar */
+    -ms-overflow-style: none; /* IE e Edge Legacy */
+}
+
+/* Nasconde anche la scrollbar interna */
+html, body {
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

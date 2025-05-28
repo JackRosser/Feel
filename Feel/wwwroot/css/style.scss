@@ -14,20 +14,31 @@ $tablet: "min-width: 576px";
 
 
 // Override colori
+$light-gray: #F5F5F0;
+$acqua: #B4CDBE;
 $caldo-sfondo: #F8D9A8;
 $caldo-icone: #7E2A0C;
-$caldo-navmenu-sfondo: #e2ae5e;
-
+$caldo-navmenu-sfondo: #E2AE5E;
+$caldo-progress-card-sfondo: #E2AE5E;
+$caldo-progress-card-titolo-testo: #7E2A0C;
 
 // Merge nel theme-colors dei nuovi colori
 $theme-colors: map-merge( $theme-colors, ( 
+    "light-gray": $light-gray,
+    "acqua": $acqua, 
     // Tema caldo
     "caldo-sfondo": $caldo-sfondo, 
     "caldo-icone": $caldo-icone, 
-    "caldo-navmenu-sfondo": $caldo-navmenu-sfondo 
+    "caldo-navmenu-sfondo": $caldo-navmenu-sfondo,
+    "caldo-progress-card-sfondo": $caldo-progress-card-sfondo,
+    "caldo-progress-card-titolo-testo": $caldo-progress-card-titolo-testo,
 ) );
 
-
+// Variabili varie
+// font size
+$titolo-card-size: 0.7rem;
+// progress-card
+$progress-card-bg-bar: #E0E0E0;
 
 a {
     text-decoration: none !important;
@@ -47,8 +58,10 @@ h1:focus {
 
 
 // qui importo i miei partials
+@import "partials/_scrollbar.scss";
 @import "partials/_fonts.scss";
 @import "partials/_mainLayout.scss";
+@import "partials/_progressCard.scss";
 
     @import "../lib/bootstrap/scss/mixins";
     @import "../lib/bootstrap/scss/bootstrap";

@@ -1,11 +1,17 @@
 ﻿@inherits LayoutComponentBase
-@if(MainTheme is not null)
-{
- <main class="@($"bg-{MainTheme}-sfondo")">
- <section class="main-section">
- @Body
- </section>   
-<NavMenu NavMenuColor="@MainTheme"/>
-</main>
-}
 
+@if (MainTheme is not null)
+{
+    <CascadingValue Value="MainTheme">
+        <main class="@($"bg-{MainTheme}-sfondo")">
+            <div class="main-gradient" />
+            <div class="main-content">
+                <section class="main-section">
+                    @Body
+                </section>
+                <NavMenu />
+            </div>
+        </main>
+
+    </CascadingValue>
+}
