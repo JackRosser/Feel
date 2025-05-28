@@ -1,8 +1,6 @@
 ﻿@page "/waiting"
 @inject IJSRuntime JS
 
-@* Questa pagina serve per far attendere l'utente durante l'aggiornamento dell'app *@
-
 <h3>Aggiornamento in corso, attendere…</h3>
 
 @code {
@@ -10,7 +8,9 @@
     {
         if (firstRender)
         {
-            await JS.InvokeVoidAsync("sendSkipWaiting");
+            // Invoca la logica JS che manda il messaggio SKIP_WAITING
+            // e, al cambio di controller, ricarica la radice "/"
+            await JS.InvokeVoidAsync("skipAndReload");
         }
     }
 }

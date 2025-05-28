@@ -1,4 +1,22 @@
-// In development, always fetch from the network and do not enable offline support.
-// This is because caching would make development more difficult (changes would not
-// be reflected on the first load after each change).
+// wwwroot/service-worker.js
+
+self.addEventListener('install', event => {
+    console.log('[SW] install');
+    // niente caching in install
+});
+
+self.addEventListener('activate', event => {
+    console.log('[SW] activate');
+    // Prende subito il controllo sui client
+    event.waitUntil(self.clients.claim());
+});
+
+// Nessuna logica di fetch: sempre in network-only
 self.addEventListener('fetch', () => { });
+
+self.addEventListener('message', event => {
+    if (event.data?.type === 'SKIP_WAITING') {
+        console.log('[SW] skipWaiting ricevuto');
+        self.skipWaiting();
+    }
+});
