@@ -1,2 +1,11 @@
 ﻿@inherits LayoutComponentBase
-@Body
+@if(MainTheme is not null)
+{
+ <main class="@($"bg-{MainTheme}-sfondo")">
+ <section class="main-section">
+ @Body
+ </section>   
+<NavMenu NavMenuColor="@MainTheme"/>
+</main>
+}
+

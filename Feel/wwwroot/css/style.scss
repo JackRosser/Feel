@@ -1,4 +1,5 @@
 ﻿@import "../lib/bootstrap/scss/functions";
+@import "../lib/bootstrap/scss/_variables.scss";
 
 //breakpoint
 $mobile: "max-width: 575px";
@@ -13,15 +14,18 @@ $tablet: "min-width: 576px";
 
 
 // Override colori
-$primary: #FF5A1E;
-$custom: #FF5A1E;
-
-
-@import "../lib/bootstrap/scss/_variables.scss";
+$caldo-sfondo: #F8D9A8;
+$caldo-icone: #7E2A0C;
+$caldo-navmenu-sfondo: #e2ae5e;
 
 
 // Merge nel theme-colors dei nuovi colori
-$theme-colors: map-merge( $theme-colors, ( "custom": $custom ) );
+$theme-colors: map-merge( $theme-colors, ( 
+    // Tema caldo
+    "caldo-sfondo": $caldo-sfondo, 
+    "caldo-icone": $caldo-icone, 
+    "caldo-navmenu-sfondo": $caldo-navmenu-sfondo 
+) );
 
 
 
@@ -44,6 +48,7 @@ h1:focus {
 
 // qui importo i miei partials
 @import "partials/_fonts.scss";
+@import "partials/_mainLayout.scss";
 
     @import "../lib/bootstrap/scss/mixins";
     @import "../lib/bootstrap/scss/bootstrap";

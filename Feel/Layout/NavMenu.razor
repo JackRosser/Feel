@@ -1,3 +1,9 @@
-﻿<div class="navmenu border border-2">
-<Icon Element="@Icons.Home" Color="dark"/>
+﻿<div class="@($"navmenu bg-{NavMenuColor}-navmenu-sfondo")">
+    @if(NavMenuItems is not null)
+    {
+        @foreach (var element in NavMenuItems)
+        {
+        <Icon Element="@element.Icon" Pointer="true" Color="@element.Color"/>
+        }
+    }
 </div>
