@@ -12,33 +12,31 @@ $tablet: "min-width: 576px";
     }
 }
 
+// Var utility
+$custom-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 
 // Override colori
-$light-gray: #F5F5F0;
 $acqua: #B4CDBE;
+$light-gray: #C8C3B9;
+
+$caldo-primary: #7E2A0C;
+$caldo-light: #F6DCA1;
 $caldo-sfondo: #F8D9A8;
 $caldo-icone: #7E2A0C;
-$caldo-navmenu-sfondo: #E2AE5E;
 $caldo-progress-card-sfondo: #E2AE5E;
-$caldo-progress-card-titolo-testo: #7E2A0C;
 
 // Merge nel theme-colors dei nuovi colori
 $theme-colors: map-merge( $theme-colors, ( 
     "light-gray": $light-gray,
     "acqua": $acqua, 
     // Tema caldo
+    "caldo-primary": $caldo-primary,
     "caldo-sfondo": $caldo-sfondo, 
     "caldo-icone": $caldo-icone, 
-    "caldo-navmenu-sfondo": $caldo-navmenu-sfondo,
-    "caldo-progress-card-sfondo": $caldo-progress-card-sfondo,
-    "caldo-progress-card-titolo-testo": $caldo-progress-card-titolo-testo,
+    "caldo-light": $caldo-light,
+    "caldo-progress-card-sfondo": $caldo-progress-card-sfondo
 ) );
 
-// Variabili varie
-// font size
-$titolo-card-size: 0.7rem;
-// progress-card
-$progress-card-bg-bar: #E0E0E0;
 
 a {
     text-decoration: none !important;
