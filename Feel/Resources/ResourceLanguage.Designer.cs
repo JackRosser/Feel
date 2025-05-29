@@ -61,11 +61,254 @@ namespace Feel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Risparmiare 100 euro.
+        ///   Looks up a localized string similar to Alimentazione.
         /// </summary>
-        public static string Test {
+        public static string Alimentazione {
             get {
-                return ResourceManager.GetString("Test", resourceCulture);
+                return ResourceManager.GetString("Alimentazione", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Animali.
+        /// </summary>
+        public static string Animali {
+            get {
+                return ResourceManager.GetString("Animali", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Arte.
+        /// </summary>
+        public static string Arte {
+            get {
+                return ResourceManager.GetString("Arte", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Auto.
+        /// </summary>
+        public static string Auto {
+            get {
+                return ResourceManager.GetString("Auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bellezza.
+        /// </summary>
+        public static string Bellezza {
+            get {
+                return ResourceManager.GetString("Bellezza", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Benessere.
+        /// </summary>
+        public static string Benessere {
+            get {
+                return ResourceManager.GetString("Benessere", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Casa.
+        /// </summary>
+        public static string Casa {
+            get {
+                return ResourceManager.GetString("Casa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cultura.
+        /// </summary>
+        public static string Cultura {
+            get {
+                return ResourceManager.GetString("Cultura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Educazione.
+        /// </summary>
+        public static string Educazione {
+            get {
+                return ResourceManager.GetString("Educazione", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Eventi.
+        /// </summary>
+        public static string Eventi {
+            get {
+                return ResourceManager.GetString("Eventi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Famiglia.
+        /// </summary>
+        public static string Famiglia {
+            get {
+                return ResourceManager.GetString("Famiglia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci una categoria.
+        /// </summary>
+        public static string InserisciCategoria {
+            get {
+                return ResourceManager.GetString("InserisciCategoria", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci una data di scadenza.
+        /// </summary>
+        public static string InserisciData {
+            get {
+                return ResourceManager.GetString("InserisciData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci un titolo.
+        /// </summary>
+        public static string InserisciTitolo {
+            get {
+                return ResourceManager.GetString("InserisciTitolo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Lavoro.
+        /// </summary>
+        public static string Lavoro {
+            get {
+                return ResourceManager.GetString("Lavoro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Massimo 20 caratteri.
+        /// </summary>
+        public static string MassimoVentiCaratteri {
+            get {
+                return ResourceManager.GetString("MassimoVentiCaratteri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Moda.
+        /// </summary>
+        public static string Moda {
+            get {
+                return ResourceManager.GetString("Moda", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Musica.
+        /// </summary>
+        public static string Musica {
+            get {
+                return ResourceManager.GetString("Musica", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Natura.
+        /// </summary>
+        public static string Natura {
+            get {
+                return ResourceManager.GetString("Natura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Politica.
+        /// </summary>
+        public static string Politica {
+            get {
+                return ResourceManager.GetString("Politica", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Religione.
+        /// </summary>
+        public static string Religione {
+            get {
+                return ResourceManager.GetString("Religione", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Risparmio.
+        /// </summary>
+        public static string Risparmio {
+            get {
+                return ResourceManager.GetString("Risparmio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Salute.
+        /// </summary>
+        public static string Salute {
+            get {
+                return ResourceManager.GetString("Salute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scadenza.
+        /// </summary>
+        public static string Scadenza {
+            get {
+                return ResourceManager.GetString("Scadenza", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sport.
+        /// </summary>
+        public static string Sport {
+            get {
+                return ResourceManager.GetString("Sport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tecnologia.
+        /// </summary>
+        public static string Tecnologia {
+            get {
+                return ResourceManager.GetString("Tecnologia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tempo libero.
+        /// </summary>
+        public static string TempoLibero {
+            get {
+                return ResourceManager.GetString("TempoLibero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Viaggi.
+        /// </summary>
+        public static string Viaggi {
+            get {
+                return ResourceManager.GetString("Viaggi", resourceCulture);
             }
         }
     }

@@ -5,9 +5,10 @@
     z-index: 10;
     display: flex;
     flex-direction: column;
+    overflow: auto;
 
     & .main-gradient {
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         z-index: 11;
@@ -26,6 +27,6 @@
         width: 100%;
         height: 100%;
         padding: 1.2rem;
-        overflow: auto;
+        margin-bottom: 20rem;
     }
 }

@@ -1,7 +1,11 @@
 ﻿
+@if(Model.Obiettivi is not null)
+{   
     <div class="container-fluid">
         <div class="row gap-3">
 
+            @foreach(var obiettivo in Model.Obiettivi)
+            {               
             <div class="col-12">          
         <div class="row progress-bar-section">
             <div class="col-3 progress-bar-bottle-container">
@@ -12,38 +16,19 @@
                 <span class="@($"percentuale text-{MainTheme}-primary")">52%</span>
                 </div>
             </div>
-            <div class="col-8 progress-bar-recap">
-            <span>Risparmio</span>
-            <span>Risparmiare 100 euro</span>
-            <span class="@($"text-{MainTheme}-primary")">Scadenza: <strong>17/01/2025</strong></span>
+            <div class="col-7 progress-bar-recap">
+            <span>@TraduzioneCategorie.Traduzione(obiettivo.Categoria, Localizer)</span>
+            <span>@obiettivo.Titolo</span>
+            <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@obiettivo.Scadenza</strong></span>
             </div>
-            <div class="col-1 go-to-details">
+            <div class="col-2 go-to-details">
                 <span class="@($"text-{MainTheme}-primary")">></span>
             </div>
         </div>
             </div>
-
-        <div class="col-12">
-            <div class="row progress-bar-section">
-                <div class="col-3 progress-bar-bottle-container">
-                    <div class="@($"progress-card bg-{MainTheme}-light")">
-                        <div class="bottle rounded-pill">
-                            <span class="bottle-fill"></span>
-                        </div>
-                        <span class="@($"percentuale text-{MainTheme}-primary")">52%</span>
-                    </div>
-                </div>
-                <div class="col-8 progress-bar-recap">
-                    <span>Risparmio</span>
-                    <span>Risparmiare 100 euro</span>
-                    <span class="@($"text-{MainTheme}-primary")">Scadenza: <strong>17/01/2025</strong></span>
-                </div>
-                <div class="col-1 go-to-details">
-                    <span class="@($"text-{MainTheme}-primary")">></span>
-                </div>
-            </div>
-        </div>
+            }
 
         </div>
     </div>
+}
 

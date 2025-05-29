@@ -117,7 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Test" xml:space="preserve">
-    <value>This text is in english</value>
+  <data name="Alimentazione" xml:space="preserve">
+    <value>Diet</value>
+  </data>
+  <data name="Animali" xml:space="preserve">
+    <value>Animals</value>
+  </data>
+  <data name="Arte" xml:space="preserve">
+    <value>Art</value>
+  </data>
+  <data name="Auto" xml:space="preserve">
+    <value>Car</value>
+  </data>
+  <data name="Bellezza" xml:space="preserve">
+    <value>Beauty</value>
+  </data>
+  <data name="Benessere" xml:space="preserve">
+    <value>Wellness</value>
+  </data>
+  <data name="Casa" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Cultura" xml:space="preserve">
+    <value>Culture</value>
+  </data>
+  <data name="Educazione" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="Eventi" xml:space="preserve">
+    <value>Events</value>
+  </data>
+  <data name="Famiglia" xml:space="preserve">
+    <value>Family</value>
+  </data>
+  <data name="InserisciCategoria" xml:space="preserve">
+    <value>Insert category</value>
+  </data>
+  <data name="InserisciData" xml:space="preserve">
+    <value>Insert end date</value>
+  </data>
+  <data name="InserisciTitolo" xml:space="preserve">
+    <value>Insert title</value>
+  </data>
+  <data name="Lavoro" xml:space="preserve">
+    <value>Job</value>
+  </data>
+  <data name="MassimoVentiCaratteri" xml:space="preserve">
+    <value>Maximum 20 characters</value>
+  </data>
+  <data name="Moda" xml:space="preserve">
+    <value>Fashion</value>
+  </data>
+  <data name="Musica" xml:space="preserve">
+    <value>Music</value>
+  </data>
+  <data name="Natura" xml:space="preserve">
+    <value>Nature</value>
+  </data>
+  <data name="Politica" xml:space="preserve">
+    <value>Politics</value>
+  </data>
+  <data name="Religione" xml:space="preserve">
+    <value>Religione</value>
+  </data>
+  <data name="Risparmio" xml:space="preserve">
+    <value>Risparmio</value>
+  </data>
+  <data name="Salute" xml:space="preserve">
+    <value>Salute</value>
+  </data>
+  <data name="Scadenza" xml:space="preserve">
+    <value>Expiration</value>
+  </data>
+  <data name="Sport" xml:space="preserve">
+    <value>Sport</value>
+  </data>
+  <data name="Tecnologia" xml:space="preserve">
+    <value>Tecnology</value>
+  </data>
+  <data name="TempoLibero" xml:space="preserve">
+    <value>Free time</value>
+  </data>
+  <data name="Viaggi" xml:space="preserve">
+    <value>Trips</value>
   </data>
 </root>
