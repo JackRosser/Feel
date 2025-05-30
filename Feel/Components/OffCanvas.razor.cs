@@ -4,7 +4,7 @@ namespace Feel.Components
 {
     public partial class OffCanvas
     {
-        [CascadingParameter] public string? MainTheme { get; set; }
+        [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
         [Parameter] public RenderFragment? ChildContent { get; set; }
         private bool IsOpen { get; set; } = false;
         private string IsOpenClass => IsOpen ? "show" : string.Empty;

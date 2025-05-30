@@ -8,6 +8,7 @@ namespace Feel.Components
     {
         [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
         [Parameter, EditorRequired] public AssistantMessageEnum Action { get; set; }
+        [Parameter, EditorRequired] public EventCallback OnActionClick { get; set; }
         [Parameter] public string? CssClass { get; set; }
         private string ActionClass => Action switch
         {
@@ -26,50 +27,6 @@ namespace Feel.Components
             _ => string.Empty
         };
 
-        private void OnActionClick()
-        {
-            switch (Action)
-            {
-                case AssistantMessageEnum.AggiungiObiettivo:
-                    OnAddGoal();
-                    break;
 
-                case AssistantMessageEnum.CambiaTema:
-                    OnChangeTheme();
-                    break;
-
-                case AssistantMessageEnum.AreaUtente:
-                    OnUserArea();
-                    break;
-
-                case AssistantMessageEnum.About:
-                    OnAbout();
-                    break;
-
-                default:
-                    break;
-            }
-        }
-
-
-        private void OnAddGoal()
-        {
-            Console.WriteLine("Aggiungi Obiettivo Clicked");
-        }
-
-        private void OnChangeTheme()
-        {
-            Console.WriteLine("Cambia Tema Clicked");
-        }
-
-        private void OnUserArea()
-        {
-            Console.WriteLine("Area Utente Clicked");
-        }
-
-        private void OnAbout()
-        {
-            Console.WriteLine("About Clicked");
-        }
     }
 }

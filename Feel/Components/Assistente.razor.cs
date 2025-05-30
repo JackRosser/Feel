@@ -6,6 +6,7 @@ namespace Feel.Components
     {
         [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
         [CascadingParameter(Name = "Assistente")] public string? AssistenteNome { get; set; }
+        private OffCanvas _offCanvas { get; set; } = new();
         private bool IsSelected { get; set; } = false;
         private string IsSelectedClass => IsSelected ? "pancia" : "fronte";
         private string ShowMessages => IsSelected ? "show" : string.Empty;
@@ -18,7 +19,12 @@ namespace Feel.Components
         private void PadOnAssistant()
         {
             IsSelected = !IsSelected;
-            InvokeAsync(StateHasChanged);
+        }
+
+        private void AddObiettivoPopUp()
+        {
+            IsSelected = false;
+            _offCanvas.Open();
         }
     }
 }
