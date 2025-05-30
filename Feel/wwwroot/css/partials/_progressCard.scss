@@ -90,3 +90,24 @@ $font-freccia-scadenza: 1.2rem;
         }
     }
 }
+
+@include media-query($tablet) {
+    .recap-box {
+        padding-inline: 1.5rem !important;
+        padding-block: 0.5rem !important;
+    }
+}
+
+@include media-query($laptop) {
+    .recap-box {
+        padding-inline: 1.5rem !important;
+        padding-block: 0.5rem !important;
+    }
+}
+
+@include media-query($desktop) {
+    .recap-box {
+        padding-inline: 1.5rem !important;
+        padding-block: 0.5rem !important;
+    }
+}

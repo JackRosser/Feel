@@ -2,12 +2,12 @@
 @if(Model.Obiettivi is not null)
 {   
     <div class="container-fluid">
-        <div class="row gap-3">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-2 gap-md-0">
 
             @foreach(var obiettivo in Model.Obiettivi)
-            {               
-            <div class="col-12">          
-        <div class="row progress-bar-section">
+            {
+             <div class="col recap-box">
+                    <div class="row progress-bar-section">
             <div class="col-3 progress-bar-bottle-container">
                 <div class="@($"progress-card bg-{MainTheme}-light")">
                 <div class="bottle rounded-pill">

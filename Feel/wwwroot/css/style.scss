@@ -1,12 +1,15 @@
 ﻿@import "../lib/bootstrap/scss/functions";
 @import "../lib/bootstrap/scss/_variables.scss";
 
-//breakpoint
-$mobile: "max-width: 575px";
-$tablet: "min-width: 576px";
+// Breakpoint SCSS standard
+$mobile: "max-width: 576px";
+$tablet: "max-width: 991px";
+$laptop: "max-width: 1199px";
+$desktop: "min-width: 1200px";
 
 
-@mixin dispositivo($media) {
+
+@mixin media-query($media) {
     @media only screen and ($media) {
         @content
     }
