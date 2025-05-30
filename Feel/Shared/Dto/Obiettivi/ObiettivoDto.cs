@@ -6,8 +6,12 @@ namespace Feel.Shared.Dto.Obiettivi
     {
         public int Id { get; set; }
         public Category Categoria { get; set; }
-        public string? Titolo { get; set; }
+        public string Titolo { get; set; } = null!;
         public string? Descrizione { get; set; }
+        public DateOnly DataCreazione { get; set; }
         public DateOnly Scadenza { get; set; }
+        public bool Completed { get; set; }
+        public int Target { get; set; }
+        public bool CheckMark { get; set; }
     }
 }

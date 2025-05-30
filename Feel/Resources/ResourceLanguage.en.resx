@@ -165,6 +165,18 @@
   <data name="MassimoVentiCaratteri" xml:space="preserve">
     <value>Maximum 20 characters</value>
   </data>
+  <data name="MessaggioAssistenteAbout" xml:space="preserve">
+    <value>About the app</value>
+  </data>
+  <data name="MessaggioAssistenteAggiuntaObiettivo" xml:space="preserve">
+    <value>Add a goal</value>
+  </data>
+  <data name="MessaggioAssistenteAreaUtente" xml:space="preserve">
+    <value>User area</value>
+  </data>
+  <data name="MessaggioAssistenteCambiaTema" xml:space="preserve">
+    <value>Change the theme</value>
+  </data>
   <data name="Moda" xml:space="preserve">
     <value>Fashion</value>
   </data>

@@ -1,9 +1,6 @@
-﻿@if(ObiettivoSelezionato is not null)
-{     
-    var isOpenClass = IsOpen ? "show" : string.Empty;
-    <div class="@($"custom-offcanvasdetails-backdrop {isOpenClass}")" @onclick="Close">
-            <div class="@($"custom-offcanvasdetails bg-{MainTheme}-primary {isOpenClass}")">
+﻿<div class="@($"custom-offcanvasdetails-backdrop {IsOpenClass}")" @onclick="Close">
+            <div class="@($"custom-offcanvasdetails bg-{MainTheme}-primary {IsOpenClass}")">
+                @ChildContent
         </div>
     </div>
     
-}

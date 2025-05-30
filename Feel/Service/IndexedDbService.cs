@@ -130,3 +130,51 @@ namespace Feel.Service
 //{
 //    await AlunnoService.DeleteAsync("alunni", alunno.Id);
 //}
+
+
+////////////////////////CREAZIONE SERVICE
+///
+//public interface IAlunnoService
+//{
+//    Task<List<Alunno>> GetAllAsync();
+//    Task<Alunno?> GetByIdAsync(int id);
+//    Task PostAsync(Alunno item);
+//    Task UpdateAsync(Alunno item);
+//    Task DeleteAsync(int id);
+//}
+
+//using TG.Blazor.IndexedDB;
+//using Feel.Shared.Models; // o dove hai definito Alunno
+
+//namespace Feel.Service
+//{
+//    public class AlunnoService(IIndexedDbService<Alunno> innerService) : IAlunnoService
+//    {
+//        private const string Store = "alunni";
+
+//        public Task<List<Alunno>> GetAllAsync() => innerService.GetAllAsync(Store);
+//        public Task<Alunno?> GetByIdAsync(int id) => innerService.GetByIdAsync(Store, id);
+//        public Task PostAsync(Alunno item) => innerService.PostAsync(Store, item);
+//        public Task UpdateAsync(Alunno item) => innerService.UpdateAsync(Store, item);
+//        public Task DeleteAsync(int id) => innerService.DeleteAsync(Store, id);
+//    }
+//}
+
+
+//builder.Services.AddScoped<IAlunnoService, AlunnoService>();
+
+//builder.Services.AddIndexedDB(dbStore =>
+//{
+//    dbStore.DbName = "FeelDb";
+//    dbStore.Version = 1;
+//    dbStore.Stores.Add(new StoreSchema
+//    {
+//        Name = "alunni", // ⬅️ ECCO COSA DEVE CORRISPONDERE PRIVATE CONST STRING
+//        PrimaryKey = new IndexSpec { Name = "id", KeyPath = "id", Auto = true },
+//        Indexes = new List<IndexSpec>
+//        {
+//            new() { Name = "name", KeyPath = "name", Auto = false },
+//            new() { Name = "datanascita", KeyPath = "datanascita", Auto = false }
+//        }
+//    });
+//});

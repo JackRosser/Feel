@@ -13,7 +13,12 @@ namespace Feel.Shared.Dto.Obiettivi
         [StringLength(20, ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "MassimoVentiCaratteri")]
         public string? Titolo { get; set; }
         public string? Descrizione { get; set; }
+        public DateOnly DataCreazione { get; set; }
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciData")]
         public DateOnly? Scadenza { get; set; }
+        public bool Completed { get; set; } = false;
+        [Required]
+        public int? Target { get; set; }
+        public bool CheckMark { get; set; }
     }
 }

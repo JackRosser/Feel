@@ -2,7 +2,9 @@
 
 @if (MainTheme is not null)
 {
-    <CascadingValue Value="MainTheme">
+    <CascadingValue Value="MainTheme" Name="MainTheme">
+        <CascadingValue Value="Assistente" Name="Assistente">
+        <Assistente />
         <main class="@($"bg-{MainTheme}-sfondo")">
             <div class="main-gradient" />
             <div class="main-content">
@@ -11,6 +13,6 @@
                 </section>
             </div>
         </main>
-
+        </CascadingValue>
     </CascadingValue>
 }

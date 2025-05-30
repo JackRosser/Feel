@@ -205,6 +205,42 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Informazioni sull&apos;app.
+        /// </summary>
+        public static string MessaggioAssistenteAbout {
+            get {
+                return ResourceManager.GetString("MessaggioAssistenteAbout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aggiungi un obiettivo.
+        /// </summary>
+        public static string MessaggioAssistenteAggiuntaObiettivo {
+            get {
+                return ResourceManager.GetString("MessaggioAssistenteAggiuntaObiettivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Area utente.
+        /// </summary>
+        public static string MessaggioAssistenteAreaUtente {
+            get {
+                return ResourceManager.GetString("MessaggioAssistenteAreaUtente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cambia il tema.
+        /// </summary>
+        public static string MessaggioAssistenteCambiaTema {
+            get {
+                return ResourceManager.GetString("MessaggioAssistenteCambiaTema", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Moda.
         /// </summary>
         public static string Moda {

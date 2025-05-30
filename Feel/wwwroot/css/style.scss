@@ -4,6 +4,7 @@
 // Breakpoint SCSS standard
 $mobile: "max-width: 576px";
 $tablet: "max-width: 991px";
+$from-tablet: "min-width: 577px";
 $laptop: "max-width: 1199px";
 $desktop: "min-width: 1200px";
 
@@ -58,6 +59,7 @@ h1:focus {
 @import "partials/_mainLayout.scss";
 @import "partials/_progressCard.scss";
 @import "partials/_offcanvas.scss";
+@import "partials/_assistente.scss";
 
     @import "../lib/bootstrap/scss/mixins";
     @import "../lib/bootstrap/scss/bootstrap";

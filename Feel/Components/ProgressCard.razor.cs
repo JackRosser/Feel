@@ -9,7 +9,7 @@ namespace Feel.Components
     /// </summary>
     public partial class ProgressCard
     {
-        [CascadingParameter] public string? MainTheme { get; set; }
+        [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
 
         private ViewModel Model = new();
 
