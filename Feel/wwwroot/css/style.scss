@@ -8,13 +8,6 @@ $laptop: "max-width: 1199px";
 $desktop: "min-width: 1200px";
 
 
-
-@mixin media-query($media) {
-    @media only screen and ($media) {
-        @content
-    }
-}
-
 // Var utility
 $custom-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 
@@ -59,10 +52,12 @@ h1:focus {
 
 
 // qui importo i miei partials
+@import "partials/_mixins.scss";
 @import "partials/_scrollbar.scss";
 @import "partials/_fonts.scss";
 @import "partials/_mainLayout.scss";
 @import "partials/_progressCard.scss";
+@import "partials/_offcanvas.scss";
 
     @import "../lib/bootstrap/scss/mixins";
     @import "../lib/bootstrap/scss/bootstrap";
