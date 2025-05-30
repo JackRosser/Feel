@@ -1,0 +1,126 @@
+﻿.assistente {
+    position: fixed;
+    z-index: 14;
+    bottom: 0;
+    left: 0;
+    max-width: 250px;
+
+    @include media-query($from-tablet) {
+        max-width: 300px;
+    }
+}
+
+@mixin assistente($translateY, $translateX, $rotate, $scale: 1) {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    transform: translateY($translateY) translateX($translateX) rotate($rotate) scale($scale);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: $custom-shadow;
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+
+    & .message-text {
+        font-size: 0.8rem;
+    }
+
+
+    &:active {
+        background-color: black !important;
+        transform: translateY($translateY) translateX($translateX) rotate($rotate) scale(1.1);
+
+        & .message-text {
+            color: white !important;
+        }
+    }
+
+    &.show {
+        display: block;
+        @include appear(300ms);
+    }
+}
+
+
+.assistente-aggiungi-obiettivo {
+    
+    &.giulio {
+        @include assistente(-18rem, 3rem, -60deg);
+
+        @include media-query($from-tablet) {
+            @include assistente(-21rem, 3rem, -60deg);
+        }
+    }
+
+
+    &.kitty {
+        @include assistente(-13rem, 0, -60deg);
+
+        @include media-query($from-tablet) {
+            @include assistente(-17rem, 0, -65deg);
+        }
+    }
+}
+
+.assistente-cambia-tema {
+
+    &.giulio {
+        @include assistente(-14rem, 9rem, -40deg, 0.9);
+
+        @include media-query($from-tablet) {
+            @include assistente(-17rem, 10rem, -40deg, 0.9);
+        }
+    }
+
+
+
+    &.kitty {
+        @include assistente(-10rem, 6rem, -40deg, 0.9);
+
+        @include media-query($from-tablet) {
+            @include assistente(-13rem, 6rem, -40deg, 0.9);
+        }
+    }
+}
+
+
+.assistente-about {
+
+    &.giulio {
+        @include assistente(-9rem, 11rem, -20deg);
+
+        @include media-query($from-tablet) {
+            @include assistente(-11rem, 13rem, -20deg);
+        }
+    }
+
+    &.kitty {
+        @include assistente(-7rem, 10rem, -20deg);
+
+        @include media-query($from-tablet) {
+            @include assistente(-9rem, 10rem, -20deg);
+        }
+    }
+}
+
+.assistente-area-utente {
+
+    &.giulio {
+        @include assistente(-2rem, 12rem, 10deg, 0.9);
+
+        @include media-query($from-tablet) {
+            @include assistente(-4rem, 15rem, 10deg, 0.9);
+        }
+    }
+
+    &.kitty {
+        @include assistente(-1rem, 10rem, 10deg, 0.9);
+
+        @include media-query($from-tablet) {
+            @include assistente(-2rem, 12rem, 10deg, 0.9);
+        }
+    }
+}
+

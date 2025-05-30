@@ -17,3 +17,27 @@ CultureInfo.DefaultThreadCurrentUICulture = culture;
 7) Aggiungere dentro a <PropertyGroup> in .csproj
 
 <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+
+___________________________________________________________________________________
+
+Cascading Value
+Se ho un solo tipo di oggetto posso omettere il nome nel componente figlio, basta che passo tipo
+e scelgo un nome in importazione, altrimenti
+
+PADRE
+<CascadingValue Name="CurrentObiettivo" Value="@obiettivo">
+    <OffCanvas />
+</CascadingValue>
+
+FIGLIO
+@code {
+    [CascadingParameter(Name = "CurrentObiettivo")]
+    public Obiettivo? Obiettivo { get; set; }
+}
+
+____________________________________________________________________________________
+
+IndexeDB
+
+Dopo aver installato il pacchetto TG.Blazor.IndexedDB
+Assicurarsi che la versione nel proj sia <PackageReference Include="TG.Blazor.IndexedDB" Version="1.5.0-preview" />

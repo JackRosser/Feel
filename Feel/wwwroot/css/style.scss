@@ -1,44 +1,43 @@
 ﻿@import "../lib/bootstrap/scss/functions";
 @import "../lib/bootstrap/scss/_variables.scss";
 
-//breakpoint
-$mobile: "max-width: 575px";
-$tablet: "min-width: 576px";
+// Breakpoint SCSS standard
+$mobile: "max-width: 576px";
+$tablet: "max-width: 991px";
+$from-tablet: "min-width: 577px";
+$laptop: "max-width: 1199px";
+$desktop: "min-width: 1200px";
 
 
-@mixin dispositivo($media) {
-    @media only screen and ($media) {
-        @content
-    }
-}
-
+// Var utility
+$custom-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 
 // Override colori
-$light-gray: #F5F5F0;
 $acqua: #B4CDBE;
+$light-gray: #C8C3B9;
+
+$caldo-primary: #7E2A0C;
+$caldo-light: #F6DCA1;
 $caldo-sfondo: #F8D9A8;
 $caldo-icone: #7E2A0C;
-$caldo-navmenu-sfondo: #E2AE5E;
 $caldo-progress-card-sfondo: #E2AE5E;
-$caldo-progress-card-titolo-testo: #7E2A0C;
+$caldo-messaggi-bg: #B5813C;
+$caldo-messaggi-testo: #fff;
 
 // Merge nel theme-colors dei nuovi colori
 $theme-colors: map-merge( $theme-colors, ( 
     "light-gray": $light-gray,
     "acqua": $acqua, 
     // Tema caldo
+    "caldo-primary": $caldo-primary,
     "caldo-sfondo": $caldo-sfondo, 
     "caldo-icone": $caldo-icone, 
-    "caldo-navmenu-sfondo": $caldo-navmenu-sfondo,
+    "caldo-light": $caldo-light,
     "caldo-progress-card-sfondo": $caldo-progress-card-sfondo,
-    "caldo-progress-card-titolo-testo": $caldo-progress-card-titolo-testo,
+    "caldo-messaggi-bg": $caldo-messaggi-bg,
+    "caldo-messaggi-testo": $caldo-messaggi-testo
 ) );
 
-// Variabili varie
-// font size
-$titolo-card-size: 0.7rem;
-// progress-card
-$progress-card-bg-bar: #E0E0E0;
 
 a {
     text-decoration: none !important;
@@ -58,10 +57,13 @@ h1:focus {
 
 
 // qui importo i miei partials
+@import "partials/_mixins.scss";
 @import "partials/_scrollbar.scss";
 @import "partials/_fonts.scss";
 @import "partials/_mainLayout.scss";
 @import "partials/_progressCard.scss";
+@import "partials/_offcanvas.scss";
+@import "partials/_assistente.scss";
 
     @import "../lib/bootstrap/scss/mixins";
     @import "../lib/bootstrap/scss/bootstrap";

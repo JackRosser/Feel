@@ -1,62 +1,38 @@
 ﻿
+@if(Model.Obiettivi is not null)
+{   
     <div class="container-fluid">
-        <div class="row row-cols-2">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-2 gap-md-0">
 
-            <div class="col">
-
-
-            <div class="@($"progress-card-box bg-{MainTheme}-progress-card-sfondo shadow-sm")">
-                <div class="progress-card">
-                    <h2 class="@($"progress-card-title m-0 text-{MainTheme}-progress-card-titolo-testo")">@Localizer[ResourceLanguage.Test]</h2>
-                    <div class="progress-card-body">
-                        <div class="pill-box">
-                            <div class="progress-card-bg-bar rounded-pill">
-                                <span class="progress-bar-fill bg-success"></span>
-                            </div>
-                        </div>
-                        <div class="pill-box">
-                            <div class="progress-card-bg-bar rounded-pill">
-                                <span class="progress-bar-fill bg-warning"></span>
-                            </div>
-                            <div class="@($"data-box progress-card-title m-0 text-{MainTheme}-progress-card-titolo-testo")">
-                                <span>10/05</span>
-                                <span>2025</span>
-                            </div>
-                        </div>
-                    </div>
-                    <h3 class="@($"progress-card-title m-0 text-{MainTheme}-progress-card-titolo-testo")">90%</h3>
+            @foreach(var obiettivo in Model.Obiettivi)
+            {
+             <div class="col recap-box">
+                    <div class="row progress-bar-section">
+            <div class="col-3 progress-bar-bottle-container">
+                <div class="@($"progress-card bg-{MainTheme}-light")">
+                <div class="bottle rounded-pill">
+                    <span class="bottle-fill"></span>
+                </div>
+                <span class="@($"percentuale text-{MainTheme}-primary")">52%</span>
                 </div>
             </div>
-        </div>
-
-        <div class="col">
-
-            <div class="@($"progress-card-box bg-{MainTheme}-progress-card-sfondo shadow-sm")">
-            <div class="progress-card">
-                <h2 class="@($"progress-card-title m-0 text-{MainTheme}-progress-card-titolo-testo")">@Localizer[ResourceLanguage.Test]</h2>
-                <div class="progress-card-body">
-                    <div class="pill-box">
-                        <div class="progress-card-bg-bar rounded-pill">
-                            <span class="progress-bar-fill bg-success"></span>
-                        </div>
-                    </div>
-                    <div class="pill-box">
-                        <div class="progress-card-bg-bar rounded-pill">
-                            <span class="progress-bar-fill bg-warning"></span>
-                        </div>
-                        <div class="@($"data-box progress-card-title m-0 text-{MainTheme}-progress-card-titolo-testo")">
-                            <span>10/05</span>
-                            <span>2025</span>
-                        </div>
-                    </div>
-                </div>
-                <h3 class="@($"progress-card-title m-0 text-{MainTheme}-progress-card-titolo-testo")">90%</h3>
+            <div class="col-7 progress-bar-recap">
+            <span>@TraduzioneCategorie.Traduzione(obiettivo.Categoria, Localizer)</span>
+            <span>@obiettivo.Titolo</span>
+            <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@obiettivo.Scadenza</strong></span>
+            </div>
+            <div class="col-2 go-to-details" @onclick="_offCanvas.Open">
+                <span class="@($"text-{MainTheme}-primary")">></span>
             </div>
         </div>
-
-
-        </div>
+            </div>
+            }
 
         </div>
     </div>
+    
+
+        <OffCanvas @ref="_offCanvas" />
+
+}
 
