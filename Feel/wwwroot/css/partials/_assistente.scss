@@ -12,15 +12,34 @@
 
 @mixin assistente($translateY, $translateX, $rotate) {
     position: fixed;
-    z-index: 14;
+    z-index: 15;
     bottom: 0;
     left: 0;
     transform: translateY($translateY) translateX($translateX) rotate($rotate);
-    border: 1px solid red;
     padding: 1rem 1.5rem;
     border-radius: 50px;
+    box-shadow: $custom-shadow;
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+
     & .message-text {
         font-size: 0.8rem;
+    }
+
+
+    &:active {
+        background-color: black !important;
+        transform: translateY($translateY) translateX($translateX) rotate($rotate) scale(1.1);
+
+        & .message-text {
+            color: white !important;
+        }
+    }
+
+    &.show {
+        display: block;
+        @include appear(300ms);
     }
 }
 

@@ -21,6 +21,8 @@ $caldo-light: #F6DCA1;
 $caldo-sfondo: #F8D9A8;
 $caldo-icone: #7E2A0C;
 $caldo-progress-card-sfondo: #E2AE5E;
+$caldo-messaggi-bg: #B5813C;
+$caldo-messaggi-testo: #fff;
 
 // Merge nel theme-colors dei nuovi colori
 $theme-colors: map-merge( $theme-colors, ( 
@@ -31,7 +33,9 @@ $theme-colors: map-merge( $theme-colors, (
     "caldo-sfondo": $caldo-sfondo, 
     "caldo-icone": $caldo-icone, 
     "caldo-light": $caldo-light,
-    "caldo-progress-card-sfondo": $caldo-progress-card-sfondo
+    "caldo-progress-card-sfondo": $caldo-progress-card-sfondo,
+    "caldo-messaggi-bg": $caldo-messaggi-bg,
+    "caldo-messaggi-testo": $caldo-messaggi-testo
 ) );
 
 

@@ -13,7 +13,7 @@ namespace Feel.Components
 
         private ViewModel Model = new();
 
-        private OffCanvas _offCanvas { get; set; } = null!;
+        private OffCanvas _offCanvas = new();
 
         protected override async Task OnInitializedAsync()
         {

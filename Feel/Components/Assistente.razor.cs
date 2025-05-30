@@ -8,6 +8,7 @@ namespace Feel.Components
         [CascadingParameter(Name = "Assistente")] public string? AssistenteNome { get; set; }
         private bool IsSelected { get; set; } = false;
         private string IsSelectedClass => IsSelected ? "pancia" : "fronte";
+        private string ShowMessages => IsSelected ? "show" : string.Empty;
         private string WhoIs => AssistenteNome switch
         {
             "giulio.png" => "giulio",

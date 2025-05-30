@@ -11,12 +11,10 @@ namespace Feel.Components
         public void Open()
         {
             IsOpen = true;
-            InvokeAsync(StateHasChanged);
         }
         private void Close()
         {
             IsOpen = false;
-            InvokeAsync(StateHasChanged);
         }
     }
 }

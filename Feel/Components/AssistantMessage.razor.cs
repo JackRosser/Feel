@@ -6,6 +6,7 @@ namespace Feel.Components
 {
     public partial class AssistantMessage
     {
+        [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
         [Parameter, EditorRequired] public AssistantMessageEnum Action { get; set; }
         [Parameter] public string? CssClass { get; set; }
         private string ActionClass => Action switch

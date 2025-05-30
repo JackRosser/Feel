@@ -1,5 +1,5 @@
-﻿<AssistantMessage Action="AssistantMessageEnum.AggiungiObiettivo" CssClass="@WhoIs"/>
-<AssistantMessage Action="AssistantMessageEnum.CambiaTema" CssClass="@WhoIs" />
-<AssistantMessage Action="AssistantMessageEnum.AreaUtente" CssClass="@WhoIs" />
-<AssistantMessage Action="AssistantMessageEnum.About" CssClass="@WhoIs" />
+﻿<AssistantMessage Action="AssistantMessageEnum.AggiungiObiettivo" CssClass="@($"{WhoIs} {ShowMessages}")" />
+<AssistantMessage Action="AssistantMessageEnum.CambiaTema" CssClass="@($"{WhoIs} {ShowMessages}")" />
+<AssistantMessage Action="AssistantMessageEnum.AreaUtente" CssClass="@($"{WhoIs} {ShowMessages}")" />
+<AssistantMessage Action="AssistantMessageEnum.About" CssClass="@($"{WhoIs} {ShowMessages}")" />
 <img class="assistente" src="@($"/css/images/Assistenti/{IsSelectedClass}-{AssistenteNome}")" @onclick="PadOnAssistant"/>
