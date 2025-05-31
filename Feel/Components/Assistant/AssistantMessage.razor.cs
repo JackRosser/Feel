@@ -2,7 +2,7 @@
 using Feel.Shared.Enum;
 using Microsoft.AspNetCore.Components;
 
-namespace Feel.Components
+namespace Feel.Components.Assistant
 {
     public partial class AssistantMessage
     {

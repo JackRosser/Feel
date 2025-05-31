@@ -16,26 +16,40 @@ $custom-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 $acqua: #B4CDBE;
 $light-gray: #C8C3B9;
 
+// TEMA CALDO
 $caldo-primary: #7E2A0C;
 $caldo-light: #F6DCA1;
 $caldo-sfondo: #F8D9A8;
 $caldo-icone: #7E2A0C;
+// OFFCANVAS
+$caldo-offcanvas-bg: #7E2A0C;
+// PROGRESS CARD
 $caldo-progress-card-sfondo: #E2AE5E;
+// MESSAGGI ASSISTENTE
 $caldo-messaggi-bg: #B5813C;
 $caldo-messaggi-testo: #fff;
+// FORM
+$caldo-label: #F6DCA1;
+$caldo-input-border: #F6DCA1;
+$caldo-input-text: #fff;
+
 
 // Merge nel theme-colors dei nuovi colori
 $theme-colors: map-merge( $theme-colors, ( 
     "light-gray": $light-gray,
     "acqua": $acqua, 
-    // Tema caldo
+    // TEMA CALDO
     "caldo-primary": $caldo-primary,
     "caldo-sfondo": $caldo-sfondo, 
-    "caldo-icone": $caldo-icone, 
+    "caldo-icone": $caldo-icone,
+    "caldo-offcanvas-bg": $caldo-offcanvas-bg,
     "caldo-light": $caldo-light,
     "caldo-progress-card-sfondo": $caldo-progress-card-sfondo,
     "caldo-messaggi-bg": $caldo-messaggi-bg,
-    "caldo-messaggi-testo": $caldo-messaggi-testo
+    "caldo-messaggi-testo": $caldo-messaggi-testo,
+    "caldo-label": $caldo-label,
+    "caldo-input-border": $caldo-input-border,
+    "caldo-input-text": $caldo-input-text
 ) );
 
 
@@ -64,6 +78,7 @@ h1:focus {
 @import "partials/_progressCard.scss";
 @import "partials/_offcanvas.scss";
 @import "partials/_assistente.scss";
+@import "partials/_form.scss";
 
     @import "../lib/bootstrap/scss/mixins";
     @import "../lib/bootstrap/scss/bootstrap";

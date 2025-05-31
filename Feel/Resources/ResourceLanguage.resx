@@ -210,7 +210,13 @@
   <data name="TempoLibero" xml:space="preserve">
     <value>Tempo libero</value>
   </data>
+  <data name="Obiettivo" xml:space="preserve">
+    <value>Obiettivo</value>
+  </data>
   <data name="Viaggi" xml:space="preserve">
     <value>Viaggi</value>
+  </data>
+  <data name="PlaceholderObiettivo" xml:space="preserve">
+    <value>Dai un titolo al tuo obiettivo...</value>
   </data>
 </root>

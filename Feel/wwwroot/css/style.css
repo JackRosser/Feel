@@ -265,7 +265,6 @@ main .main-section {
 .custom-offcanvasdetails-backdrop .custom-offcanvasdetails {
   position: fixed;
   width: 100%;
-  height: 68%;
   top: 0;
   left: 0;
   border-bottom: 1px solid #6c757d;
@@ -276,11 +275,6 @@ main .main-section {
   z-index: 16;
   opacity: 0;
   border-radius: 0 0 10% 10%;
-}
-@media only screen and (min-width: 577px) {
-  .custom-offcanvasdetails-backdrop .custom-offcanvasdetails {
-    height: 60%;
-  }
 }
 
 .custom-offcanvasdetails-backdrop.show {
@@ -906,6 +900,40 @@ main .main-section {
   }
 }
 
+.form-group.caldo {
+  position: relative;
+  width: 100%;
+}
+.form-group.caldo label {
+  position: absolute;
+  color: #F6DCA1;
+  background-color: #7E2A0C;
+  padding: 0 0.6rem;
+  left: 1.2rem;
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  box-shadow: 0 0 5px 2px rgba(126, 42, 12, 0.5);
+}
+.form-group.caldo input {
+  width: 100%;
+  padding: 0.8rem 1em 0.5rem;
+  font-size: 0.9rem;
+  border: 1px solid #F6DCA1;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+}
+.form-group.caldo input::placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+.form-group.caldo input:focus {
+  outline: none;
+  border: 2px solid #F6DCA1;
+  box-shadow: 0 0 5px 2px rgba(246, 220, 161, 0.5);
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors
@@ -949,10 +977,14 @@ main .main-section {
   --bs-caldo-primary: #7E2A0C;
   --bs-caldo-sfondo: #F8D9A8;
   --bs-caldo-icone: #7E2A0C;
+  --bs-caldo-offcanvas-bg: #7E2A0C;
   --bs-caldo-light: #F6DCA1;
   --bs-caldo-progress-card-sfondo: #E2AE5E;
   --bs-caldo-messaggi-bg: #B5813C;
   --bs-caldo-messaggi-testo: #fff;
+  --bs-caldo-label: #F6DCA1;
+  --bs-caldo-input-border: #F6DCA1;
+  --bs-caldo-input-text: #fff;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -966,10 +998,14 @@ main .main-section {
   --bs-caldo-primary-rgb: 126, 42, 12;
   --bs-caldo-sfondo-rgb: 248, 217, 168;
   --bs-caldo-icone-rgb: 126, 42, 12;
+  --bs-caldo-offcanvas-bg-rgb: 126, 42, 12;
   --bs-caldo-light-rgb: 246, 220, 161;
   --bs-caldo-progress-card-sfondo-rgb: 226, 174, 94;
   --bs-caldo-messaggi-bg-rgb: 181, 129, 60;
   --bs-caldo-messaggi-testo-rgb: 255, 255, 255;
+  --bs-caldo-label-rgb: 246, 220, 161;
+  --bs-caldo-input-border-rgb: 246, 220, 161;
+  --bs-caldo-input-text-rgb: 255, 255, 255;
   --bs-primary-text-emphasis: rgb(5.2, 44, 101.2);
   --bs-secondary-text-emphasis: rgb(43.2, 46.8, 50);
   --bs-success-text-emphasis: rgb(10, 54, 33.6);
@@ -4110,6 +4146,23 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #7E2A0C;
 }
 
+.btn-caldo-offcanvas-bg {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #7E2A0C;
+  --bs-btn-border-color: #7E2A0C;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: rgb(107.1, 35.7, 10.2);
+  --bs-btn-hover-border-color: rgb(100.8, 33.6, 9.6);
+  --bs-btn-focus-shadow-rgb: 145, 74, 48;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: rgb(100.8, 33.6, 9.6);
+  --bs-btn-active-border-color: rgb(94.5, 31.5, 9);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #7E2A0C;
+  --bs-btn-disabled-border-color: #7E2A0C;
+}
+
 .btn-caldo-light {
   --bs-btn-color: #000;
   --bs-btn-bg: #F6DCA1;
@@ -4162,6 +4215,57 @@ textarea.form-control-lg {
 }
 
 .btn-caldo-messaggi-testo {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: white;
+  --bs-btn-hover-border-color: white;
+  --bs-btn-focus-shadow-rgb: 217, 217, 217;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: white;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #fff;
+  --bs-btn-disabled-border-color: #fff;
+}
+
+.btn-caldo-label {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #F6DCA1;
+  --bs-btn-border-color: #F6DCA1;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: rgb(247.35, 225.25, 175.1);
+  --bs-btn-hover-border-color: rgb(246.9, 223.5, 170.4);
+  --bs-btn-focus-shadow-rgb: 209, 187, 137;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: rgb(247.8, 227, 179.8);
+  --bs-btn-active-border-color: rgb(246.9, 223.5, 170.4);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #F6DCA1;
+  --bs-btn-disabled-border-color: #F6DCA1;
+}
+
+.btn-caldo-input-border {
+  --bs-btn-color: #000;
+  --bs-btn-bg: #F6DCA1;
+  --bs-btn-border-color: #F6DCA1;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: rgb(247.35, 225.25, 175.1);
+  --bs-btn-hover-border-color: rgb(246.9, 223.5, 170.4);
+  --bs-btn-focus-shadow-rgb: 209, 187, 137;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: rgb(247.8, 227, 179.8);
+  --bs-btn-active-border-color: rgb(246.9, 223.5, 170.4);
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #000;
+  --bs-btn-disabled-bg: #F6DCA1;
+  --bs-btn-disabled-border-color: #F6DCA1;
+}
+
+.btn-caldo-input-text {
   --bs-btn-color: #000;
   --bs-btn-bg: #fff;
   --bs-btn-border-color: #fff;
@@ -4399,6 +4503,23 @@ textarea.form-control-lg {
   --bs-gradient: none;
 }
 
+.btn-outline-caldo-offcanvas-bg {
+  --bs-btn-color: #7E2A0C;
+  --bs-btn-border-color: #7E2A0C;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #7E2A0C;
+  --bs-btn-hover-border-color: #7E2A0C;
+  --bs-btn-focus-shadow-rgb: 126, 42, 12;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #7E2A0C;
+  --bs-btn-active-border-color: #7E2A0C;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #7E2A0C;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #7E2A0C;
+  --bs-gradient: none;
+}
+
 .btn-outline-caldo-light {
   --bs-btn-color: #F6DCA1;
   --bs-btn-border-color: #F6DCA1;
@@ -4451,6 +4572,57 @@ textarea.form-control-lg {
 }
 
 .btn-outline-caldo-messaggi-testo {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #fff;
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-focus-shadow-rgb: 255, 255, 255;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-border-color: #fff;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #fff;
+  --bs-gradient: none;
+}
+
+.btn-outline-caldo-label {
+  --bs-btn-color: #F6DCA1;
+  --bs-btn-border-color: #F6DCA1;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #F6DCA1;
+  --bs-btn-hover-border-color: #F6DCA1;
+  --bs-btn-focus-shadow-rgb: 246, 220, 161;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #F6DCA1;
+  --bs-btn-active-border-color: #F6DCA1;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #F6DCA1;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #F6DCA1;
+  --bs-gradient: none;
+}
+
+.btn-outline-caldo-input-border {
+  --bs-btn-color: #F6DCA1;
+  --bs-btn-border-color: #F6DCA1;
+  --bs-btn-hover-color: #000;
+  --bs-btn-hover-bg: #F6DCA1;
+  --bs-btn-hover-border-color: #F6DCA1;
+  --bs-btn-focus-shadow-rgb: 246, 220, 161;
+  --bs-btn-active-color: #000;
+  --bs-btn-active-bg: #F6DCA1;
+  --bs-btn-active-border-color: #F6DCA1;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #F6DCA1;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #F6DCA1;
+  --bs-gradient: none;
+}
+
+.btn-outline-caldo-input-text {
   --bs-btn-color: #fff;
   --bs-btn-border-color: #fff;
   --bs-btn-hover-color: #000;
@@ -6127,6 +6299,13 @@ textarea.form-control-lg {
   --bs-alert-link-color: var(--bs-caldo-icone-text-emphasis);
 }
 
+.alert-caldo-offcanvas-bg {
+  --bs-alert-color: var(--bs-caldo-offcanvas-bg-text-emphasis);
+  --bs-alert-bg: var(--bs-caldo-offcanvas-bg-bg-subtle);
+  --bs-alert-border-color: var(--bs-caldo-offcanvas-bg-border-subtle);
+  --bs-alert-link-color: var(--bs-caldo-offcanvas-bg-text-emphasis);
+}
+
 .alert-caldo-light {
   --bs-alert-color: var(--bs-caldo-light-text-emphasis);
   --bs-alert-bg: var(--bs-caldo-light-bg-subtle);
@@ -6153,6 +6332,27 @@ textarea.form-control-lg {
   --bs-alert-bg: var(--bs-caldo-messaggi-testo-bg-subtle);
   --bs-alert-border-color: var(--bs-caldo-messaggi-testo-border-subtle);
   --bs-alert-link-color: var(--bs-caldo-messaggi-testo-text-emphasis);
+}
+
+.alert-caldo-label {
+  --bs-alert-color: var(--bs-caldo-label-text-emphasis);
+  --bs-alert-bg: var(--bs-caldo-label-bg-subtle);
+  --bs-alert-border-color: var(--bs-caldo-label-border-subtle);
+  --bs-alert-link-color: var(--bs-caldo-label-text-emphasis);
+}
+
+.alert-caldo-input-border {
+  --bs-alert-color: var(--bs-caldo-input-border-text-emphasis);
+  --bs-alert-bg: var(--bs-caldo-input-border-bg-subtle);
+  --bs-alert-border-color: var(--bs-caldo-input-border-border-subtle);
+  --bs-alert-link-color: var(--bs-caldo-input-border-text-emphasis);
+}
+
+.alert-caldo-input-text {
+  --bs-alert-color: var(--bs-caldo-input-text-text-emphasis);
+  --bs-alert-bg: var(--bs-caldo-input-text-bg-subtle);
+  --bs-alert-border-color: var(--bs-caldo-input-text-border-subtle);
+  --bs-alert-link-color: var(--bs-caldo-input-text-text-emphasis);
 }
 
 @keyframes progress-bar-stripes {
@@ -6625,6 +6825,19 @@ textarea.form-control-lg {
   --bs-list-group-active-border-color: var(--bs-caldo-icone-text-emphasis);
 }
 
+.list-group-item-caldo-offcanvas-bg {
+  --bs-list-group-color: var(--bs-caldo-offcanvas-bg-text-emphasis);
+  --bs-list-group-bg: var(--bs-caldo-offcanvas-bg-bg-subtle);
+  --bs-list-group-border-color: var(--bs-caldo-offcanvas-bg-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-caldo-offcanvas-bg-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-caldo-offcanvas-bg-border-subtle);
+  --bs-list-group-active-color: var(--bs-caldo-offcanvas-bg-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-caldo-offcanvas-bg-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-caldo-offcanvas-bg-text-emphasis);
+}
+
 .list-group-item-caldo-light {
   --bs-list-group-color: var(--bs-caldo-light-text-emphasis);
   --bs-list-group-bg: var(--bs-caldo-light-bg-subtle);
@@ -6675,6 +6888,45 @@ textarea.form-control-lg {
   --bs-list-group-active-color: var(--bs-caldo-messaggi-testo-bg-subtle);
   --bs-list-group-active-bg: var(--bs-caldo-messaggi-testo-text-emphasis);
   --bs-list-group-active-border-color: var(--bs-caldo-messaggi-testo-text-emphasis);
+}
+
+.list-group-item-caldo-label {
+  --bs-list-group-color: var(--bs-caldo-label-text-emphasis);
+  --bs-list-group-bg: var(--bs-caldo-label-bg-subtle);
+  --bs-list-group-border-color: var(--bs-caldo-label-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-caldo-label-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-caldo-label-border-subtle);
+  --bs-list-group-active-color: var(--bs-caldo-label-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-caldo-label-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-caldo-label-text-emphasis);
+}
+
+.list-group-item-caldo-input-border {
+  --bs-list-group-color: var(--bs-caldo-input-border-text-emphasis);
+  --bs-list-group-bg: var(--bs-caldo-input-border-bg-subtle);
+  --bs-list-group-border-color: var(--bs-caldo-input-border-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-caldo-input-border-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-caldo-input-border-border-subtle);
+  --bs-list-group-active-color: var(--bs-caldo-input-border-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-caldo-input-border-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-caldo-input-border-text-emphasis);
+}
+
+.list-group-item-caldo-input-text {
+  --bs-list-group-color: var(--bs-caldo-input-text-text-emphasis);
+  --bs-list-group-bg: var(--bs-caldo-input-text-bg-subtle);
+  --bs-list-group-border-color: var(--bs-caldo-input-text-border-subtle);
+  --bs-list-group-action-hover-color: var(--bs-emphasis-color);
+  --bs-list-group-action-hover-bg: var(--bs-caldo-input-text-border-subtle);
+  --bs-list-group-action-active-color: var(--bs-emphasis-color);
+  --bs-list-group-action-active-bg: var(--bs-caldo-input-text-border-subtle);
+  --bs-list-group-active-color: var(--bs-caldo-input-text-bg-subtle);
+  --bs-list-group-active-bg: var(--bs-caldo-input-text-text-emphasis);
+  --bs-list-group-active-border-color: var(--bs-caldo-input-text-text-emphasis);
 }
 
 .btn-close {
@@ -8222,6 +8474,11 @@ textarea.form-control-lg {
   background-color: RGBA(var(--bs-caldo-icone-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
+.text-bg-caldo-offcanvas-bg {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-caldo-offcanvas-bg-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
 .text-bg-caldo-light {
   color: #000 !important;
   background-color: RGBA(var(--bs-caldo-light-rgb), var(--bs-bg-opacity, 1)) !important;
@@ -8240,6 +8497,21 @@ textarea.form-control-lg {
 .text-bg-caldo-messaggi-testo {
   color: #000 !important;
   background-color: RGBA(var(--bs-caldo-messaggi-testo-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-caldo-label {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-caldo-label-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-caldo-input-border {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-caldo-input-border-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.text-bg-caldo-input-text {
+  color: #000 !important;
+  background-color: RGBA(var(--bs-caldo-input-text-rgb), var(--bs-bg-opacity, 1)) !important;
 }
 
 .link-primary {
@@ -8359,6 +8631,15 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(101, 34, 10, var(--bs-link-underline-opacity, 1)) !important;
 }
 
+.link-caldo-offcanvas-bg {
+  color: RGBA(var(--bs-caldo-offcanvas-bg-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-caldo-offcanvas-bg-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-caldo-offcanvas-bg:hover, .link-caldo-offcanvas-bg:focus {
+  color: RGBA(101, 34, 10, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(101, 34, 10, var(--bs-link-underline-opacity, 1)) !important;
+}
+
 .link-caldo-light {
   color: RGBA(var(--bs-caldo-light-rgb), var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(var(--bs-caldo-light-rgb), var(--bs-link-underline-opacity, 1)) !important;
@@ -8391,6 +8672,33 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-caldo-messaggi-testo-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-caldo-messaggi-testo:hover, .link-caldo-messaggi-testo:focus {
+  color: RGBA(255, 255, 255, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(255, 255, 255, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-caldo-label {
+  color: RGBA(var(--bs-caldo-label-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-caldo-label-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-caldo-label:hover, .link-caldo-label:focus {
+  color: RGBA(248, 227, 180, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(248, 227, 180, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-caldo-input-border {
+  color: RGBA(var(--bs-caldo-input-border-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-caldo-input-border-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-caldo-input-border:hover, .link-caldo-input-border:focus {
+  color: RGBA(248, 227, 180, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(248, 227, 180, var(--bs-link-underline-opacity, 1)) !important;
+}
+
+.link-caldo-input-text {
+  color: RGBA(var(--bs-caldo-input-text-rgb), var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(var(--bs-caldo-input-text-rgb), var(--bs-link-underline-opacity, 1)) !important;
+}
+.link-caldo-input-text:hover, .link-caldo-input-text:focus {
   color: RGBA(255, 255, 255, var(--bs-link-opacity, 1)) !important;
   text-decoration-color: RGBA(255, 255, 255, var(--bs-link-underline-opacity, 1)) !important;
 }
@@ -8846,6 +9154,10 @@ textarea.form-control-lg {
   --bs-focus-ring-color: rgba(var(--bs-caldo-icone-rgb), var(--bs-focus-ring-opacity));
 }
 
+.focus-ring-caldo-offcanvas-bg {
+  --bs-focus-ring-color: rgba(var(--bs-caldo-offcanvas-bg-rgb), var(--bs-focus-ring-opacity));
+}
+
 .focus-ring-caldo-light {
   --bs-focus-ring-color: rgba(var(--bs-caldo-light-rgb), var(--bs-focus-ring-opacity));
 }
@@ -8860,6 +9172,18 @@ textarea.form-control-lg {
 
 .focus-ring-caldo-messaggi-testo {
   --bs-focus-ring-color: rgba(var(--bs-caldo-messaggi-testo-rgb), var(--bs-focus-ring-opacity));
+}
+
+.focus-ring-caldo-label {
+  --bs-focus-ring-color: rgba(var(--bs-caldo-label-rgb), var(--bs-focus-ring-opacity));
+}
+
+.focus-ring-caldo-input-border {
+  --bs-focus-ring-color: rgba(var(--bs-caldo-input-border-rgb), var(--bs-focus-ring-opacity));
+}
+
+.focus-ring-caldo-input-text {
+  --bs-focus-ring-color: rgba(var(--bs-caldo-input-text-rgb), var(--bs-focus-ring-opacity));
 }
 
 .position-static {
@@ -9047,6 +9371,11 @@ textarea.form-control-lg {
   border-color: rgba(var(--bs-caldo-icone-rgb), var(--bs-border-opacity)) !important;
 }
 
+.border-caldo-offcanvas-bg {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-caldo-offcanvas-bg-rgb), var(--bs-border-opacity)) !important;
+}
+
 .border-caldo-light {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-caldo-light-rgb), var(--bs-border-opacity)) !important;
@@ -9065,6 +9394,21 @@ textarea.form-control-lg {
 .border-caldo-messaggi-testo {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-caldo-messaggi-testo-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-caldo-label {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-caldo-label-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-caldo-input-border {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-caldo-input-border-rgb), var(--bs-border-opacity)) !important;
+}
+
+.border-caldo-input-text {
+  --bs-border-opacity: 1;
+  border-color: rgba(var(--bs-caldo-input-text-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-black {
@@ -10043,6 +10387,11 @@ textarea.form-control-lg {
   color: rgba(var(--bs-caldo-icone-rgb), var(--bs-text-opacity)) !important;
 }
 
+.text-caldo-offcanvas-bg {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-caldo-offcanvas-bg-rgb), var(--bs-text-opacity)) !important;
+}
+
 .text-caldo-light {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-caldo-light-rgb), var(--bs-text-opacity)) !important;
@@ -10061,6 +10410,21 @@ textarea.form-control-lg {
 .text-caldo-messaggi-testo {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-caldo-messaggi-testo-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-caldo-label {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-caldo-label-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-caldo-input-border {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-caldo-input-border-rgb), var(--bs-text-opacity)) !important;
+}
+
+.text-caldo-input-text {
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-caldo-input-text-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-black {
@@ -10290,6 +10654,11 @@ textarea.form-control-lg {
   text-decoration-color: rgba(var(--bs-caldo-icone-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
+.link-underline-caldo-offcanvas-bg {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-caldo-offcanvas-bg-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
 .link-underline-caldo-light {
   --bs-link-underline-opacity: 1;
   text-decoration-color: rgba(var(--bs-caldo-light-rgb), var(--bs-link-underline-opacity)) !important;
@@ -10308,6 +10677,21 @@ textarea.form-control-lg {
 .link-underline-caldo-messaggi-testo {
   --bs-link-underline-opacity: 1;
   text-decoration-color: rgba(var(--bs-caldo-messaggi-testo-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
+.link-underline-caldo-label {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-caldo-label-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
+.link-underline-caldo-input-border {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-caldo-input-border-rgb), var(--bs-link-underline-opacity)) !important;
+}
+
+.link-underline-caldo-input-text {
+  --bs-link-underline-opacity: 1;
+  text-decoration-color: rgba(var(--bs-caldo-input-text-rgb), var(--bs-link-underline-opacity)) !important;
 }
 
 .link-underline {
@@ -10428,6 +10812,11 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-caldo-icone-rgb), var(--bs-bg-opacity)) !important;
 }
 
+.bg-caldo-offcanvas-bg {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-caldo-offcanvas-bg-rgb), var(--bs-bg-opacity)) !important;
+}
+
 .bg-caldo-light {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-caldo-light-rgb), var(--bs-bg-opacity)) !important;
@@ -10446,6 +10835,21 @@ textarea.form-control-lg {
 .bg-caldo-messaggi-testo {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-caldo-messaggi-testo-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-caldo-label {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-caldo-label-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-caldo-input-border {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-caldo-input-border-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.bg-caldo-input-text {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-caldo-input-text-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-black {

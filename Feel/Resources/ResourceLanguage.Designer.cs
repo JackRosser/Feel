@@ -268,6 +268,24 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Obiettivo.
+        /// </summary>
+        public static string Obiettivo {
+            get {
+                return ResourceManager.GetString("Obiettivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dai un titolo al tuo obiettivo....
+        /// </summary>
+        public static string PlaceholderObiettivo {
+            get {
+                return ResourceManager.GetString("PlaceholderObiettivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Politica.
         /// </summary>
         public static string Politica {

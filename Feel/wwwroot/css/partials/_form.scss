@@ -1,0 +1,44 @@
+﻿@mixin theme-settings($border, $label-text, $label-bg, $input-text) {
+    position: relative;
+    width: 100%;
+
+    & label {
+        position: absolute;
+        color: $label-text;
+        background-color: $label-bg;
+        padding: 0 0.6rem;
+        left: 1.2rem;
+        top: 0;
+        transform: translateY(-50%);
+        font-size: 0.8rem;
+        box-shadow: 0 0 5px 2px rgba($label-bg, 0.5);
+    }
+
+    & input {
+        width: 100%;
+        padding: 0.8rem 1em 0.5rem;
+        font-size: 0.9rem;
+        border: 1px solid $border;
+        border-radius: 5px;
+        background-color: transparent;
+        color: $input-text;
+
+        &::placeholder {
+            color: $input-text;
+            opacity: 0.7;
+        }
+       
+
+        &:focus {
+            outline: none;
+            border: 2px solid $border;
+            box-shadow: 0 0 5px 2px rgba($border, 0.5);
+        }
+    }
+}
+
+.form-group {
+    &.caldo {
+        @include theme-settings($caldo-input-border, $caldo-label, $caldo-offcanvas-bg, $caldo-input-text);
+    }
+}
