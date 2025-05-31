@@ -1,1 +1,29 @@
-﻿
+﻿<OffCanvas @ref="_offCanvas">
+    @if(CreateObiettivoForm is not null)
+    {        
+    <EditForm Model="@CreateObiettivoForm" OnValidSubmit="Save">
+    <DataAnnotationsValidator />
+<div class="container-fluid p-0">
+    <div class="row row-cols-1 row-cols-md-2">
+    <div class="col">
+    <div class="@($"form-group {MainTheme}")">
+    <label>@Localizer[ResourceLanguage.Obiettivo]</label>
+    <InputText @bind-Value="CreateObiettivoForm.Titolo" placeholder="@Localizer[ResourceLanguage.PlaceholderObiettivo]" />
+    </div>
+    </div>
+    </div>
+</div>
+
+</EditForm>
+    }
+</OffCanvas>
+
+
+@* <InputText @bind-Value="Input.Email"
+           id="Input.Email"
+           class="form-control"
+           autocomplete="username"
+           aria-required="true"
+           placeholder="name@example.com" />
+<ValidationMessage For="() => Input.Email"
+                   class="text-danger" /> *@

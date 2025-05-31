@@ -4,6 +4,5 @@
 <AssistantMessage Action="AssistantMessageEnum.About" CssClass="@($"{WhoIs} {ShowMessages}")" />
 <img class="assistente" src="@($"/css/images/Assistenti/{IsSelectedClass}-{AssistenteNome}")" @onclick="PadOnAssistant"/>
 
-<OffCanvas @ref="_offCanvas">
-    <AddObiettivo />
-</OffCanvas>
+
+    <AddObiettivo @ref="_addObiettivo"/>
