@@ -4,7 +4,7 @@ using Microsoft.Extensions.Localization;
 
 namespace Feel.Shared.Helper
 {
-    public static class TraduzioneCategorie
+    public static class HelperTraduzione
     {
         public static string Traduzione(Category obj, IStringLocalizer<ResourceLanguage> localizer)
         {

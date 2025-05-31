@@ -1,16 +1,12 @@
-﻿<OffCanvas @ref="_offCanvas">
+﻿@using Feel.Components.Form
+<OffCanvas @ref="_offCanvas">
     @if(CreateObiettivoForm is not null)
     {        
     <EditForm Model="@CreateObiettivoForm" OnValidSubmit="Save">
     <DataAnnotationsValidator />
 <div class="container-fluid p-0">
     <div class="row row-cols-1 row-cols-md-2">
-    <div class="col">
-    <div class="@($"form-group {MainTheme}")">
-    <label>@Localizer[ResourceLanguage.Obiettivo]</label>
-    <InputText @bind-Value="CreateObiettivoForm.Titolo" placeholder="@Localizer[ResourceLanguage.PlaceholderObiettivo]" />
-    </div>
-    </div>
+    <FormText LabelTitle="@Localizer[ResourceLanguage.Obiettivo]" Placeholder="@Localizer[ResourceLanguage.PlaceholderObiettivo]" @bind-Value="CreateObiettivoForm.Titolo"/>
     </div>
 </div>
 

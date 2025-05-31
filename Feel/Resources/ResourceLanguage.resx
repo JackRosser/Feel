@@ -219,4 +219,7 @@
   <data name="PlaceholderObiettivo" xml:space="preserve">
     <value>Dai un titolo al tuo obiettivo...</value>
   </data>
+  <data name="Seleziona" xml:space="preserve">
+    <value>Seleziona</value>
+  </data>
 </root>

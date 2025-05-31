@@ -331,6 +331,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Seleziona.
+        /// </summary>
+        public static string Seleziona {
+            get {
+                return ResourceManager.GetString("Seleziona", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sport.
         /// </summary>
         public static string Sport {

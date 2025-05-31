@@ -1,0 +1,12 @@
+﻿@inherits MainClassBase
+
+@{
+    var IdGenerator = Random.Shared.Next(0, 9999);
+    var inputId = $"Id-{IdGenerator}";
+}
+<div class="col">
+    <div class="@($"form-group {MainTheme}")">
+        <label for="@inputId">@LabelTitle</label>
+        <InputText Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" placeholder="@Placeholder" id="@inputId" />
+    </div>
+    </div>

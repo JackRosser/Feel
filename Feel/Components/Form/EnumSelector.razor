@@ -1,0 +1,22 @@
+﻿@typeparam TEnum
+
+
+<label for="@Id" class="form-label">@Label</label>
+<InputSelect id="@Id" class="form-select" Value="Value" ValueChanged="ValueChanged" ValueExpression="@ValueExpression">
+    @if (ShowDefaultOption)
+    {
+        <option value="">@(DefaultOptionText ?? Localizer[ResourceLanguage.Seleziona])</option>
+    }
+    @foreach (var value in EnumValues)
+    {
+        string label = typeof(TEnum) switch
+        {
+            var t when t == typeof(Category) => HelperTraduzione.Traduzione((Category)(object)value, Localizer),
+            _ => value?.ToString() ?? ""
+        };
+
+        <option value="@value">@label</option>
+    }
+
+
+</InputSelect>
