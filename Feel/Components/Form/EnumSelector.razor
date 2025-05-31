@@ -1,11 +1,22 @@
 ﻿@typeparam TEnum
+@inherits FormBase
 
 
-<label for="@Id" class="form-label">@Label</label>
-<InputSelect id="@Id" class="form-select" Value="Value" ValueChanged="ValueChanged" ValueExpression="@ValueExpression">
+<div class="@($"col-{Col} col-md-{ColMd}")">
+    <div class="@($"form-group {MainTheme}")">
+        @if(!string.IsNullOrWhiteSpace(Info))
+        {
+            <label>@LabelTitle <span><Icon Element="@Icons.Info" Color="@($"{MainTheme}")" /></span></label>
+            
+        }
+        else
+        {            
+        <label for="@InputId">@LabelTitle</label>
+        }
+<InputSelect id="@InputId" Value="Value" ValueChanged="ValueChanged" ValueExpression="@ValueExpression">
     @if (ShowDefaultOption)
     {
-        <option value="">@(DefaultOptionText ?? Localizer[ResourceLanguage.Seleziona])</option>
+    <option selected disabled value="" style="color: rgba(255, 255, 255, 0.7)">@(DefaultOptionText ?? Localizer[ResourceLanguage.Seleziona])</option>
     }
     @foreach (var value in EnumValues)
     {
@@ -17,6 +28,7 @@
 
         <option value="@value">@label</option>
     }
-
-
 </InputSelect>
+    </div>
+    @ChildContent
+</div>

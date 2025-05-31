@@ -220,6 +220,45 @@
     <value>Dai un titolo al tuo obiettivo...</value>
   </data>
   <data name="Seleziona" xml:space="preserve">
-    <value>Seleziona</value>
+    <value>--Seleziona--</value>
+  </data>
+  <data name="Categoria" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="Descrizione" xml:space="preserve">
+    <value>Descrizione (Opzionale)</value>
+  </data>
+  <data name="PlaceholderDescrizione" xml:space="preserve">
+    <value>Descrivi il tuo obiettivo...</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="PlaceholderTarget" xml:space="preserve">
+    <value>Definisci un target...</value>
+  </data>
+  <data name="InserisciTarget" xml:space="preserve">
+    <value>Inserisci un target</value>
+  </data>
+  <data name="CheckPeriodico" xml:space="preserve">
+    <value>Check periodico</value>
+  </data>
+  <data name="InfoTarget" xml:space="preserve">
+    <value>Definisci un valore numerico che vuoi raggiungere in base all'obiettivo prefissato. Ad esempio, se vuoi risparmiare 1.000 euro, il Target che dovrai scrivere sarà 1.000, e quando lo raggiungerai, l'obiettivo sarà classificato come Completato. Se invece vuoi correre 10km ogni giorno per una settimana, fissa il tuo Target a 7 e spunta Check Periodico, così da aggiungere automaticamente un +1 ogni volta che eseguirai un check.</value>
+  </data>
+  <data name="InfoCheck" xml:space="preserve">
+    <value>Stabilisci se questo obiettivo sarà aggiornato attraverso check periodici. Ad esempio, se il tuo obiettivo è leggere 10 libri, fissa il tuo Target a 10 e spunta Check Periodico così da eseguire un +1 ad ogni check.</value>
+  </data>
+  <data name="Chiudi" xml:space="preserve">
+    <value>Chiudi</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Salva" xml:space="preserve">
+    <value>Salva</value>
+  </data>
+  <data name="Annulla" xml:space="preserve">
+    <value>Annulla</value>
   </data>
 </root>

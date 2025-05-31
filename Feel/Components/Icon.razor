@@ -1,14 +1,16 @@
-﻿@if(Pointer)
-{  
-    <span class="text-@Color" style="cursor: pointer;"><i class="@Element"></i></span>
+﻿@if(!string.IsNullOrWhiteSpace(ToolTip)) {
+    <ToolTip Text="@ToolTip">
+    <span class="text-@Color" @onclick="Action"><i class="@Element"></i></span>
+    </ToolTip>
 }
-else
-{
-    <span class="text-@Color"><i class="@Element"></i></span>
+else {
+<span class="text-@Color" @onclick="Action"><i class="@Element"></i></span>
 }
 
 @code {
+    
     [Parameter, EditorRequired] public string? Element { get; set; }
     [Parameter] public string Color { get; set; } = "primary";
-    [Parameter] public bool Pointer { get; set; } = false;
+    [Parameter] public EventCallback Action { get; set; }
+    [Parameter] public string? ToolTip { get; set; }
 }

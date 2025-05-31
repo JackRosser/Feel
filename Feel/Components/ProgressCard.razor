@@ -21,7 +21,7 @@
             <span>@obiettivo.Titolo</span>
             <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@obiettivo.Scadenza</strong></span>
             </div>
-            <div class="col-2 go-to-details" @onclick="_offCanvas.Open">
+            <div class="col-2 go-to-details">
                 <span class="@($"text-{MainTheme}-primary")">></span>
             </div>
         </div>
@@ -30,9 +30,7 @@
 
         </div>
     </div>
-    
-
-        <OffCanvas @ref="_offCanvas" />
+   
 
 }
 

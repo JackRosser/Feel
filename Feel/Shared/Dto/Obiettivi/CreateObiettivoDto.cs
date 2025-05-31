@@ -8,7 +8,7 @@ namespace Feel.Shared.Dto.Obiettivi
     {
         public int Id { get; set; }
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciCategoria")]
-        public Category Categoria { get; set; }
+        public Category? Categoria { get; set; }
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciTitolo")]
         [StringLength(20, ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "MassimoVentiCaratteri")]
         public string? Titolo { get; set; }
@@ -17,8 +17,8 @@ namespace Feel.Shared.Dto.Obiettivi
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciData")]
         public DateOnly? Scadenza { get; set; }
         public bool Completed { get; set; } = false;
-        [Required]
+        [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciTarget")]
         public int? Target { get; set; }
-        public bool CheckMark { get; set; }
+        public bool CheckMark { get; set; } = false;
     }
 }

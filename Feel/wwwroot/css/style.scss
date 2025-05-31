@@ -1,12 +1,19 @@
 ﻿@import "../lib/bootstrap/scss/functions";
 @import "../lib/bootstrap/scss/_variables.scss";
 
-// Breakpoint SCSS standard
+// Breakpoints custom
 $mobile: "max-width: 576px";
 $tablet: "max-width: 991px";
 $from-tablet: "min-width: 577px";
 $laptop: "max-width: 1199px";
 $desktop: "min-width: 1200px";
+
+//Breakpoints BS
+$bs-sm: "min-width: 576px";
+$bs-md: "min-width: 768px";
+$bs-lg: "min-width: 992px";
+$bs-xl: "min-width: 1200px";
+$bs-xxl: "min-width: 1400px";
 
 
 // Var utility
@@ -20,8 +27,8 @@ $light-gray: #C8C3B9;
 $caldo-primary: #7E2A0C;
 $caldo-light: #F6DCA1;
 $caldo-sfondo: #F8D9A8;
-$caldo-icone: #7E2A0C;
-// OFFCANVAS
+$caldo-submit: #F6DCA1;
+// POPUP (EX OFFCANVAS)
 $caldo-offcanvas-bg: #7E2A0C;
 // PROGRESS CARD
 $caldo-progress-card-sfondo: #E2AE5E;
@@ -32,7 +39,10 @@ $caldo-messaggi-testo: #fff;
 $caldo-label: #F6DCA1;
 $caldo-input-border: #F6DCA1;
 $caldo-input-text: #fff;
-
+$caldo-input-text-disabled: rgba(255, 255, 255, 0.7);
+// TOOLTIP
+$caldo-tooltip-bg: #F6DCA1;
+$caldo-tooltip-text: #7E2A0C;
 
 // Merge nel theme-colors dei nuovi colori
 $theme-colors: map-merge( $theme-colors, ( 
@@ -41,7 +51,6 @@ $theme-colors: map-merge( $theme-colors, (
     // TEMA CALDO
     "caldo-primary": $caldo-primary,
     "caldo-sfondo": $caldo-sfondo, 
-    "caldo-icone": $caldo-icone,
     "caldo-offcanvas-bg": $caldo-offcanvas-bg,
     "caldo-light": $caldo-light,
     "caldo-progress-card-sfondo": $caldo-progress-card-sfondo,
@@ -49,7 +58,11 @@ $theme-colors: map-merge( $theme-colors, (
     "caldo-messaggi-testo": $caldo-messaggi-testo,
     "caldo-label": $caldo-label,
     "caldo-input-border": $caldo-input-border,
-    "caldo-input-text": $caldo-input-text
+    "caldo-input-text": $caldo-input-text,
+    "caldo-input-text-disabled": $caldo-input-text-disabled,
+    "caldo-submit": $caldo-submit,
+    "caldo-tooltip-bg": $caldo-tooltip-bg,
+    "caldo-tooltip-text": $caldo-tooltip-text
 ) );
 
 
@@ -68,17 +81,31 @@ h1:focus {
 }
 
 
+// Togliere le freccette da InputNumber
+/* Chrome, Safari, Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 
 
 // qui importo i miei partials
 @import "partials/_mixins.scss";
+@import "partials/_presets.scss";
 @import "partials/_scrollbar.scss";
 @import "partials/_fonts.scss";
 @import "partials/_mainLayout.scss";
 @import "partials/_progressCard.scss";
-@import "partials/_offcanvas.scss";
 @import "partials/_assistente.scss";
 @import "partials/_form.scss";
+@import "partials/_tooltip.scss";
 
     @import "../lib/bootstrap/scss/mixins";
     @import "../lib/bootstrap/scss/bootstrap";

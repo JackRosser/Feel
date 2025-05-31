@@ -1,7 +1,7 @@
 ﻿@inherits FormBase
 
 <div class="@($"col-{Col} col-md-{ColMd}")">
-    <div class="@($"form-group {MainTheme}")">
+    <div class="@($"form-group-check {MainTheme}")">
         @if (!string.IsNullOrWhiteSpace(Info))
         {
             <label>@LabelTitle <span><Icon Element="@Icons.Info" Color="@($"{MainTheme}")" ToolTip="@Info" /></span></label>
@@ -11,6 +11,10 @@
         {
             <label for="@InputId">@LabelTitle</label>
         }
-        <InputText Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" placeholder="@Placeholder" id="@InputId" />
+        <div class="row">
+            <div class="col-2">
+        <InputCheckbox class="@($"cm-toggle {MainTheme}-label")" Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" id="@InputId" />
+            </div>
+        </div>
     </div>
 </div>

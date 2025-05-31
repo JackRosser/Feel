@@ -6,7 +6,6 @@ namespace Feel.Components.Assistant
     {
         [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
         [CascadingParameter(Name = "Assistente")] public string? AssistenteNome { get; set; }
-        private AddObiettivo? _addObiettivo { get; set; }
         private bool IsSelected { get; set; } = false;
         private string IsSelectedClass => IsSelected ? "pancia" : "fronte";
         private string ShowMessages => IsSelected ? "show" : string.Empty;
@@ -21,10 +20,10 @@ namespace Feel.Components.Assistant
             IsSelected = !IsSelected;
         }
 
-        private void AddObiettivoPopUp()
+        private void SitAssistant()
         {
             IsSelected = false;
-            _addObiettivo?.OpenAddObiettivo();
         }
+
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Feel.Shared.Dto.Obiettivi;
+using Microsoft.AspNetCore.Components;
 
 namespace Feel.Components
 {
@@ -6,7 +7,10 @@ namespace Feel.Components
     {
         [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
 
+
         protected CancellationTokenSource Ct = new();
+
+        protected FormModel EditModel { get; set; } = new();
 
         public void Dispose()
         {
@@ -14,8 +18,11 @@ namespace Feel.Components
             Ct.Dispose();
         }
 
+        public class FormModel
+        {
+            public CreateObiettivoDto? CreateObiettivoForm { get; set; }
 
-
+        }
     }
 }
 

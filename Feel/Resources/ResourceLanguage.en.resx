@@ -220,6 +220,45 @@
     <value>Give your goal a title...</value>
   </data>
   <data name="Seleziona" xml:space="preserve">
-    <value>Select</value>
+    <value>--Select--</value>
+  </data>
+  <data name="Categoria" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Descrizione" xml:space="preserve">
+    <value>Description (Optional)</value>
+  </data>
+  <data name="PlaceholderDescrizione" xml:space="preserve">
+    <value>Describe your goal...</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>Target</value>
+  </data>
+  <data name="PlaceholderTarget" xml:space="preserve">
+    <value>Define a target...</value>
+  </data>
+  <data name="InserisciTarget" xml:space="preserve">
+    <value>Insert a target</value>
+  </data>
+  <data name="CheckPeriodico" xml:space="preserve">
+    <value>Periodic check</value>
+  </data>
+  <data name="InfoTarget" xml:space="preserve">
+    <value>Define a numerical value that you want to reach based on the goal you set. For example, if you want to save 1,000 euros, the Target you will have to write will be 1,000, and when you reach it, the goal will be classified as Completed. If instead you want to run 10km every day for a week, set your Target to 7 and check Periodic Check, so as to automatically add a +1 every time you perform a check.</value>
+  </data>
+  <data name="InfoCheck" xml:space="preserve">
+    <value>Determine whether this goal will be updated through periodic checks. For example, if your goal is to read 10 books, set your Target to 10 and check Periodic Check so that you perform a +1 with each check.</value>
+  </data>
+  <data name="Chiudi" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
+  <data name="Salva" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Annulla" xml:space="preserve">
+    <value>Cancel</value>
   </data>
 </root>
