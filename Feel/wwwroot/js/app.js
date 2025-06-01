@@ -8,4 +8,14 @@ window.closeModalById = (modalId) => {
     }
 };
 
+// APRE IL MODAL NEL DIV CHE DECIDO IO COSI DA EVITARE CHE SI APRA IN ALTRI POSTI
+
+window.moveModalToContainer = (modalId, containerId = 'modal-container') => {
+    const modal = document.getElementById(modalId);
+    const container = document.getElementById(containerId);
+    if (modal && container && !container.contains(modal)) {
+        container.appendChild(modal);
+    }
+};
+
 

@@ -1,12 +1,12 @@
 ﻿@inherits MainClassBase
 
-@if (UpdateForm is not null)
+@if (EditModel is not null)
     {       
-<FormLayout UpdateModel="@UpdateForm" OnSubmit="Save">
+<FormLayout UpdateModel="@EditModel" OnSubmit="Save">
             <FormNumberInteger LabelTitle="@Localizer[ResourceLanguage.Aggiornamento]"
                       Placeholder="@Localizer[ResourceLanguage.InserisciValore]"
                       Info="@Localizer[ResourceLanguage.AvvicinatiTarget]"
-                      @bind-Value="UpdateForm.Progressivo">
+                      @bind-Value="EditModel.Importo">
             </FormNumberInteger>
 </FormLayout>   
     }

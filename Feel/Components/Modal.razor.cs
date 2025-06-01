@@ -2,13 +2,14 @@
 using Feel.Shared.Enum;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using Microsoft.JSInterop;
 
 namespace Feel.Components
 {
-    public partial class Modal(IStringLocalizer<ResourceLanguage> Localizer)
+    public partial class Modal(IStringLocalizer<ResourceLanguage> Localizer) : MainClassBase
     {
         [CascadingParameter(Name = "ModalId")] public string? ModalId { get; set; }
-        [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
+
         [Parameter] public string? Title { get; set; }
         [Parameter, EditorRequired] public ModalType ModalType { get; set; }
         [Parameter] public bool IsSubmit { get; set; } = false;
@@ -30,6 +31,13 @@ namespace Feel.Components
 
         }
 
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if (firstRender)
+            {
+                await JS.InvokeVoidAsync("moveModalToContainer", ModalId);
+            }
+        }
 
 
 

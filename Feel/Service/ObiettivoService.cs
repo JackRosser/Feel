@@ -36,23 +36,10 @@ namespace Feel.Service
             await service.CreateAsync<ObiettivoDto>(Key, DefaultFactory, dto);
         }
 
-        public async Task UpdateObiettivoAsync(UpdateObiettivoDto obiettivo)
+        public async Task UpdateObiettivoAsync(ObiettivoDto obiettivo)
         {
-            var dto = new ObiettivoDto
-            {
-                Id = obiettivo.Id,
-                Categoria = obiettivo.Categoria,
-                Titolo = obiettivo.Titolo,
-                Descrizione = obiettivo.Descrizione,
-                DataCreazione = obiettivo.DataCreazione,
-                Scadenza = obiettivo.Scadenza,
-                Completed = obiettivo.Completed,
-                Target = obiettivo.Target,
-                CheckMark = obiettivo.CheckMark,
-                Progressivo = obiettivo.Progressivo.Value
-            };
 
-            await service.UpdateAsync<ObiettivoDto>(Key, DefaultFactory, dto);
+            await service.UpdateAsync<ObiettivoDto>(Key, DefaultFactory, obiettivo);
         }
 
         public async Task DeleteObiettivoAsync(int id)
