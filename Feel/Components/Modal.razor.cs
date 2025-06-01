@@ -17,6 +17,7 @@ namespace Feel.Components
         [Parameter] public string? ActionClass { get; set; }
         [Parameter] public string? CssClass { get; set; }
         [Parameter] public string? ActionText { get; set; }
+
         private string? TypeButton { get; set; }
 
         protected override void OnParametersSet()

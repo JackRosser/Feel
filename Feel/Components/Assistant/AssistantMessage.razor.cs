@@ -12,7 +12,18 @@ namespace Feel.Components.Assistant
         [Parameter] public string? CssClass { get; set; }
         [Parameter] public EventCallback SitAssistant { get; set; }
         [Parameter, EditorRequired] public ModalType AssistantChoice { get; set; }
+        private bool EndOperations { get; set; } = false;
         private AddObiettivo? _addObiettivo;
+
+        protected override void OnParametersSet()
+        {
+            if (EndOperations)
+            {
+                EndOperations = false;
+                InvokeAsync(StateHasChanged);
+            }
+        }
+
         private void Action()
         {
             SitAssistant.InvokeAsync();

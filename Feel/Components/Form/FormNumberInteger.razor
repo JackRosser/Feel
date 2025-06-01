@@ -13,4 +13,5 @@
         }
         <InputNumber Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" id="@InputId" placeholder="@Placeholder" />
     </div>
+    <ValidationMessage For="ValueExpression" class="@($"error-message {MainTheme}")" />
 </div>

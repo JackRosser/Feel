@@ -6,7 +6,7 @@ namespace Feel.Shared.Helper
 {
     public static class HelperTraduzione
     {
-        public static string Traduzione(Category obj, IStringLocalizer<ResourceLanguage> localizer)
+        public static string Traduzione(Category? obj, IStringLocalizer<ResourceLanguage> localizer)
         {
             return obj switch
             {

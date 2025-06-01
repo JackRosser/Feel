@@ -43,7 +43,8 @@ $caldo-input-text-disabled: rgba(255, 255, 255, 0.7);
 // TOOLTIP
 $caldo-tooltip-bg: #F6DCA1;
 $caldo-tooltip-text: #7E2A0C;
-
+//VALIDAZIONE
+$caldo-error-text: #F6DCA1;
 // Merge nel theme-colors dei nuovi colori
 $theme-colors: map-merge( $theme-colors, ( 
     "light-gray": $light-gray,
@@ -62,7 +63,8 @@ $theme-colors: map-merge( $theme-colors, (
     "caldo-input-text-disabled": $caldo-input-text-disabled,
     "caldo-submit": $caldo-submit,
     "caldo-tooltip-bg": $caldo-tooltip-bg,
-    "caldo-tooltip-text": $caldo-tooltip-text
+    "caldo-tooltip-text": $caldo-tooltip-text,
+    "caldo-error-text": $caldo-error-text,
 ) );
 
 

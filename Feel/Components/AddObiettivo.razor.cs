@@ -1,16 +1,30 @@
-﻿namespace Feel.Components
+﻿using Microsoft.AspNetCore.Components;
+
+namespace Feel.Components
 {
     public partial class AddObiettivo : MainClassBase
     {
+        private string? testTitolo;
+
+        [Parameter, EditorRequired] public bool EndOperationsToggle { get; set; }
         public void StartForm()
         {
-            EditModel.CreateObiettivoForm = new();
+            if (EditModel.CreateObiettivoForm is null)
+            {
+                EditModel.CreateObiettivoForm = new();
+                EditModel.CreateObiettivoForm.DataCreazione = DateOnly.FromDateTime(DateTime.Now);
+            }
             InvokeAsync(StateHasChanged);
         }
         private async Task Save()
         {
-            await Task.Delay(1000);
-            Console.WriteLine("Obiettivo salvato con successo!");
+            if (EditModel.CreateObiettivoForm is null) return;
+
+            await proxyObiettivi.SendRequestAsync(a => a.CreateNewObiettivoAsync(EditModel.CreateObiettivoForm));
+
+            EndOperationsToggle = true;
+            await GetAllObiettivi();
         }
+
     }
 }

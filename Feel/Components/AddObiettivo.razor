@@ -2,16 +2,13 @@
 
     @if(EditModel.CreateObiettivoForm is not null)
     {       
-<FormLayout Model="@EditModel" OnSubmit="Save">
-          <FormText LabelTitle="@Localizer[ResourceLanguage.Obiettivo]"
-          Placeholder="@Localizer[ResourceLanguage.PlaceholderObiettivo]"
-          @bind-Value="EditModel.CreateObiettivoForm.Titolo">
-          <ValidationMessage For="() => EditModel.CreateObiettivoForm.Titolo" />
-          </FormText>
-
+<FormLayout Model="@EditModel.CreateObiettivoForm" OnSubmit="Save">
+        <FormText LabelTitle="@Localizer[ResourceLanguage.Obiettivo]"
+                  Placeholder="@Localizer[ResourceLanguage.PlaceholderObiettivo]"
+                  @bind-Value="EditModel.CreateObiettivoForm.Titolo" />
+        
             <EnumSelector LabelTitle="@Localizer[ResourceLanguage.Categoria]"
-                      @bind-Value="EditModel.CreateObiettivoForm.Categoria" TEnum="Category?">
-                    <ValidationMessage For="() => EditModel.CreateObiettivoForm.Categoria"/>
+                      @bind-Value="EditModel.CreateObiettivoForm.Categoria" TEnum="Category?">                   
             </EnumSelector>
 
             <FormText LabelTitle="@Localizer[ResourceLanguage.Descrizione]"
@@ -21,13 +18,11 @@
 
             <FormDate LabelTitle="@Localizer[ResourceLanguage.Scadenza]"
                       @bind-Value="EditModel.CreateObiettivoForm.Scadenza">
-                <ValidationMessage For="() => EditModel.CreateObiettivoForm.Scadenza" />
             </FormDate>
 
             <FormNumberInteger LabelTitle="@Localizer[ResourceLanguage.Target]"
                       Placeholder="@Localizer[ResourceLanguage.PlaceholderTarget]"
                       @bind-Value="EditModel.CreateObiettivoForm.Target" Info="@Localizer[ResourceLanguage.InfoTarget]">
-                <ValidationMessage For="() => EditModel.CreateObiettivoForm.Target" />
             </FormNumberInteger>
 
             <FormCheck LabelTitle="@Localizer[ResourceLanguage.CheckPeriodico]"

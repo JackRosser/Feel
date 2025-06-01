@@ -27,6 +27,10 @@
         background-color: transparent;
         color: $input-text;
 
+        &::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+
         &::placeholder {
             color: $text-disabled;
         }
@@ -68,7 +72,6 @@
             background-color: $label-bg;
         }
     }
-
 }
 
 @mixin check-form($label-text) {
@@ -111,3 +114,24 @@
         }
     }
 }
+
+//VALIDAZIONE
+
+@mixin error-message($color) {
+    color: $color;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+
+    &::before {
+        content: "⚠️ ";
+        margin-right: 0.2rem;
+    }
+}
+
+.error-message {
+    &.caldo {
+    @include error-message($caldo-error-text);
+    }
+}
+

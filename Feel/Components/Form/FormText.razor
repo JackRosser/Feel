@@ -11,6 +11,8 @@
         {
             <label for="@InputId">@LabelTitle</label>
         }
-        <InputText Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" placeholder="@Placeholder" id="@InputId" />
+        <InputText Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" id="@InputId" placeholder="@Placeholder" />
     </div>
+    <ValidationMessage For="ValueExpression" class="@($"error-message {MainTheme}")" />
 </div>
+

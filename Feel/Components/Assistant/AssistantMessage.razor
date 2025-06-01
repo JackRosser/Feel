@@ -1,10 +1,13 @@
 ﻿<div @onclick="Action">
 
-@if(AssistantChoice is ModalType.AggiungiObiettivo)
-{   
-<Modal ActionClass="@ActionClass" CssClass="@CssClass" ActionText="@ActionText" ModalId="@ModalId" ModalType="AssistantChoice">
-<AddObiettivo @ref="_addObiettivo"/>
-</Modal>
+    @if(AssistantChoice is ModalType.AggiungiObiettivo)
+    {
+        @if(!EndOperations)
+        {           
+        <Modal ActionClass="@ActionClass" CssClass="@CssClass" ActionText="@ActionText" ModalId="@ModalId" ModalType="AssistantChoice">
+        <AddObiettivo @ref="_addObiettivo" EndOperationsToggle="EndOperations"/>
+        </Modal>
+        }
 }
 </div>
 
