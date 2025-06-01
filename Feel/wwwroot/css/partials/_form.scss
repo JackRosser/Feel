@@ -104,13 +104,13 @@
 
     & .form-group {
         &.caldo {
-            @include theme-settings($caldo-input-border, $caldo-label, $caldo-offcanvas-bg, $caldo-input-text, $caldo-input-text-disabled);
+            @include theme-settings($caldo-feel-light, $caldo-feel-light, $caldo-feel-primary, $caldo-feel-ultra-light, $caldo-text-disabled);
         }
     }
 
     & .form-group-check {
         &.caldo {
-            @include check-form($caldo-label);
+            @include check-form($caldo-feel-light);
         }
     }
 }
@@ -131,7 +131,7 @@
 
 .error-message {
     &.caldo {
-    @include error-message($caldo-error-text);
+    @include error-message($caldo-feel-error);
     }
 }
 

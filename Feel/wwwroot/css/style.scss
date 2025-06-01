@@ -24,47 +24,29 @@ $acqua: #B4CDBE;
 $light-gray: #C8C3B9;
 
 // TEMA CALDO
-$caldo-primary: #7E2A0C;
-$caldo-light: #F6DCA1;
-$caldo-sfondo: #F8D9A8;
-$caldo-submit: #F6DCA1;
-// POPUP (EX OFFCANVAS)
-$caldo-offcanvas-bg: #7E2A0C;
-// PROGRESS CARD
-$caldo-progress-card-sfondo: #E2AE5E;
-// MESSAGGI ASSISTENTE
-$caldo-messaggi-bg: #B5813C;
-$caldo-messaggi-testo: #fff;
-// FORM
-$caldo-label: #F6DCA1;
-$caldo-input-border: #F6DCA1;
-$caldo-input-text: #fff;
-$caldo-input-text-disabled: rgba(255, 255, 255, 0.7);
-// TOOLTIP
-$caldo-tooltip-bg: #F6DCA1;
-$caldo-tooltip-text: #7E2A0C;
-//VALIDAZIONE
-$caldo-error-text: #F6DCA1;
+
+$caldo-feel-primary: #7E2A0C;
+$caldo-feel-secondary: #B5813C;
+$caldo-feel-light: #F6DCA1;
+$caldo-feel-ultra-light: #fff;
+$caldo-feel-gray: #6c757d;
+$caldo-feel-main-bg: #F8D9A8;
+$caldo-text-disabled: rgba($caldo-feel-ultra-light, 0.7);
+$caldo-feel-error: #F6DCA1;
+
+
 // Merge nel theme-colors dei nuovi colori
 $theme-colors: map-merge( $theme-colors, ( 
-    "light-gray": $light-gray,
-    "acqua": $acqua, 
+
     // TEMA CALDO
-    "caldo-primary": $caldo-primary,
-    "caldo-sfondo": $caldo-sfondo, 
-    "caldo-offcanvas-bg": $caldo-offcanvas-bg,
-    "caldo-light": $caldo-light,
-    "caldo-progress-card-sfondo": $caldo-progress-card-sfondo,
-    "caldo-messaggi-bg": $caldo-messaggi-bg,
-    "caldo-messaggi-testo": $caldo-messaggi-testo,
-    "caldo-label": $caldo-label,
-    "caldo-input-border": $caldo-input-border,
-    "caldo-input-text": $caldo-input-text,
-    "caldo-input-text-disabled": $caldo-input-text-disabled,
-    "caldo-submit": $caldo-submit,
-    "caldo-tooltip-bg": $caldo-tooltip-bg,
-    "caldo-tooltip-text": $caldo-tooltip-text,
-    "caldo-error-text": $caldo-error-text,
+    "caldo-feel-primary": $caldo-feel-primary,
+    "caldo-feel-secondary": $caldo-feel-secondary,
+    "caldo-feel-ligh": $caldo-feel-light,
+    "caldo-feel-gray": $caldo-feel-gray,
+    "caldo-feel-main-bg": $caldo-feel-main-bg,
+    "caldo-text-disabled": $caldo-text-disabled,
+    "caldo-feel-error": $caldo-feel-error
+
 ) );
 
 

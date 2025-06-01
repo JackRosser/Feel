@@ -32,7 +32,7 @@
 
 .tooltip-container {
     &.caldo {
-        @include tooltip($caldo-tooltip-bg, $caldo-tooltip-text);
+        @include tooltip($caldo-feel-light, $caldo-feel-primary);
     }
 }
 

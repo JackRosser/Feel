@@ -6,7 +6,7 @@ namespace Feel.Components.Form
     {
         [Parameter, EditorRequired] public string? LabelTitle { get; set; }
         [Parameter] public int Col { get; set; } = 12;
-        [Parameter] public int ColMd { get; set; } = 6;
+        [Parameter] public int ColMd { get; set; } = 12;
         [Parameter] public RenderFragment? ChildContent { get; set; }
         [Parameter] public string? Info { get; set; }
         [Parameter] public string? Placeholder { get; set; }
