@@ -6,7 +6,6 @@ namespace Feel.Shared.Dto.Obiettivi
 {
     public class CreateObiettivoDto
     {
-        public int Id { get; set; }
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciCategoria")]
         public Category? Categoria { get; set; }
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciTitolo")]

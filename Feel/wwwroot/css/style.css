@@ -281,8 +281,6 @@ main .main-section {
 }
 .progress-bar-section .progress-bar-bottle-container .progress-card .bottle .bottle-fill {
   width: 100%;
-  height: 50%;
-  background-color: red;
   opacity: 0.9;
 }
 .progress-bar-section .progress-bar-bottle-container .progress-card .percentuale {

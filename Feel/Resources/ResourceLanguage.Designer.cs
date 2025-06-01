@@ -61,6 +61,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aggiornamento.
+        /// </summary>
+        public static string Aggiornamento {
+            get {
+                return ResourceManager.GetString("Aggiornamento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Alimentazione.
         /// </summary>
         public static string Alimentazione {
@@ -102,6 +111,15 @@ namespace Feel.Resources {
         public static string Auto {
             get {
                 return ResourceManager.GetString("Auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci un importo o un valore numerico inerente al tuo obiettivo per avvicinarti o raggiungere il Target..
+        /// </summary>
+        public static string AvvicinatiTarget {
+            get {
+                return ResourceManager.GetString("AvvicinatiTarget", resourceCulture);
             }
         }
         
@@ -255,6 +273,15 @@ namespace Feel.Resources {
         public static string InserisciTitolo {
             get {
                 return ResourceManager.GetString("InserisciTitolo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci un valore....
+        /// </summary>
+        public static string InserisciValore {
+            get {
+                return ResourceManager.GetString("InserisciValore", resourceCulture);
             }
         }
         

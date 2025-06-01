@@ -20,5 +20,7 @@ namespace Feel.Shared.Dto.Obiettivi
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciTarget")]
         public int? Target { get; set; }
         public bool CheckMark { get; set; } = false;
+        [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciValore")]
+        public int? Progressivo { get; set; }
     }
 }

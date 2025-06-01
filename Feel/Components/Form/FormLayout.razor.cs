@@ -10,7 +10,8 @@ namespace Feel.Components.Form
     {
         [CascadingParameter(Name = "ModalId")] public string? ModalId { get; set; }
         [Parameter, EditorRequired] public EventCallback OnSubmit { get; set; }
-        [Parameter, EditorRequired] public CreateObiettivoDto? Model { get; set; }
+        [Parameter] public CreateObiettivoDto? CreateModel { get; set; }
+        [Parameter] public UpdateObiettivoDto? UpdateModel { get; set; }
         [Parameter] public RenderFragment? ChildContent { get; set; }
         [Parameter] public string SubmitText { get; set; } = Localizer[ResourceLanguage.Salva];
         [Parameter] public string CloseText { get; set; } = Localizer[ResourceLanguage.Annulla];

@@ -1,37 +1,28 @@
-﻿@inherits MainClassBase
+﻿@using Feel.Components.Obiettivo
+@inherits MainClassBase
 
-@if(Obiettivi is not null)
-{   
-    <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-2 gap-md-0">
-
-            @foreach(var obiettivo in Obiettivi)
-            {
-             <div class="col recap-box">
-                    <div class="row progress-bar-section">
-            <div class="col-3 progress-bar-bottle-container">
-                <div class="@($"progress-card bg-{MainTheme}-light")">
+<div class="col recap-box">
+    <div class="row progress-bar-section">
+        <div class="col-3 progress-bar-bottle-container">
+            <div class="@($"progress-card bg-{MainTheme}-light")">
                 <div class="bottle rounded-pill">
-                    <span class="bottle-fill"></span>
+                    <span class="bottle-fill" style="@($"height: {Obiettivo?.Percentage}%; background-color: {FillColor};")"></span>
                 </div>
-                <span class="@($"percentuale text-{MainTheme}-primary")">52%</span>
-                </div>
-            </div>
-            <div class="col-7 progress-bar-recap">
-            <span>@HelperTraduzione.Traduzione(obiettivo.Categoria, Localizer)</span>
-            <span>@obiettivo.Titolo</span>
-            <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@obiettivo.Scadenza</strong></span>
-            </div>
-            <div class="col-2 go-to-details">
-                <span class="@($"text-{MainTheme}-primary")">></span>
+                <span class="@($"percentuale text-{MainTheme}-primary")">@Obiettivo?.Percentage%</span>
             </div>
         </div>
-            </div>
-            }
-
+        <div class="col-7 progress-bar-recap">
+            <span>@HelperTraduzione.Traduzione(Obiettivo?.Categoria, Localizer)</span>
+            <span>@Obiettivo?.Titolo</span>
+            <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@Obiettivo?.Scadenza</strong></span>
         </div>
+        <CascadingValue Value="@($"id_{Obiettivo?.Id}")" Name="ModalId">
+            <CascadingValue Value="@Obiettivo?.Id" Name="ObiettivoId">
+        <Modal ModalType="ModalType.EditObiettivo" OnActionClick="Action">
+        <UpdateObiettivo @ref="_updateObiettivo"/>
+        </Modal>
+        </CascadingValue>
+        </CascadingValue>
     </div>
-   
-
-}
+</div>
 

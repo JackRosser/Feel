@@ -261,4 +261,13 @@
   <data name="Annulla" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="Aggiornamento" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="InserisciValore" xml:space="preserve">
+    <value>Add value...</value>
+  </data>
+  <data name="AvvicinatiTarget" xml:space="preserve">
+    <value>Enter an amount or numeric value related to your goal to get closer to or reach your Target.</value>
+  </data>
 </root>

@@ -1,6 +1,7 @@
 using Blazored.LocalStorage;
 using Feel;
 using Feel.Service;
+using Feel.Service.ChangeStateHelper;
 using Feel.Service.LocalStorage;
 using Feel.Service.Proxy;
 using Microsoft.AspNetCore.Components.Web;
@@ -33,6 +34,10 @@ builder.Services.AddScoped<LocalDbService>();
 // Services
 
 builder.Services.AddScoped<ObiettivoService>();
+
+// Services di ascolto
+
+builder.Services.AddScoped<ObiettiviStateService>();
 
 // Proxy
 builder.Services.AddScoped<ProxyObiettivi>();

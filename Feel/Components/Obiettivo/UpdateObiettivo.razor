@@ -1,0 +1,13 @@
+﻿@inherits MainClassBase
+
+@if (UpdateForm is not null)
+    {       
+<FormLayout UpdateModel="@UpdateForm" OnSubmit="Save">
+            <FormNumberInteger LabelTitle="@Localizer[ResourceLanguage.Aggiornamento]"
+                      Placeholder="@Localizer[ResourceLanguage.InserisciValore]"
+                      Info="@Localizer[ResourceLanguage.AvvicinatiTarget]"
+                      @bind-Value="UpdateForm.Progressivo">
+            </FormNumberInteger>
+</FormLayout>   
+    }
+

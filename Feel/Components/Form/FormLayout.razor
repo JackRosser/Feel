@@ -2,7 +2,9 @@
 
 @if (IsLoaded)
 {
-    <EditForm Model="@Model" OnValidSubmit="HandleValidSubmit">
+    @if(CreateModel is not null)
+    {       
+    <EditForm Model="@CreateModel" OnValidSubmit="HandleValidSubmit">
         <DataAnnotationsValidator />
         <div class="container-fluid p-0">
             <div class="row form-display">
@@ -14,4 +16,20 @@
             <button type="submit" class="@($"btn btn-{MainTheme}-feel-ligh text-{MainTheme}-feel-primary")">@SubmitText</button>
         </div>
     </EditForm>
+    }
+    else if (UpdateModel is not null)
+    {
+        <EditForm Model="@UpdateModel" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <div class="container-fluid p-0">
+                <div class="row form-display">
+                    @ChildContent
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@CloseText</button>
+                <button type="submit" class="@($"btn btn-{MainTheme}-feel-ligh text-{MainTheme}-feel-primary")">@SubmitText</button>
+            </div>
+        </EditForm>
+    }
 }
