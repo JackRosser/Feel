@@ -1,0 +1,34 @@
+﻿@typeparam TEnum
+@inherits FormBase
+
+
+<div class="@($"col-{Col} col-md-{ColMd}")">
+    <div class="@($"form-group {MainTheme}")">
+        @if(!string.IsNullOrWhiteSpace(Info))
+        {
+            <label>@LabelTitle <span><Icon Element="@Icons.Info" Color="@($"{MainTheme}")" /></span></label>
+            
+        }
+        else
+        {            
+        <label for="@InputId">@LabelTitle</label>
+        }
+<InputSelect id="@InputId" Value="Value" ValueChanged="ValueChanged" ValueExpression="@ValueExpression">
+    @if (ShowDefaultOption)
+    {
+    <option selected disabled value="" style="color: rgba(255, 255, 255, 0.7)">@(DefaultOptionText ?? Localizer[ResourceLanguage.Seleziona])</option>
+    }
+    @foreach (var value in EnumValues)
+    {
+        string label = typeof(TEnum) switch
+        {
+            var t when t == typeof(Category) => HelperTraduzione.Traduzione((Category)(object)value, Localizer),
+            _ => value?.ToString() ?? ""
+        };
+
+        <option value="@value">@label</option>
+    }
+</InputSelect>
+    </div>
+    <ValidationMessage For="ValueExpression" class="@($"error-message {MainTheme}")" />
+</div>

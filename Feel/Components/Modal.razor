@@ -1,0 +1,39 @@
+﻿<!-- Button trigger modal -->
+@if(ModalType is ModalType.Button)
+{
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
+        Launch demo modal
+    </button>
+}
+
+else if(ModalType is ModalType.AggiungiObiettivo || ModalType is ModalType.CambiaTema || ModalType is ModalType.InformazioniApp || ModalType is ModalType.AreaUtente)
+{
+
+    <div class="@($"assistente {MainTheme} assistente-{ActionClass} {CssClass} bg-{MainTheme}-feel-secondary")" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
+        <span class="@($"message-text text-{MainTheme}-feel-ultra-light")">@ActionText</span>
+    </div>
+}
+
+  
+<!-- Modal -->
+<div class="modal fade" id="@($"{ModalId}")" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="@($"modal-content bg-{MainTheme}-feel-primary")">
+                @if(!string.IsNullOrWhiteSpace(Title))
+                {                    
+            <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-feel-light="Close"></button>
+            </div>
+                }
+            <div class="modal-body">
+                @ChildContent
+            </div>
+            @* <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="@($"{TypeButton}")" class="btn btn-primary">@SubmitText</button>
+            </div> *@
+        </div>
+    </div>
+</div>
+

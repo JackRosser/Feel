@@ -1,10 +1,11 @@
-﻿
-@if(Model.Obiettivi is not null)
+﻿@inherits MainClassBase
+
+@if(Obiettivi is not null)
 {   
     <div class="container-fluid">
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-2 gap-md-0">
 
-            @foreach(var obiettivo in Model.Obiettivi)
+            @foreach(var obiettivo in Obiettivi)
             {
              <div class="col recap-box">
                     <div class="row progress-bar-section">
@@ -17,11 +18,11 @@
                 </div>
             </div>
             <div class="col-7 progress-bar-recap">
-            <span>@TraduzioneCategorie.Traduzione(obiettivo.Categoria, Localizer)</span>
+            <span>@HelperTraduzione.Traduzione(obiettivo.Categoria, Localizer)</span>
             <span>@obiettivo.Titolo</span>
             <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@obiettivo.Scadenza</strong></span>
             </div>
-            <div class="col-2 go-to-details" @onclick="_offCanvas.Open">
+            <div class="col-2 go-to-details">
                 <span class="@($"text-{MainTheme}-primary")">></span>
             </div>
         </div>
@@ -30,9 +31,7 @@
 
         </div>
     </div>
-    
-
-        <OffCanvas @ref="_offCanvas" />
+   
 
 }
 

@@ -1,0 +1,21 @@
+﻿@inherits FormBase
+
+<div class="@($"col-{Col} col-md-{ColMd}")">
+    <div class="@($"form-group-check {MainTheme}")">
+        @if (!string.IsNullOrWhiteSpace(Info))
+        {
+            <label>@LabelTitle <span><Icon Element="@Icons.Info" Color="@($"{MainTheme}")" ToolTip="@Info" /></span></label>
+
+        }
+        else
+        {
+            <label for="@InputId">@LabelTitle</label>
+        }
+        <div class="row">
+            <div class="col-2">
+        <InputCheckbox class="@($"cm-toggle {MainTheme}-feel-light")" Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" id="@InputId" />
+            </div>
+        </div>
+    </div>
+    <ValidationMessage For="ValueExpression" class="@($"error-message {MainTheme}")" />
+</div>

@@ -1,4 +1,13 @@
-﻿<div class="@($"assistente-{ActionClass} {CssClass} bg-{MainTheme}-messaggi-bg")" @onclick="OnActionClick">
-<span class="@($"message-text text-{MainTheme}-messaggi-testo")">@ActionText</span>
+﻿<div @onclick="Action">
+
+    @if(AssistantChoice is ModalType.AggiungiObiettivo)
+    {
+        <CascadingValue Value="ModalId" Name="ModalId">
+        <Modal ActionClass="@ActionClass" CssClass="@CssClass" ActionText="@ActionText" ModalType="AssistantChoice">
+        <AddObiettivo @ref="_addObiettivo"/>
+        </Modal>
+        </CascadingValue>
+}
 </div>
+
 

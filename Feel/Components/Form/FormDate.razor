@@ -1,0 +1,17 @@
+﻿@inherits FormBase
+
+<div class="@($"col-{Col} col-md-{ColMd}")">
+    <div class="@($"form-group {MainTheme}")">
+        @if (!string.IsNullOrWhiteSpace(Info))
+        {
+            <label>@LabelTitle <span><Icon Element="@Icons.Info" Color="@($"{MainTheme}")" ToolTip="@Info" /></span></label>
+
+        }
+        else
+        {
+            <label for="@InputId">@LabelTitle</label>
+        }
+        <InputDate Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" id="@InputId" />
+    </div>
+    <ValidationMessage For="ValueExpression" class="@($"error-message {MainTheme}")" />
+</div>

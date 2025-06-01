@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Feel.Shared.Dto.Obiettivi
 {
-    public class CreateObiettivoDto
+    public class UpdateObiettivoDto
     {
         public int Id { get; set; }
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciCategoria")]

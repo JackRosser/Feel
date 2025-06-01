@@ -1,29 +1,33 @@
-﻿<OffCanvas @ref="_offCanvas">
-    @if(CreateObiettivoForm is not null)
-    {        
-    <EditForm Model="@CreateObiettivoForm" OnValidSubmit="Save">
-    <DataAnnotationsValidator />
-<div class="container-fluid p-0">
-    <div class="row row-cols-1 row-cols-md-2">
-    <div class="col">
-    <div class="@($"form-group {MainTheme}")">
-    <label>@Localizer[ResourceLanguage.Obiettivo]</label>
-    <InputText @bind-Value="CreateObiettivoForm.Titolo" placeholder="@Localizer[ResourceLanguage.PlaceholderObiettivo]" />
-    </div>
-    </div>
-    </div>
-</div>
+﻿@inherits MainClassBase
 
-</EditForm>
+    @if(EditModel.CreateObiettivoForm is not null)
+    {       
+<FormLayout Model="@EditModel.CreateObiettivoForm" OnSubmit="Save">
+        <FormText LabelTitle="@Localizer[ResourceLanguage.Obiettivo]"
+                  Placeholder="@Localizer[ResourceLanguage.PlaceholderObiettivo]"
+                  @bind-Value="EditModel.CreateObiettivoForm.Titolo" />
+        
+            <EnumSelector LabelTitle="@Localizer[ResourceLanguage.Categoria]"
+                      @bind-Value="EditModel.CreateObiettivoForm.Categoria" TEnum="Category?">                   
+            </EnumSelector>
+
+            <FormText LabelTitle="@Localizer[ResourceLanguage.Descrizione]"
+                      Placeholder="@Localizer[ResourceLanguage.PlaceholderDescrizione]"
+                      @bind-Value="EditModel.CreateObiettivoForm.Descrizione">
+            </FormText>
+
+            <FormDate LabelTitle="@Localizer[ResourceLanguage.Scadenza]"
+                      @bind-Value="EditModel.CreateObiettivoForm.Scadenza">
+            </FormDate>
+
+            <FormNumberInteger LabelTitle="@Localizer[ResourceLanguage.Target]"
+                      Placeholder="@Localizer[ResourceLanguage.PlaceholderTarget]"
+                      @bind-Value="EditModel.CreateObiettivoForm.Target" Info="@Localizer[ResourceLanguage.InfoTarget]">
+            </FormNumberInteger>
+
+            <FormCheck LabelTitle="@Localizer[ResourceLanguage.CheckPeriodico]"
+                      @bind-Value="EditModel.CreateObiettivoForm.CheckMark" Info="@Localizer[ResourceLanguage.InfoCheck]">
+            </FormCheck>
+</FormLayout>   
     }
-</OffCanvas>
 
-
-@* <InputText @bind-Value="Input.Email"
-           id="Input.Email"
-           class="form-control"
-           autocomplete="username"
-           aria-required="true"
-           placeholder="name@example.com" />
-<ValidationMessage For="() => Input.Email"
-                   class="text-danger" /> *@

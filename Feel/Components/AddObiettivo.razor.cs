@@ -1,23 +1,24 @@
-﻿using Feel.Shared.Dto.Obiettivi;
-using Microsoft.AspNetCore.Components;
-
-namespace Feel.Components
+﻿namespace Feel.Components
 {
-    public partial class AddObiettivo
+    public partial class AddObiettivo : MainClassBase
     {
-        [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
-        private CreateObiettivoDto? CreateObiettivoForm { get; set; }
-        private OffCanvas? _offCanvas { get; set; }
 
-        public void OpenAddObiettivo()
+        public void StartForm()
         {
-            CreateObiettivoForm = new CreateObiettivoDto();
-            _offCanvas?.Open();
+            if (EditModel.CreateObiettivoForm is null)
+            {
+                EditModel.CreateObiettivoForm = new();
+                EditModel.CreateObiettivoForm.DataCreazione = DateOnly.FromDateTime(DateTime.Now);
+            }
+            InvokeAsync(StateHasChanged);
         }
-
         private async Task Save()
         {
-            await Task.Delay(1000);
+            if (EditModel.CreateObiettivoForm is null) return;
+
+            await proxyObiettivi.SendRequestAsync(a => a.CreateNewObiettivoAsync(EditModel.CreateObiettivoForm));
+            await GetAllObiettivi();
         }
+
     }
 }

@@ -1,0 +1,10 @@
+﻿<span class="@($"tooltip-container {MainTheme}")">
+    @ChildContent
+    <span class="tooltip-text">@Text</span>
+</span>
+
+@code {
+    [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
+    [Parameter, EditorRequired] public string Text { get; set; } = string.Empty;
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+}

@@ -40,4 +40,10 @@ ________________________________________________________________________________
 IndexeDB
 
 Dopo aver installato il pacchetto TG.Blazor.IndexedDB
+
+Link https://www.nuget.org/packages/TG.Blazor.IndexedDB
+
+ <!--IndexedDB importante metterlo DOPO blazor.webassembly.js-->
+    <script src="_content/TG.Blazor.IndexedDB/indexedDb.Blazor.js"></script>
+
 Assicurarsi che la versione nel proj sia <PackageReference Include="TG.Blazor.IndexedDB" Version="1.5.0-preview" />
