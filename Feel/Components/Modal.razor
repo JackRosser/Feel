@@ -14,6 +14,16 @@ else if(ModalType is ModalType.AggiungiObiettivo || ModalType is ModalType.Cambi
     </div>
 }
 
+else if (ModalType is ModalType.EditObiettivo)
+{
+    <div class="col-2 go-to-details" @onclick="OnActionClick">
+        <div data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
+            <span class="@($"text-{MainTheme}-primary")">></span>
+        </div>
+    </div>
+
+}
+
   
 <!-- Modal -->
 <div class="modal fade" id="@($"{ModalId}")" tabindex="-1">
