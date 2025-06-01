@@ -1,17 +1,17 @@
 ﻿@inherits MainClassBase
 
-@if(IsLoaded)
-{ 
-<EditForm Model="@Model" OnValidSubmit="OnSubmit">
-    <DataAnnotationsValidator />
-    <div class="container-fluid p-0">
-        <div class="row form-display">
-            @ChildContent
+@if (IsLoaded)
+{
+    <EditForm Model="@Model" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <div class="container-fluid p-0">
+            <div class="row form-display">
+                @ChildContent
+            </div>
         </div>
-    </div>
         <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@CloseText</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@CloseText</button>
             <button type="submit" class="@($"btn btn-{MainTheme}-submit text-{MainTheme}-offcanvas-bg")">@SubmitText</button>
         </div>
-</EditForm>
+    </EditForm>
 }

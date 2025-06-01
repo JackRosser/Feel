@@ -2,12 +2,11 @@
 
     @if(AssistantChoice is ModalType.AggiungiObiettivo)
     {
-        @if(!EndOperations)
-        {           
-        <Modal ActionClass="@ActionClass" CssClass="@CssClass" ActionText="@ActionText" ModalId="@ModalId" ModalType="AssistantChoice">
-        <AddObiettivo @ref="_addObiettivo" EndOperationsToggle="EndOperations"/>
+        <CascadingValue Value="ModalId" Name="ModalId">
+        <Modal ActionClass="@ActionClass" CssClass="@CssClass" ActionText="@ActionText" ModalType="AssistantChoice">
+        <AddObiettivo @ref="_addObiettivo"/>
         </Modal>
-        }
+        </CascadingValue>
 }
 </div>
 

@@ -2,17 +2,28 @@
 using Feel.Shared.Dto.Obiettivi;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
+using Microsoft.JSInterop;
 
 namespace Feel.Components.Form
 {
     public partial class FormLayout(IStringLocalizer<ResourceLanguage> Localizer) : MainClassBase
     {
+        [CascadingParameter(Name = "ModalId")] public string? ModalId { get; set; }
         [Parameter, EditorRequired] public EventCallback OnSubmit { get; set; }
         [Parameter, EditorRequired] public CreateObiettivoDto? Model { get; set; }
         [Parameter] public RenderFragment? ChildContent { get; set; }
         [Parameter] public string SubmitText { get; set; } = Localizer[ResourceLanguage.Salva];
         [Parameter] public string CloseText { get; set; } = Localizer[ResourceLanguage.Annulla];
         private bool IsLoaded { get; set; } = false;
+
+        private ElementReference SubmitButtonRef;
+
+        private async Task HandleValidSubmit()
+        {
+            await JS.InvokeVoidAsync("closeModalById", ModalId);
+            await OnSubmit.InvokeAsync();
+        }
+
 
         protected override void OnParametersSet()
         {
