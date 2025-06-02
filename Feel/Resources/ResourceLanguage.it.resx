@@ -318,4 +318,10 @@
   <data name="Stato" xml:space="preserve">
     <value>Stato</value>
   </data>
+  <data name="MostraFiltri" xml:space="preserve">
+    <value>Mostra filtri</value>
+  </data>
+  <data name="NascondiFiltri" xml:space="preserve">
+    <value>Nascondi filtri</value>
+  </data>
 </root>

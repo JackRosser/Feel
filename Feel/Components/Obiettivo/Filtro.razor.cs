@@ -10,6 +10,8 @@ namespace Feel.Components.Obiettivo
         [Parameter] public EventCallback<IEnumerable<ObiettivoDto>> OnListaFiltrata { get; set; }
 
         private bool? CompletedFilter { get; set; }
+        private bool FilterToggle { get; set; } = false;
+
         private List<Category> CategorieSelezionate { get; set; } = [];
 
         private string? categoriaTemp
@@ -25,6 +27,11 @@ namespace Feel.Components.Obiettivo
                     AggiornaLista();
                 }
             }
+        }
+
+        private void ShowFilters()
+        {
+            FilterToggle = !FilterToggle;
         }
 
         private void AggiornaLista()

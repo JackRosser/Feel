@@ -430,11 +430,29 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mostra filtri.
+        /// </summary>
+        public static string MostraFiltri {
+            get {
+                return ResourceManager.GetString("MostraFiltri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Musica.
         /// </summary>
         public static string Musica {
             get {
                 return ResourceManager.GetString("Musica", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nascondi filtri.
+        /// </summary>
+        public static string NascondiFiltri {
+            get {
+                return ResourceManager.GetString("NascondiFiltri", resourceCulture);
             }
         }
         

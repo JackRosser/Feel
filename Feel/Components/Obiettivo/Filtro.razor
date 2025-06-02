@@ -1,9 +1,14 @@
 ﻿@inherits MainClassBase
 
-<div class="@($"row mb-4 filterbox {MainTheme}")">
-    <div class="@($"col-12 filtertitle")">Filtra</div>
+<div class="@($"row filterbox {MainTheme}")">
+    @{
+        var filterText = !FilterToggle ? Localizer[ResourceLanguage.MostraFiltri] : Localizer[ResourceLanguage.NascondiFiltri];
+    }
+    <div class="@($"col-12 filtertitle")" @onclick="ShowFilters">@filterText</div>
 
-    <div class="@($"col-6 filterform {MainTheme}")">
+    @if(FilterToggle)
+    {       
+    <div class="@($"col-6 filterform mt-2 mb-3 {MainTheme}")">
         <label for="completamento">@Localizer[ResourceLanguage.Stato]</label>
         <select class="form-select" @onchange="OnCompletedChanged" id="completamento">
             <option value="">@Localizer[ResourceLanguage.Seleziona]</option>
@@ -12,7 +17,7 @@
         </select>
     </div>
 
-    <div class="@($"col-6 filterform {MainTheme}")">
+    <div class="@($"col-6 filterform mt-2 mb-3 {MainTheme}")">
         <label for="categoria">@Localizer[ResourceLanguage.Categoria]</label>
         <select class="form-select" @bind="categoriaTemp" @bind:event="onchange" id="categoria">
             <option value="">@Localizer[ResourceLanguage.Seleziona]</option>
@@ -27,7 +32,7 @@
     <div class="@($"col-12 filterform filteractives {MainTheme}")">
         @if (CompletedFilter.HasValue)
         {
-            <span class="badge bg-secondary me-1">
+            <span class="badge">
                 @((CompletedFilter.Value ? "Completati" : "Non completati"))
                 <button class="btn btn-sm btn-close ms-1" @onclick="ClearCompletedFilter"></button>
             </span>
@@ -35,9 +40,9 @@
 
         @foreach (var cat in CategorieSelezionate)
         {
-            <span class="badge bg-secondary me-1">
+            <span class="badge">
                 @HelperTraduzione.Traduzione(cat, Localizer)
-                <button class="btn btn-sm btn-close ms-1" @onclick="@(() => ClearCategoria(cat))"></button>
+                <button class="btn btn-sm btn-close" @onclick="@(() => ClearCategoria(cat))"></button>
             </span>
         }
 
@@ -46,4 +51,5 @@
             <button class="btn btn-link text-danger" @onclick="ResetFilters">Reset</button>
         }
     </div>
+    }
 </div>
