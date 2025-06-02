@@ -1192,6 +1192,29 @@ main .main-section {
   border-bottom: 2px dashed #F6DCA1;
 }
 
+.filterbox.autunno .filtertitle {
+  color: #F54A00;
+  font-style: italic;
+  text-decoration: underline;
+  font-weight: 400;
+}
+.filterbox.autunno .filterform label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.filterbox.autunno .filteractives .badge {
+  background-color: #F54A00;
+  color: #fff;
+  margin-left: 1rem;
+}
+.filterbox.autunno .filteractives .badge:first-child {
+  margin-left: 0;
+}
+.filterbox.autunno .filteractives button {
+  color: #F54A00 !important;
+  margin-left: 0.5rem;
+}
+
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2025 The Bootstrap Authors

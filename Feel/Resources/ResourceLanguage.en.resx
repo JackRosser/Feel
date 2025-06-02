@@ -306,4 +306,22 @@
   <data name="NessunaDescrizione" xml:space="preserve">
     <value>--No description available--</value>
   </data>
+  <data name="Filtra" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="Completati" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="NonCompletati" xml:space="preserve">
+    <value>Uncompleted</value>
+  </data>
+  <data name="Stato" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="MostraFiltri" xml:space="preserve">
+    <value>Show filter</value>
+  </data>
+  <data name="NascondiFiltri" xml:space="preserve">
+    <value>Hide filters</value>
+  </data>
 </root>

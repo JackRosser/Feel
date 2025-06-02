@@ -1,0 +1,39 @@
+﻿@mixin filtri($secondary, $ultra-light) {
+    & .filtertitle {
+        color: $secondary;
+        font-style: italic;
+        text-decoration: underline;
+        font-weight: 400;
+    }
+
+    & .filterform {
+
+        & label {
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+    }
+
+    & .filteractives {
+        & .badge {
+            background-color: $secondary;
+            color: $ultra-light;
+            margin-left: 1rem;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        & button {
+            color: $secondary !important;
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.filterbox {
+    &.autunno {
+        @include filtri($autunno-feel-secondary, $autunno-feel-ultra-light);
+    }
+}
