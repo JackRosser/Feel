@@ -1,28 +1,27 @@
 ﻿@using Feel.Components.Obiettivo
 @inherits MainClassBase
 
+@if(Obiettivo is not null)
+{   
 <div class="col recap-box">
     <div class="row progress-bar-section">
         <div class="col-3 progress-bar-bottle-container">
             <div class="@($"progress-card bg-{MainTheme}-light")">
                 <div class="bottle rounded-pill">
-                    <span class="bottle-fill" style="@($"height: {Obiettivo?.Percentage}%; background-color: {FillColor};")"></span>
+                    <span class="bottle-fill" style="@($"height: {Obiettivo.Percentage}%; background-color: {FillColor};")"></span>
                 </div>
-                <span class="@($"percentuale text-{MainTheme}-primary")">@Obiettivo?.Percentage%</span>
+                <span class="@($"percentuale text-{MainTheme}-primary")">@($"{Obiettivo.Percentage}")</span>
             </div>
         </div>
         <div class="col-7 progress-bar-recap">
-            <span>@HelperTraduzione.Traduzione(Obiettivo?.Categoria, Localizer)</span>
+            <span>@HelperTraduzione.Traduzione(Obiettivo.Categoria, Localizer)</span>
             <span>@Obiettivo?.Titolo</span>
-            <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@Obiettivo?.Scadenza</strong></span>
+            <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@Obiettivo.Scadenza</strong></span>
         </div>
-        <CascadingValue Value="@($"id_{Obiettivo?.Id}")" Name="ModalId">
-            <CascadingValue Value="@Obiettivo?.Id" Name="ObiettivoId">
-        <Modal ModalType="ModalType.EditObiettivo" OnActionClick="Action">
-        <UpdateObiettivo @ref="_updateObiettivo"/>
+        <Modal ModalType="ModalType.EditObiettivo" OnActionClick="Action" ModalId="@Obiettivo.Id">
+        <UpdateObiettivo @ref="_updateObiettivo" ObiettivoId="@Obiettivo.Id"/>
         </Modal>
-        </CascadingValue>
-        </CascadingValue>
     </div>
 </div>
+}
 

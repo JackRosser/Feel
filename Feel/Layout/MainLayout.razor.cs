@@ -12,12 +12,12 @@
             int IdDaLocalStorage = 1;
             MainTheme = IdDaLocalStorage switch
             {
-                1 => "caldo",
+                1 => "autunno",
                 2 => "altro",
-                _ => "caldo"
+                _ => "autunno"
             };
             // Qua arriva l'id dall'assistente
-            int IdAssistente = 1;
+            int IdAssistente = 2;
             AssistenteNome = IdAssistente switch
             {
                 1 => "giulio",

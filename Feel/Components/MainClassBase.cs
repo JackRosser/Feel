@@ -7,7 +7,6 @@ namespace Feel.Components
     {
         [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
         [Inject] protected IJSRuntime JS { get; set; } = default!;
-        [Inject] protected NavigationManager NavManager { get; set; } = default!;
 
         protected CancellationTokenSource Ct = new();
 

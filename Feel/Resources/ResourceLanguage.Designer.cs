@@ -484,11 +484,29 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spunta la casella.
+        /// </summary>
+        public static string SpuntaCasella {
+            get {
+                return ResourceManager.GetString("SpuntaCasella", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Target.
         /// </summary>
         public static string Target {
             get {
                 return ResourceManager.GetString("Target", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci un valore maggiore di zero.
+        /// </summary>
+        public static string TargetMaggioreDiZero {
+            get {
+                return ResourceManager.GetString("TargetMaggioreDiZero", resourceCulture);
             }
         }
         

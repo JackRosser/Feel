@@ -270,4 +270,10 @@
   <data name="AvvicinatiTarget" xml:space="preserve">
     <value>Inserisci un importo o un valore numerico inerente al tuo obiettivo per avvicinarti o raggiungere il Target.</value>
   </data>
+  <data name="TargetMaggioreDiZero" xml:space="preserve">
+    <value>Inserisci un valore maggiore di zero</value>
+  </data>
+  <data name="SpuntaCasella" xml:space="preserve">
+    <value>Spunta la casella</value>
+  </data>
 </root>

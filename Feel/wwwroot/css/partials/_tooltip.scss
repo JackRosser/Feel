@@ -31,8 +31,8 @@
 
 
 .tooltip-container {
-    &.caldo {
-        @include tooltip($caldo-feel-light, $caldo-feel-primary);
+    &.autunno {
+        @include tooltip($autunno-feel-light, $autunno-feel-primary);
     }
 }
 

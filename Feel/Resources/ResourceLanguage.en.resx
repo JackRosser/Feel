@@ -270,4 +270,10 @@
   <data name="AvvicinatiTarget" xml:space="preserve">
     <value>Enter an amount or numeric value related to your goal to get closer to or reach your Target.</value>
   </data>
+  <data name="TargetMaggioreDiZero" xml:space="preserve">
+    <value>Please enter a value greater than zero</value>
+  </data>
+  <data name="SpuntaCasella" xml:space="preserve">
+    <value>Check the box</value>
+  </data>
 </root>

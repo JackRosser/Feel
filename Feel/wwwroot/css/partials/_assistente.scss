@@ -128,7 +128,7 @@
 }
 
 .assistente {
-    &.caldo {
-        @include messaggio-text($caldo-feel-ultra-light, $caldo-feel-primary);
+    &.autunno {
+        @include messaggio-text($autunno-feel-ultra-light, $autunno-feel-primary);
     }
 }

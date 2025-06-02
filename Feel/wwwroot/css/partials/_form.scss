@@ -74,6 +74,20 @@
     }
 }
 
+@mixin radio-form($label-text) {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+        color: $label-text;
+        font-size: 0.8rem;
+
+        & span {
+            margin-left: 0.2rem;
+        }
+    }
+}
+
 @mixin check-form($label-text) {
     display: flex;
     flex-direction: column;
@@ -103,14 +117,20 @@
     }
 
     & .form-group {
-        &.caldo {
-            @include theme-settings($caldo-feel-light, $caldo-feel-light, $caldo-feel-primary, $caldo-feel-ultra-light, $caldo-text-disabled);
+        &.autunno {
+            @include theme-settings($autunno-feel-light, $autunno-feel-light, $autunno-feel-primary, $autunno-feel-ultra-light, $autunno-text-disabled);
+        }
+    }
+
+    & .form-group-radio {
+        &.autunno {
+            @include radio-form($autunno-feel-light);
         }
     }
 
     & .form-group-check {
-        &.caldo {
-            @include check-form($caldo-feel-light);
+        &.autunno {
+            @include check-form($autunno-feel-light);
         }
     }
 }
@@ -130,8 +150,8 @@
 }
 
 .error-message {
-    &.caldo {
-    @include error-message($caldo-feel-error);
+    &.autunno {
+    @include error-message($autunno-feel-error);
     }
 }
 

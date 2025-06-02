@@ -9,7 +9,7 @@ namespace Feel.Components.Assistant
     {
         [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
         [Parameter] public EventCallback OnActionClick { get; set; }
-        [Parameter, EditorRequired] public string? ModalId { get; set; }
+        [Parameter, EditorRequired] public int ModalId { get; set; }
         [Parameter] public string? CssClass { get; set; }
         [Parameter] public EventCallback SitAssistant { get; set; }
         [Parameter, EditorRequired] public ModalType AssistantChoice { get; set; }

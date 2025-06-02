@@ -8,8 +8,7 @@ namespace Feel.Components
 {
     public partial class Modal(IStringLocalizer<ResourceLanguage> Localizer) : MainClassBase
     {
-        [CascadingParameter(Name = "ModalId")] public string? ModalId { get; set; }
-
+        [Parameter, EditorRequired] public int ModalId { get; set; }
         [Parameter] public string? Title { get; set; }
         [Parameter, EditorRequired] public ModalType ModalType { get; set; }
         [Parameter] public bool IsSubmit { get; set; } = false;

@@ -17,7 +17,9 @@ namespace Feel.Shared.Dto.Obiettivi
         public DateOnly? Scadenza { get; set; }
         public bool Completed { get; set; } = false;
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciTarget")]
+        [Range(1, int.MaxValue, ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "TargetMaggioreDiZero")]
         public int? Target { get; set; }
+
         public bool CheckMark { get; set; } = false;
     }
 }
