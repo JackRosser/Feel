@@ -196,6 +196,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Completati.
+        /// </summary>
+        public static string Completati {
+            get {
+                return ResourceManager.GetString("Completati", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cultura.
         /// </summary>
         public static string Cultura {
@@ -448,6 +457,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Non completati.
+        /// </summary>
+        public static string NonCompletati {
+            get {
+                return ResourceManager.GetString("NonCompletati", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Obiettivo.
         /// </summary>
         public static string Obiettivo {
@@ -570,6 +588,15 @@ namespace Feel.Resources {
         public static string SpuntaCasella {
             get {
                 return ResourceManager.GetString("SpuntaCasella", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stato.
+        /// </summary>
+        public static string Stato {
+            get {
+                return ResourceManager.GetString("Stato", resourceCulture);
             }
         }
         

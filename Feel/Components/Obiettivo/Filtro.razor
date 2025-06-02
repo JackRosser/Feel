@@ -1,27 +1,30 @@
 ﻿@inherits MainClassBase
 
-<div class="row align-items-center mb-3">
-    <div class="col">Filtra</div>
-
-    <div class="col">
-        <select class="form-select" @onchange="OnCompletedChanged">
-            <option value="">-- Completamento --</option>
-            <option value="true">Completati</option>
-            <option value="false">Non completati</option>
+<div class="@($"row mb-4 filterbox {MainTheme}")">
+    <div class="@($"col-12 filtertitle")">Filtra</div>
+    @* Selezione *@
+    <div class="@($"col-6 filterform {MainTheme}")">
+        <label for="completamento">@Localizer[ResourceLanguage.Stato]</label>
+        <select class="form-select" @onchange="OnCompletedChanged" id="completamento">
+            <option value="">@Localizer[ResourceLanguage.Seleziona]</option>
+            <option value="true">@Localizer[ResourceLanguage.Completati]</option>
+            <option value="false">@Localizer[ResourceLanguage.NonCompletati]</option>
         </select>
     </div>
-
-    <div class="col">
-        <select class="form-select" @onchange="OnCategoriaChanged">
-            <option value="">-- Categoria --</option>
+    
+    <div class="@($"col-6 filterform {MainTheme}")">
+        <label for="categoria">@Localizer[ResourceLanguage.Categoria]</label>
+        <select class="form-select" @onchange="OnCategoriaChanged" id="categoria">
+            <option value="">@Localizer[ResourceLanguage.Seleziona]</option>
             @foreach (var cat in Enum.GetValues<Category>())
             {
-                <option value="@cat">@cat</option>
+                var label = HelperTraduzione.Traduzione(cat, Localizer);
+                <option value="@cat">@label</option>
             }
         </select>
-    </div>
 
-    <div class="col">
+    </div>
+    <div class="@($"col-12 filterform filteractives {MainTheme}")">
         @if (CompletedFilter.HasValue)
         {
             <span class="badge bg-secondary me-1">
@@ -41,4 +44,4 @@
             <button class="btn btn-link text-danger" @onclick="ResetFilters">Reset</button>
         }
     </div>
-</div>
+    </div>

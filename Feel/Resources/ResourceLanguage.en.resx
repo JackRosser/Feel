@@ -309,4 +309,13 @@
   <data name="Filtra" xml:space="preserve">
     <value>Filter</value>
   </data>
+  <data name="Completati" xml:space="preserve">
+    <value>Completed</value>
+  </data>
+  <data name="NonCompletati" xml:space="preserve">
+    <value>Uncompleted</value>
+  </data>
+  <data name="Stato" xml:space="preserve">
+    <value>State</value>
+  </data>
 </root>
