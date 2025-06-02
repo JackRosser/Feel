@@ -297,4 +297,13 @@
   <data name="TermineObiettivo" xml:space="preserve">
     <value>Termine</value>
   </data>
+  <data name="Inizio" xml:space="preserve">
+    <value>Inizio</value>
+  </data>
+  <data name="DataCompletamento" xml:space="preserve">
+    <value>Completato</value>
+  </data>
+  <data name="NessunaDescrizione" xml:space="preserve">
+    <value>--Nessuna descrizione disponibile--</value>
+  </data>
 </root>

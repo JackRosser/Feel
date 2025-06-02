@@ -6,16 +6,29 @@
         <div class="row row-cols-1">
             @if(Obiettivo?.Descrizione is not null)
             {                
-            <div class="@($"col description {MainTheme}")">@Obiettivo.Descrizione</div>
+                <div class="@($"col description {MainTheme}")">@Obiettivo?.Descrizione</div>
             }
-            @foreach(var element in RecapElements)
+            else
             {
-                <div class="@($"col recap {MainTheme}")">
-                    <h5 class="m-0">@element.Title</h5>
-                    <span>@element.Value</span>
-                    <hr />
+                <div class="@($"col description {MainTheme}")">@Localizer[ResourceLanguage.NessunaDescrizione]</div>
+            }
+            @if(!Obiettivo.Completed)
+            {                
+                @foreach(var element in RecapElements)
+                {
+                    <div class="@($"col recap {MainTheme}")">
+                        <h5 class="m-0">@element.Title</h5>
+                        <span>@element.Value</span>
+                        <hr />
+                    </div>
+                };
+            }
+            else
+            {
+                <div class="col">
+                    <img src="@($"/css/images/Assistenti/dorme-{AssistenteNome}")" style="max-width: 170px;"/>
                 </div>
             }
         </div>
-</div>
+    </div>
 }

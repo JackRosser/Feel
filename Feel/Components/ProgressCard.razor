@@ -3,20 +3,27 @@
 
 @if(Obiettivo is not null)
 {   
-<div class="col recap-box">
-    <div class="row progress-bar-section">
-        <div class="col-3 progress-bar-bottle-container">
-            <div class="@($"progress-card bg-{MainTheme}-light")">
-                <div class="bottle rounded-pill">
-                    <span class="bottle-fill" style="@($"height: {Obiettivo.Percentage}%; background-color: {FillColor};")"></span>
+    <div class="col recap-box">
+        <div class="@($"row progress-bar-section {MainTheme} {IsCompleted}")">
+            <div class="col-3 progress-bar-bottle-container">
+                <div class="@($"progress-card {MainTheme}")">
+                    <div class="bottle rounded-pill">
+                        <span class="bottle-fill" style="@($"height: {Obiettivo.Percentage}%; background-color: {FillColor};")"></span>
+                    </div>
+                    <span class="@($"percentuale {MainTheme}")">@($"{Obiettivo.Percentage}%")</span>
                 </div>
-                <span class="@($"percentuale text-{MainTheme}-primary")">@($"{Obiettivo.Percentage}")</span>
             </div>
-        </div>
-        <div class="col-7 progress-bar-recap">
-            <span>@HelperTraduzione.Traduzione(Obiettivo.Categoria, Localizer)</span>
-            <span>@Obiettivo?.Titolo</span>
-            <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@Obiettivo.Scadenza</strong></span>
+            <div class="col-7 progress-bar-recap">
+                <span>@HelperTraduzione.Traduzione(Obiettivo.Categoria, Localizer)</span>
+                <span>@Obiettivo?.Titolo</span>
+                @if(Obiettivo.Completed)
+                {                  
+                <span class="@($"{MainTheme}")">@Localizer[ResourceLanguage.DataCompletamento]: <strong>@Obiettivo.DataCompletamento</strong></span>
+                }
+                else
+                {
+                    <span class="@($"{MainTheme}")">@Localizer[ResourceLanguage.Scadenza]: <strong>@Obiettivo.Scadenza</strong></span>
+                }
         </div>
         <Modal ModalType="ModalType.EditObiettivo" OnActionClick="Action" ModalId="@Obiettivo.Id">
         <UpdateObiettivo @ref="_updateObiettivo" ObiettivoId="@Obiettivo.Id"/>

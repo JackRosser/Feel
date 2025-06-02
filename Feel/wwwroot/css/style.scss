@@ -96,6 +96,8 @@ input[type=number] {
 @import "partials/_tooltip.scss";
 @import "partials/_dashboardMessage.scss";
 @import "partials/_recap.scss";
+// Classe con tutti gli elementi da aggiornare con i temi
+@import "partials/_allElements.scss";
 
     @import "../lib/bootstrap/scss/mixins";
     @import "../lib/bootstrap/scss/bootstrap";

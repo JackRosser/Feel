@@ -214,6 +214,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Completato.
+        /// </summary>
+        public static string DataCompletamento {
+            get {
+                return ResourceManager.GetString("DataCompletamento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Descrizione (Opzionale).
         /// </summary>
         public static string Descrizione {
@@ -273,6 +282,15 @@ namespace Feel.Resources {
         public static string InfoTarget {
             get {
                 return ResourceManager.GetString("InfoTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inizio.
+        /// </summary>
+        public static string Inizio {
+            get {
+                return ResourceManager.GetString("Inizio", resourceCulture);
             }
         }
         
@@ -408,6 +426,15 @@ namespace Feel.Resources {
         public static string Natura {
             get {
                 return ResourceManager.GetString("Natura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to --Nessuna descrizione disponibile--.
+        /// </summary>
+        public static string NessunaDescrizione {
+            get {
+                return ResourceManager.GetString("NessunaDescrizione", resourceCulture);
             }
         }
         

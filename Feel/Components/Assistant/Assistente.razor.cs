@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Components;
-
-namespace Feel.Components.Assistant
+﻿namespace Feel.Components.Assistant
 {
-    public partial class Assistente
+    public partial class Assistente : MainClassBase
     {
-        [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
-        [CascadingParameter(Name = "Assistente")] public string? AssistenteNome { get; set; }
+
         private bool IsSelected { get; set; } = false;
         private string IsSelectedClass => IsSelected ? "pancia" : "fronte";
         private string ShowMessages => IsSelected ? "show" : string.Empty;

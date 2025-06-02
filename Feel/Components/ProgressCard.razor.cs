@@ -11,6 +11,7 @@ namespace Feel.Components
     {
         [Parameter, EditorRequired] public ObiettivoDto? Obiettivo { get; set; }
         private string? FillColor { get; set; }
+        private string? IsCompleted { get; set; }
         private UpdateObiettivo? _updateObiettivo;
         protected override void OnParametersSet()
         {
@@ -23,6 +24,7 @@ namespace Feel.Components
                 _ => "red",
             };
             FillColor = color;
+            IsCompleted = Obiettivo?.Completed == true ? "completed" : "";
         }
         private void Action()
         {

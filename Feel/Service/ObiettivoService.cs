@@ -36,6 +36,12 @@ namespace Feel.Service
             await service.CreateAsync<ObiettivoDto>(Key, DefaultFactory, dto);
         }
 
+        public async Task CreateTestingNewObiettivoAsync(ObiettivoDto test)
+        {
+
+            await service.CreateAsync<ObiettivoDto>(Key, DefaultFactory, test);
+        }
+
         public async Task UpdateObiettivoAsync(ObiettivoDto obiettivo)
         {
 

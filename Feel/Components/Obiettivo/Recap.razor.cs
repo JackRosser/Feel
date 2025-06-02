@@ -15,6 +15,7 @@ namespace Feel.Components.Obiettivo
             RecapElements = new()
             {
                 new() { Title = Localizer[ResourceLanguage.Target], Value = Obiettivo?.Target.ToString() },
+                new() { Title = Localizer[ResourceLanguage.Inizio], Value = Obiettivo?.DataCreazione.ToString() },
                 new() { Title = Localizer[ResourceLanguage.Attuale], Value = Obiettivo?.Progressivo.ToString() },
                 new() { Title = Localizer[ResourceLanguage.TermineObiettivo], Value = $"{Localizer[ResourceLanguage.Mancano]} {CalcoloGiorniScadenza(Obiettivo?.Scadenza)} {Localizer[ResourceLanguage.GiorniScadenza]}"},
             };

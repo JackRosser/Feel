@@ -25,9 +25,27 @@ namespace Feel.Pages
 
         private async Task GetRecords()
         {
+            // QUESTO SERVE SOLO PER TEST DI OBIETTIVO COMPLETATO
+
+
+            //var nuovo = new ObiettivoDto
+            //{
+            //    Categoria = Category.Salute,
+            //    Titolo = "Test Obiettivo Completato",
+            //    Descrizione = "Questo è un obiettivo di test già completato.",
+            //    DataCreazione = DateOnly.FromDateTime(DateTime.Today.AddDays(-10)),
+            //    Scadenza = DateOnly.FromDateTime(DateTime.Today),
+            //    DataCompletamento = DateOnly.FromDateTime(DateTime.Today),
+            //    Completed = true,
+            //    Target = 10,
+            //    Progressivo = 10,
+            //    CheckMark = true
+            //};
+            //await sdk.SendRequestAsync(a => a.CreateTestingNewObiettivoAsync(nuovo));
             Obiettivi = await sdk.SendRequestAsync(a => a.GetAllObiettiviAsync());
             StateHasChanged();
         }
+
 
         protected override void OnDispose()
         {

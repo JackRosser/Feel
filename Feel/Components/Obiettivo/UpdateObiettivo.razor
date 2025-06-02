@@ -3,7 +3,13 @@
 
 <Recap Obiettivo="@Obiettivo"/>
 
-@if (EditModelValore is not null)
+@if(Obiettivo.Completed)
+{
+    <div class="@($"modal-footer {MainTheme}")">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer[ResourceLanguage.Chiudi]</button>
+    </div>
+}
+else if (EditModelValore is not null)
 {
     <FormLayout UpdateModelValore="EditModelValore" OnSubmit="SaveValore">
         <FormNumberInteger LabelTitle="@Localizer[ResourceLanguage.Aggiornamento]"
