@@ -2,7 +2,7 @@
 
 <div class="@($"row mb-4 filterbox {MainTheme}")">
     <div class="@($"col-12 filtertitle")">Filtra</div>
-    @* Selezione *@
+
     <div class="@($"col-6 filterform {MainTheme}")">
         <label for="completamento">@Localizer[ResourceLanguage.Stato]</label>
         <select class="form-select" @onchange="OnCompletedChanged" id="completamento">
@@ -11,10 +11,10 @@
             <option value="false">@Localizer[ResourceLanguage.NonCompletati]</option>
         </select>
     </div>
-    
+
     <div class="@($"col-6 filterform {MainTheme}")">
         <label for="categoria">@Localizer[ResourceLanguage.Categoria]</label>
-        <select class="form-select" @onchange="OnCategoriaChanged" id="categoria">
+        <select class="form-select" @bind="categoriaTemp" @bind:event="onchange" id="categoria">
             <option value="">@Localizer[ResourceLanguage.Seleziona]</option>
             @foreach (var cat in Enum.GetValues<Category>())
             {
@@ -22,8 +22,8 @@
                 <option value="@cat">@label</option>
             }
         </select>
-
     </div>
+
     <div class="@($"col-12 filterform filteractives {MainTheme}")">
         @if (CompletedFilter.HasValue)
         {
@@ -32,16 +32,18 @@
                 <button class="btn btn-sm btn-close ms-1" @onclick="ClearCompletedFilter"></button>
             </span>
         }
-        @if (CategoriaFilter.HasValue)
+
+        @foreach (var cat in CategorieSelezionate)
         {
             <span class="badge bg-secondary me-1">
-                @CategoriaFilter.Value
-                <button class="btn btn-sm btn-close ms-1" @onclick="ClearCategoriaFilter"></button>
+                @HelperTraduzione.Traduzione(cat, Localizer)
+                <button class="btn btn-sm btn-close ms-1" @onclick="@(() => ClearCategoria(cat))"></button>
             </span>
         }
-        @if (CompletedFilter.HasValue || CategoriaFilter.HasValue)
+
+        @if (CompletedFilter.HasValue || CategorieSelezionate.Any())
         {
             <button class="btn btn-link text-danger" @onclick="ResetFilters">Reset</button>
         }
     </div>
-    </div>
+</div>

@@ -10,13 +10,28 @@ namespace Feel.Components.Obiettivo
         [Parameter] public EventCallback<IEnumerable<ObiettivoDto>> OnListaFiltrata { get; set; }
 
         private bool? CompletedFilter { get; set; }
-        private Category? CategoriaFilter { get; set; }
+        private List<Category> CategorieSelezionate { get; set; } = [];
+
+        private string? categoriaTemp
+        {
+            get => null;
+            set
+            {
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    var cat = Enum.Parse<Category>(value);
+                    if (!CategorieSelezionate.Contains(cat))
+                        CategorieSelezionate.Add(cat);
+                    AggiornaLista();
+                }
+            }
+        }
 
         private void AggiornaLista()
         {
             var filtrata = ListaObiettivi
                 .Where(o => !CompletedFilter.HasValue || o.Completed == CompletedFilter.Value)
-                .Where(o => !CategoriaFilter.HasValue || o.Categoria == CategoriaFilter.Value);
+                .Where(o => CategorieSelezionate.Count == 0 || (o.Categoria.HasValue && CategorieSelezionate.Contains(o.Categoria.Value)));
 
             OnListaFiltrata.InvokeAsync(filtrata);
         }
@@ -28,29 +43,22 @@ namespace Feel.Components.Obiettivo
             AggiornaLista();
         }
 
-        private void OnCategoriaChanged(ChangeEventArgs e)
-        {
-            var value = e.Value?.ToString();
-            CategoriaFilter = string.IsNullOrWhiteSpace(value) ? null : Enum.Parse<Category>(value);
-            AggiornaLista();
-        }
-
         private void ClearCompletedFilter()
         {
             CompletedFilter = null;
             AggiornaLista();
         }
 
-        private void ClearCategoriaFilter()
+        private void ClearCategoria(Category cat)
         {
-            CategoriaFilter = null;
+            CategorieSelezionate.Remove(cat);
             AggiornaLista();
         }
 
         private void ResetFilters()
         {
             CompletedFilter = null;
-            CategoriaFilter = null;
+            CategorieSelezionate.Clear();
             AggiornaLista();
         }
     }
