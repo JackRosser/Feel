@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 
 namespace Feel.Components.Form;
-public partial class FormCheck : FormBase
+public partial class FormRadio : FormBase
 {
     [Parameter, EditorRequired] public bool Value { get; set; }
 

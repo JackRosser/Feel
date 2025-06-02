@@ -10,8 +10,11 @@ namespace Feel.Shared.Dto.Obiettivi
         public string? Descrizione { get; set; }
         public DateOnly DataCreazione { get; set; }
         public DateOnly? Scadenza { get; set; }
+        public DateOnly? DataCompletamento { get; set; }
         public bool Completed { get; set; }
         public int? Target { get; set; }
         public bool CheckMark { get; set; }
+        public int Progressivo { get; set; } = 0;
+        public int Percentage => (Target.HasValue && Target.Value > 0) ? Math.Min(100, Progressivo * 100 / Target.Value) : 0;
     }
 }

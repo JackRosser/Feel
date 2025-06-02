@@ -1,12 +1,12 @@
-﻿<div @onclick="Action">
+﻿@using Feel.Components.Obiettivo
+<div @onclick="Action">
 
     @if(AssistantChoice is ModalType.AggiungiObiettivo)
     {
-        <CascadingValue Value="ModalId" Name="ModalId">
-        <Modal ActionClass="@ActionClass" CssClass="@CssClass" ActionText="@ActionText" ModalType="AssistantChoice">
-        <AddObiettivo @ref="_addObiettivo"/>
+        <Modal ActionClass="@ActionClass" CssClass="@CssClass" ActionText="@ActionText" ModalType="AssistantChoice" ModalId="@ModalId">
+        <AddObiettivo @ref="_addObiettivo" ModalId="@ModalId" />
         </Modal>
-        </CascadingValue>
+
 }
 </div>
 

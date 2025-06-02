@@ -8,13 +8,17 @@ namespace Feel.Service
         private const string Key = "obiettivi";
         private static List<ObiettivoDto> DefaultFactory() => new();
 
-        public Task<IEnumerable<ObiettivoDto>> GetAllObiettiviAsync() =>
-            service.GetAsync<ObiettivoDto>(Key, DefaultFactory);
+        public async Task<IEnumerable<ObiettivoDto>> GetAllObiettiviAsync()
+        {
+            return await service.GetAsync<ObiettivoDto>(Key, DefaultFactory);
+        }
 
-        public Task<ObiettivoDto?> GetObiettivoAsync(int id) =>
-            service.GetByIdAsync<ObiettivoDto>(Key, DefaultFactory, id);
+        public async Task<ObiettivoDto?> GetObiettivoAsync(int id)
+        {
+            return await service.GetByIdAsync<ObiettivoDto>(Key, DefaultFactory, id);
+        }
 
-        public Task CreateNewObiettivoAsync(CreateObiettivoDto obiettivo)
+        public async Task CreateNewObiettivoAsync(CreateObiettivoDto obiettivo)
         {
             var dto = new ObiettivoDto
             {
@@ -25,32 +29,28 @@ namespace Feel.Service
                 Scadenza = obiettivo.Scadenza,
                 Completed = obiettivo.Completed,
                 Target = obiettivo.Target,
-                CheckMark = obiettivo.CheckMark
+                CheckMark = obiettivo.CheckMark,
+                Progressivo = 0
             };
 
-            return service.CreateAsync<ObiettivoDto>(Key, DefaultFactory, dto);
+            await service.CreateAsync<ObiettivoDto>(Key, DefaultFactory, dto);
         }
 
-        public Task UpdateObiettivoAsync(UpdateObiettivoDto obiettivo)
+        public async Task CreateTestingNewObiettivoAsync(ObiettivoDto test)
         {
-            var dto = new ObiettivoDto
-            {
-                Id = obiettivo.Id,
-                Categoria = obiettivo.Categoria,
-                Titolo = obiettivo.Titolo,
-                Descrizione = obiettivo.Descrizione,
-                DataCreazione = obiettivo.DataCreazione,
-                Scadenza = obiettivo.Scadenza,
-                Completed = obiettivo.Completed,
-                Target = obiettivo.Target,
-                CheckMark = obiettivo.CheckMark
-            };
 
-            return service.UpdateAsync<ObiettivoDto>(Key, DefaultFactory, dto);
+            await service.CreateAsync<ObiettivoDto>(Key, DefaultFactory, test);
         }
 
-        public Task DeleteObiettivoAsync(int id) =>
-            service.DeleteAsync<ObiettivoDto>(Key, DefaultFactory, id);
+        public async Task UpdateObiettivoAsync(ObiettivoDto obiettivo)
+        {
+
+            await service.UpdateAsync<ObiettivoDto>(Key, DefaultFactory, obiettivo);
+        }
+
+        public async Task DeleteObiettivoAsync(int id)
+        {
+            await service.DeleteAsync<ObiettivoDto>(Key, DefaultFactory, id);
+        }
     }
-
 }

@@ -1,0 +1,31 @@
+﻿@inherits MainClassBase
+
+
+<Recap Obiettivo="@Obiettivo"/>
+
+@if(Obiettivo.Completed)
+{
+    <div class="@($"modal-footer {MainTheme}")">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer[ResourceLanguage.Chiudi]</button>
+    </div>
+}
+else if (EditModelValore is not null)
+{
+    <FormLayout UpdateModelValore="EditModelValore" OnSubmit="SaveValore">
+        <FormNumberInteger LabelTitle="@Localizer[ResourceLanguage.Aggiornamento]"
+                           Placeholder="@Localizer[ResourceLanguage.InserisciValore]"
+                           Info="@Localizer[ResourceLanguage.AvvicinatiTarget]"
+                           @bind-Value="EditModelValore.Importo">
+        </FormNumberInteger>
+    </FormLayout>   
+    }
+else if (EditModelCheck is not null)
+{
+    <FormLayout UpdateModelCheck="EditModelCheck" OnSubmit="SaveCheck" UpdateModelCheckValidation="EditModelCheck.Check">
+
+            <FormCheckBox LabelTitle="@Localizer[ResourceLanguage.Aggiornamento]"           
+            @bind-Value="EditModelCheck.Check">
+            </FormCheckBox>       
+    </FormLayout>
+}
+

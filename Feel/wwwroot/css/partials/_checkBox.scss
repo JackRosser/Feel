@@ -1,0 +1,33 @@
+﻿@mixin checkbox-style($light, $primary) {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1rem;
+    border: 2px solid $light;
+    position: relative;
+    outline: 2px solid $primary;
+    border-radius: 3px;
+
+    &:checked {
+        border: 2px solid greenyellow;
+        box-shadow: 3px 3px 0 1px rgba(greenyellow, 0.5);
+    }
+
+    &:checked::after {
+        content: "✓";
+        position: absolute;
+        top: 30%;
+        right: -1rem;
+        transform: translateY(-50%) rotate(40deg);
+        background-color: transparent;
+        font-size: 3rem;
+        font-weight: bold;
+        color: forestgreen;
+    }
+}
+
+.cm-checkbox {
+    &.autunno {
+        @include checkbox-style($autunno-feel-light, $autunno-feel-primary);
+    }
+}

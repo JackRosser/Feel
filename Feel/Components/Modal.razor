@@ -1,4 +1,6 @@
-﻿<!-- Button trigger modal -->
+﻿@inherits MainClassBase
+
+<!-- Button trigger modal -->
 @if(ModalType is ModalType.Button)
 {
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
@@ -12,6 +14,16 @@ else if(ModalType is ModalType.AggiungiObiettivo || ModalType is ModalType.Cambi
     <div class="@($"assistente {MainTheme} assistente-{ActionClass} {CssClass} bg-{MainTheme}-feel-secondary")" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
         <span class="@($"message-text text-{MainTheme}-feel-ultra-light")">@ActionText</span>
     </div>
+}
+
+else if (ModalType is ModalType.EditObiettivo)
+{
+    <div class="col-2 go-to-details" @onclick="OnActionClick">
+        <div data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
+            <span class="@($"text-{MainTheme}-primary")">></span>
+        </div>
+    </div>
+
 }
 
   

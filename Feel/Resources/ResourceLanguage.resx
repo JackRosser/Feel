@@ -261,4 +261,49 @@
   <data name="Annulla" xml:space="preserve">
     <value>Annulla</value>
   </data>
+  <data name="Aggiornamento" xml:space="preserve">
+    <value>Aggiornamento</value>
+  </data>
+  <data name="InserisciValore" xml:space="preserve">
+    <value>Inserisci un valore...</value>
+  </data>
+  <data name="AvvicinatiTarget" xml:space="preserve">
+    <value>Inserisci un importo o un valore numerico inerente al tuo obiettivo per avvicinarti o raggiungere il Target.</value>
+  </data>
+  <data name="TargetMaggioreDiZero" xml:space="preserve">
+    <value>Inserisci un valore maggiore di zero</value>
+  </data>
+  <data name="SpuntaCasella" xml:space="preserve">
+    <value>Spunta la casella</value>
+  </data>
+  <data name="Ciao" xml:space="preserve">
+    <value>Ciao</value>
+  </data>
+  <data name="DashboardEccoObiettivi" xml:space="preserve">
+    <value>ecco i tuoi obiettivi</value>
+  </data>
+  <data name="VerificaAggiornamenti" xml:space="preserve">
+    <value>Verifica aggiornamenti in corso...</value>
+  </data>
+  <data name="Attuale" xml:space="preserve">
+    <value>Attuale</value>
+  </data>
+  <data name="GiorniScadenza" xml:space="preserve">
+    <value>giorni alla scadenza</value>
+  </data>
+  <data name="Mancano" xml:space="preserve">
+    <value>Mancano</value>
+  </data>
+  <data name="TermineObiettivo" xml:space="preserve">
+    <value>Termine</value>
+  </data>
+  <data name="Inizio" xml:space="preserve">
+    <value>Inizio</value>
+  </data>
+  <data name="DataCompletamento" xml:space="preserve">
+    <value>Completato</value>
+  </data>
+  <data name="NessunaDescrizione" xml:space="preserve">
+    <value>--Nessuna descrizione disponibile--</value>
+  </data>
 </root>

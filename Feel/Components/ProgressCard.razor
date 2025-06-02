@@ -1,37 +1,34 @@
-﻿@inherits MainClassBase
+﻿@using Feel.Components.Obiettivo
+@inherits MainClassBase
 
-@if(Obiettivi is not null)
+@if(Obiettivo is not null)
 {   
-    <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-2 gap-md-0">
-
-            @foreach(var obiettivo in Obiettivi)
-            {
-             <div class="col recap-box">
-                    <div class="row progress-bar-section">
+    <div class="col recap-box">
+        <div class="@($"row progress-bar-section {MainTheme} {IsCompleted}")">
             <div class="col-3 progress-bar-bottle-container">
-                <div class="@($"progress-card bg-{MainTheme}-light")">
-                <div class="bottle rounded-pill">
-                    <span class="bottle-fill"></span>
-                </div>
-                <span class="@($"percentuale text-{MainTheme}-primary")">52%</span>
+                <div class="@($"progress-card {MainTheme}")">
+                    <div class="bottle rounded-pill">
+                        <span class="bottle-fill" style="@($"height: {Obiettivo.Percentage}%; background-color: {FillColor};")"></span>
+                    </div>
+                    <span class="@($"percentuale {MainTheme}")">@($"{Obiettivo.Percentage}%")</span>
                 </div>
             </div>
             <div class="col-7 progress-bar-recap">
-            <span>@HelperTraduzione.Traduzione(obiettivo.Categoria, Localizer)</span>
-            <span>@obiettivo.Titolo</span>
-            <span class="@($"text-{MainTheme}-primary")">@Localizer[ResourceLanguage.Scadenza]: <strong>@obiettivo.Scadenza</strong></span>
-            </div>
-            <div class="col-2 go-to-details">
-                <span class="@($"text-{MainTheme}-primary")">></span>
-            </div>
+                <span>@HelperTraduzione.Traduzione(Obiettivo.Categoria, Localizer)</span>
+                <span>@Obiettivo?.Titolo</span>
+                @if(Obiettivo.Completed)
+                {                  
+                <span class="@($"{MainTheme}")">@Localizer[ResourceLanguage.DataCompletamento]: <strong>@Obiettivo.DataCompletamento</strong></span>
+                }
+                else
+                {
+                    <span class="@($"{MainTheme}")">@Localizer[ResourceLanguage.Scadenza]: <strong>@Obiettivo.Scadenza</strong></span>
+                }
         </div>
-            </div>
-            }
-
-        </div>
+        <Modal ModalType="ModalType.EditObiettivo" OnActionClick="Action" ModalId="@Obiettivo.Id">
+        <UpdateObiettivo @ref="_updateObiettivo" ObiettivoId="@Obiettivo.Id"/>
+        </Modal>
     </div>
-   
-
+</div>
 }
 

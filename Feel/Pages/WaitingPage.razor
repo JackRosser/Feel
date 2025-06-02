@@ -1,7 +1,10 @@
 ﻿@page "/waiting"
 @inject IJSRuntime JS
 
-<h3>Aggiornamento in corso, attendere…</h3>
+<div class="waiting-container">
+    <span class="loader"></span>
+    <span>@Localizer[ResourceLanguage.VerificaAggiornamenti]</span>
+</div>
 
 @code {
     protected override async Task OnAfterRenderAsync(bool firstRender)

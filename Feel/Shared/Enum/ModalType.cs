@@ -3,8 +3,8 @@
     public enum ModalType
     {
         Button = 0,
-        Info,
         AggiungiObiettivo,
+        EditObiettivo,
         CambiaTema,
         InformazioniApp,
         AreaUtente

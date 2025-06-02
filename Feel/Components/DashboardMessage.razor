@@ -1,0 +1,13 @@
+﻿@inherits MainClassBase
+
+<div class="row row-cols-1 my-4">
+    <div class="col">
+        <div class="@($"dash-message {MainTheme}")">
+        <div>
+            <span>@Localizer[ResourceLanguage.Ciao]</span>
+            <h1 class="m-0">@($"{User?.Name},")</h1>
+        </div>
+            <span>@($"{Localizer[ResourceLanguage.DashboardEccoObiettivi]} 🎯")</span>
+        </div>
+    </div>
+</div>

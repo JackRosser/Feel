@@ -2,16 +2,56 @@
 
 @if (IsLoaded)
 {
-    <EditForm Model="@Model" OnValidSubmit="HandleValidSubmit">
-        <DataAnnotationsValidator />
-        <div class="container-fluid p-0">
-            <div class="row form-display">
-                @ChildContent
+    @if(CreateModel is not null)
+    {       
+        <EditForm Model="@CreateModel" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <div class="container-fluid p-0">
+                <div class="row form-display">
+                    @ChildContent
+                </div>
             </div>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@CloseText</button>
-            <button type="submit" class="@($"btn btn-{MainTheme}-feel-ligh text-{MainTheme}-feel-primary")">@SubmitText</button>
-        </div>
-    </EditForm>
+            <div class="@($"modal-footer {MainTheme}")">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@CloseText</button>
+                <button type="submit" class="@($"btn btn-{MainTheme}-feel-ligh text-{MainTheme}-feel-primary")">@SubmitText</button>
+            </div>
+        </EditForm>
+    }
+    else if (UpdateModelValore is not null)
+    {
+        <EditForm Model="@UpdateModelValore" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <div class="container-fluid p-0">
+                <div class="row form-display">
+                    @ChildContent
+                </div>
+            </div>
+            <div class="@($"modal-footer {MainTheme}")">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@CloseText</button>
+                <button type="submit" class="@($"btn btn-{MainTheme}-feel-ligh text-{MainTheme}-feel-primary")">@SubmitText</button>
+            </div>
+        </EditForm>
+    }
+    else if (UpdateModelCheck is not null)
+    {
+        <EditForm Model="@UpdateModelCheck" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <div class="container-fluid p-0">
+                <div class="row form-display">
+                    @ChildContent
+                </div>
+            </div>
+            <div class="@($"modal-footer {MainTheme}")">
+                @if(UpdateModelCheckValidation)
+                {                    
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@CloseText</button>
+                <button type="submit" class="@($"btn btn-{MainTheme}-feel-ligh text-{MainTheme}-feel-primary")">@SubmitText</button>
+                }
+                else
+                {
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer[ResourceLanguage.Chiudi]</button>
+                }
+            </div>
+        </EditForm>
+    }
 }

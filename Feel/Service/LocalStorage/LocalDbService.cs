@@ -31,6 +31,23 @@ namespace Feel.Service.LocalStorage
             return initial;
         }
 
+        public async Task<T?> GetFirstAsync<T>(string key, Func<List<T>> defaultFactory)
+        {
+            var data = await storage.GetItemAsync<List<T>>(key);
+
+            if (data is { Count: > 0 })
+                return data.First();
+
+            var initial = defaultFactory();
+            if (initial is { Count: > 0 })
+            {
+                await storage.SetItemAsync(key, initial);
+                return initial.First();
+            }
+
+            return default;
+        }
+
         public async Task<T?> GetByIdAsync<T>(string key, Func<List<T>> defaultFactory, int id)
         {
             var list = await GetAsync(key, defaultFactory);
@@ -97,6 +114,17 @@ namespace Feel.Service.LocalStorage
                 (int?)idProp.GetValue(x) == id);
 
             await SetAsync(key, list);
+        }
+
+        public async Task DeleteFirstAsync<T>(string key, Func<List<T>> defaultFactory)
+        {
+            var list = (await GetAsync(key, defaultFactory)).ToList();
+
+            if (list.Count > 0)
+            {
+                list.RemoveAt(0);
+                await SetAsync(key, list);
+            }
         }
 
 

@@ -61,6 +61,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Aggiornamento.
+        /// </summary>
+        public static string Aggiornamento {
+            get {
+                return ResourceManager.GetString("Aggiornamento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Alimentazione.
         /// </summary>
         public static string Alimentazione {
@@ -97,11 +106,29 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attuale.
+        /// </summary>
+        public static string Attuale {
+            get {
+                return ResourceManager.GetString("Attuale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auto.
         /// </summary>
         public static string Auto {
             get {
                 return ResourceManager.GetString("Auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci un importo o un valore numerico inerente al tuo obiettivo per avvicinarti o raggiungere il Target..
+        /// </summary>
+        public static string AvvicinatiTarget {
+            get {
+                return ResourceManager.GetString("AvvicinatiTarget", resourceCulture);
             }
         }
         
@@ -160,11 +187,38 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ciao.
+        /// </summary>
+        public static string Ciao {
+            get {
+                return ResourceManager.GetString("Ciao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cultura.
         /// </summary>
         public static string Cultura {
             get {
                 return ResourceManager.GetString("Cultura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ecco i tuoi obiettivi.
+        /// </summary>
+        public static string DashboardEccoObiettivi {
+            get {
+                return ResourceManager.GetString("DashboardEccoObiettivi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Completato.
+        /// </summary>
+        public static string DataCompletamento {
+            get {
+                return ResourceManager.GetString("DataCompletamento", resourceCulture);
             }
         }
         
@@ -205,6 +259,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to giorni alla scadenza.
+        /// </summary>
+        public static string GiorniScadenza {
+            get {
+                return ResourceManager.GetString("GiorniScadenza", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stabilisci se questo obiettivo sarà aggiornato attraverso check periodici. Ad esempio, se il tuo obiettivo è leggere 10 libri, fissa il tuo Target a 10 e spunta Check Periodico così da eseguire un +1 ad ogni check..
         /// </summary>
         public static string InfoCheck {
@@ -219,6 +282,15 @@ namespace Feel.Resources {
         public static string InfoTarget {
             get {
                 return ResourceManager.GetString("InfoTarget", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inizio.
+        /// </summary>
+        public static string Inizio {
+            get {
+                return ResourceManager.GetString("Inizio", resourceCulture);
             }
         }
         
@@ -259,11 +331,29 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Inserisci un valore....
+        /// </summary>
+        public static string InserisciValore {
+            get {
+                return ResourceManager.GetString("InserisciValore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lavoro.
         /// </summary>
         public static string Lavoro {
             get {
                 return ResourceManager.GetString("Lavoro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mancano.
+        /// </summary>
+        public static string Mancano {
+            get {
+                return ResourceManager.GetString("Mancano", resourceCulture);
             }
         }
         
@@ -336,6 +426,15 @@ namespace Feel.Resources {
         public static string Natura {
             get {
                 return ResourceManager.GetString("Natura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to --Nessuna descrizione disponibile--.
+        /// </summary>
+        public static string NessunaDescrizione {
+            get {
+                return ResourceManager.GetString("NessunaDescrizione", resourceCulture);
             }
         }
         
@@ -457,11 +556,29 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Spunta la casella.
+        /// </summary>
+        public static string SpuntaCasella {
+            get {
+                return ResourceManager.GetString("SpuntaCasella", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Target.
         /// </summary>
         public static string Target {
             get {
                 return ResourceManager.GetString("Target", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci un valore maggiore di zero.
+        /// </summary>
+        public static string TargetMaggioreDiZero {
+            get {
+                return ResourceManager.GetString("TargetMaggioreDiZero", resourceCulture);
             }
         }
         
@@ -480,6 +597,24 @@ namespace Feel.Resources {
         public static string TempoLibero {
             get {
                 return ResourceManager.GetString("TempoLibero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termine.
+        /// </summary>
+        public static string TermineObiettivo {
+            get {
+                return ResourceManager.GetString("TermineObiettivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verifica aggiornamenti in corso....
+        /// </summary>
+        public static string VerificaAggiornamenti {
+            get {
+                return ResourceManager.GetString("VerificaAggiornamenti", resourceCulture);
             }
         }
         

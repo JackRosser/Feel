@@ -1,33 +1,33 @@
 ﻿@inherits MainClassBase
 
-    @if(EditModel.CreateObiettivoForm is not null)
+    @if(CreateObiettivo is not null)
     {       
-<FormLayout Model="@EditModel.CreateObiettivoForm" OnSubmit="Save">
+<FormLayout CreateModel="@CreateObiettivo" OnSubmit="Save">
         <FormText LabelTitle="@Localizer[ResourceLanguage.Obiettivo]"
                   Placeholder="@Localizer[ResourceLanguage.PlaceholderObiettivo]"
-                  @bind-Value="EditModel.CreateObiettivoForm.Titolo" />
+                  @bind-Value="CreateObiettivo.Titolo" />
         
             <EnumSelector LabelTitle="@Localizer[ResourceLanguage.Categoria]"
-                      @bind-Value="EditModel.CreateObiettivoForm.Categoria" TEnum="Category?">                   
+                      @bind-Value="CreateObiettivo.Categoria" TEnum="Category?">                   
             </EnumSelector>
 
             <FormText LabelTitle="@Localizer[ResourceLanguage.Descrizione]"
                       Placeholder="@Localizer[ResourceLanguage.PlaceholderDescrizione]"
-                      @bind-Value="EditModel.CreateObiettivoForm.Descrizione">
+                      @bind-Value="CreateObiettivo.Descrizione">
             </FormText>
 
             <FormDate LabelTitle="@Localizer[ResourceLanguage.Scadenza]"
-                      @bind-Value="EditModel.CreateObiettivoForm.Scadenza">
+                      @bind-Value="CreateObiettivo.Scadenza">
             </FormDate>
 
             <FormNumberInteger LabelTitle="@Localizer[ResourceLanguage.Target]"
                       Placeholder="@Localizer[ResourceLanguage.PlaceholderTarget]"
-                      @bind-Value="EditModel.CreateObiettivoForm.Target" Info="@Localizer[ResourceLanguage.InfoTarget]">
+                      @bind-Value="CreateObiettivo.Target" Info="@Localizer[ResourceLanguage.InfoTarget]">
             </FormNumberInteger>
 
-            <FormCheck LabelTitle="@Localizer[ResourceLanguage.CheckPeriodico]"
-                      @bind-Value="EditModel.CreateObiettivoForm.CheckMark" Info="@Localizer[ResourceLanguage.InfoCheck]">
-            </FormCheck>
+            <FormRadio LabelTitle="@Localizer[ResourceLanguage.CheckPeriodico]"
+                      @bind-Value="CreateObiettivo.CheckMark" Info="@Localizer[ResourceLanguage.InfoCheck]">
+            </FormRadio>
 </FormLayout>   
     }
 
