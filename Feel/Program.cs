@@ -34,12 +34,15 @@ builder.Services.AddScoped<LocalDbService>();
 // Services
 
 builder.Services.AddScoped<ObiettivoService>();
+builder.Services.AddScoped<UserService>();
 
 // Services di ascolto
 
 builder.Services.AddScoped<ObiettiviStateService>();
+builder.Services.AddScoped<UserStateService>();
 
 // Proxy
 builder.Services.AddScoped<ProxyObiettivi>();
+builder.Services.AddScoped<ProxyUser>();
 
 await builder.Build().RunAsync();

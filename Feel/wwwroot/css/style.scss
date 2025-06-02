@@ -25,8 +25,8 @@ $light-gray: #C8C3B9;
 
 // TEMA autunno
 
-$autunno-feel-primary: #7E2A0C;
-$autunno-feel-secondary: #B5813C;
+$autunno-feel-primary: #82181A;
+$autunno-feel-secondary: #F54A00;
 $autunno-feel-light: #F6DCA1;
 $autunno-feel-ultra-light: #fff;
 $autunno-feel-gray: #6c757d;
@@ -82,6 +82,9 @@ input[type=number] {
 
 // qui importo i miei partials
 @import "partials/_mixins.scss";
+@import "partials/_loading.scss";
+@import "partials/_modal.scss";
+@import "partials/_waitingPage.scss";
 @import "partials/_checkRadio.scss";
 @import "partials/_checkBox.scss";
 @import "partials/_scrollbar.scss";
@@ -91,6 +94,8 @@ input[type=number] {
 @import "partials/_assistente.scss";
 @import "partials/_form.scss";
 @import "partials/_tooltip.scss";
+@import "partials/_dashboardMessage.scss";
+@import "partials/_recap.scss";
 
     @import "../lib/bootstrap/scss/mixins";
     @import "../lib/bootstrap/scss/bootstrap";

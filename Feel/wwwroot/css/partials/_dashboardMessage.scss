@@ -1,0 +1,30 @@
+﻿@mixin dashboard-message($color) {
+    & h1 {
+        color: $color;
+    }
+
+    & span {
+        font-weight: 500 !important;
+
+        &:last-child {
+            margin-left: 2rem;
+            font-style: italic;
+        }
+    }
+
+    & div {
+        display: flex;
+        align-items: end;
+        gap: 0.5rem;
+
+        & span {
+            font-weight: 700 !important;
+        }
+    }
+}
+
+.dash-message {
+    &.autunno {
+        @include dashboard-message($autunno-feel-secondary);
+    }
+}

@@ -26,6 +26,82 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+.loader {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  background: radial-gradient(ellipse at center, #FFF 69%, rgba(0, 0, 0, 0) 70%), linear-gradient(to right, rgba(0, 0, 0, 0) 47%, #FFF 48%, #FFF 52%, rgba(0, 0, 0, 0) 53%);
+  background-size: 20px 20px, 20px auto;
+  background-repeat: repeat-x;
+  background-position: center bottom, center -5px;
+  box-sizing: border-box;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 20px;
+  height: 60px;
+  background: radial-gradient(ellipse at center, #FFF 69%, rgba(0, 0, 0, 0) 70%), linear-gradient(to right, rgba(0, 0, 0, 0) 47%, #FFF 48%, #FFF 52%, rgba(0, 0, 0, 0) 53%);
+  background-size: 20px 20px, 20px auto;
+  background-repeat: no-repeat;
+  background-position: center bottom, center -5px;
+  transform: rotate(0deg);
+  transform-origin: 50% 0%;
+  animation: animPend 1s linear infinite alternate;
+}
+
+.loader::after {
+  animation: animPend2 1s linear infinite alternate;
+  left: 100%;
+}
+
+@keyframes animPend {
+  0% {
+    transform: rotate(22deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes animPend2 {
+  0%, 55% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-22deg);
+  }
+}
+.modal-footer.autunno {
+  border-top: 2px solid #F6DCA1;
+  margin-top: 2.5rem;
+}
+
+.waiting-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding: 2rem;
+  transition: all 1s ease-in-out;
+}
+
 /* RADIO BUTTON */
 .cm-toggle {
   -webkit-appearance: none;
@@ -110,7 +186,7 @@ input[type=number] {
   margin: 1rem;
   border: 2px solid #F6DCA1;
   position: relative;
-  outline: 2px solid #7E2A0C;
+  outline: 2px solid #82181A;
   border-radius: 3px;
 }
 .cm-checkbox.autunno:checked {
@@ -256,9 +332,8 @@ main .main-gradient {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  mix-blend-mode: overlay;
+  mix-blend-mode: soft-light;
   pointer-events: none;
-  opacity: 0.9;
 }
 main .main-section {
   position: relative;
@@ -850,7 +925,7 @@ main .main-section {
   color: #fff;
 }
 .assistente.autunno:active {
-  background-color: #7E2A0C !important;
+  background-color: #82181A !important;
 }
 
 .form-display {
@@ -874,13 +949,13 @@ main .main-section {
 .form-display .form-group.autunno label {
   position: absolute;
   color: #F6DCA1;
-  background-color: #7E2A0C;
+  background-color: #82181A;
   padding: 0 0.6rem;
   left: 1.2rem;
   top: 0;
   transform: translateY(-50%);
   font-size: 0.8rem;
-  box-shadow: 0 0 5px 2px rgba(126, 42, 12, 0.5);
+  box-shadow: 0 0 5px 2px rgba(130, 24, 26, 0.5);
 }
 .form-display .form-group.autunno label span {
   margin-left: 0.2rem;
@@ -928,7 +1003,7 @@ main .main-section {
 }
 .form-display .form-group.autunno select option {
   color: #F6DCA1;
-  background-color: #7E2A0C;
+  background-color: #82181A;
 }
 .form-display .form-group-radio.autunno {
   display: flex;
@@ -975,7 +1050,7 @@ main .main-section {
   width: max-content;
   max-width: 200px;
   background-color: #F6DCA1;
-  color: #7E2A0C;
+  color: #82181A;
   text-align: left;
   padding: 10px 8px;
   border-radius: 4px;
@@ -991,6 +1066,51 @@ main .main-section {
 .tooltip-container.autunno:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
+}
+
+.dash-message.autunno h1, .dash-message.autunno .h1 {
+  color: #F54A00;
+}
+.dash-message.autunno span {
+  font-weight: 500 !important;
+}
+.dash-message.autunno span:last-child {
+  margin-left: 2rem;
+  font-style: italic;
+}
+.dash-message.autunno div {
+  display: flex;
+  align-items: end;
+  gap: 0.5rem;
+}
+.dash-message.autunno div span {
+  font-weight: 700 !important;
+}
+
+.recap.autunno {
+  color: #F6DCA1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.recap.autunno:first-of-type {
+  margin-top: 1rem;
+}
+.recap.autunno:last-child {
+  margin-bottom: 0;
+}
+.recap.autunno:last-child span {
+  font-size: 0.7rem;
+  text-decoration: underline;
+}
+
+.description.autunno {
+  font-size: 0.7rem;
+  color: #F6DCA1;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed #F6DCA1;
 }
 
 /*!
@@ -1031,8 +1151,8 @@ main .main-section {
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-autunno-feel-primary: #7E2A0C;
-  --bs-autunno-feel-secondary: #B5813C;
+  --bs-autunno-feel-primary: #82181A;
+  --bs-autunno-feel-secondary: #F54A00;
   --bs-autunno-feel-ligh: #F6DCA1;
   --bs-autunno-feel-gray: #6c757d;
   --bs-autunno-feel-main-bg: #F8D9A8;
@@ -1046,8 +1166,8 @@ main .main-section {
   --bs-danger-rgb: 220, 53, 69;
   --bs-light-rgb: 248, 249, 250;
   --bs-dark-rgb: 33, 37, 41;
-  --bs-autunno-feel-primary-rgb: 126, 42, 12;
-  --bs-autunno-feel-secondary-rgb: 181, 129, 60;
+  --bs-autunno-feel-primary-rgb: 130, 24, 26;
+  --bs-autunno-feel-secondary-rgb: 245, 74, 0;
   --bs-autunno-feel-ligh-rgb: 246, 220, 161;
   --bs-autunno-feel-gray-rgb: 108, 117, 125;
   --bs-autunno-feel-main-bg-rgb: 248, 217, 168;
@@ -4110,36 +4230,36 @@ textarea.form-control-lg {
 
 .btn-autunno-feel-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #7E2A0C;
-  --bs-btn-border-color: #7E2A0C;
+  --bs-btn-bg: #82181A;
+  --bs-btn-border-color: #82181A;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: rgb(107.1, 35.7, 10.2);
-  --bs-btn-hover-border-color: rgb(100.8, 33.6, 9.6);
-  --bs-btn-focus-shadow-rgb: 145, 74, 48;
+  --bs-btn-hover-bg: rgb(110.5, 20.4, 22.1);
+  --bs-btn-hover-border-color: rgb(104, 19.2, 20.8);
+  --bs-btn-focus-shadow-rgb: 149, 59, 60;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: rgb(100.8, 33.6, 9.6);
-  --bs-btn-active-border-color: rgb(94.5, 31.5, 9);
+  --bs-btn-active-bg: rgb(104, 19.2, 20.8);
+  --bs-btn-active-border-color: rgb(97.5, 18, 19.5);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #7E2A0C;
-  --bs-btn-disabled-border-color: #7E2A0C;
+  --bs-btn-disabled-bg: #82181A;
+  --bs-btn-disabled-border-color: #82181A;
 }
 
 .btn-autunno-feel-secondary {
   --bs-btn-color: #000;
-  --bs-btn-bg: #B5813C;
-  --bs-btn-border-color: #B5813C;
+  --bs-btn-bg: #F54A00;
+  --bs-btn-border-color: #F54A00;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: rgb(192.1, 147.9, 89.25);
-  --bs-btn-hover-border-color: rgb(188.4, 141.6, 79.5);
-  --bs-btn-focus-shadow-rgb: 154, 110, 51;
+  --bs-btn-hover-bg: rgb(246.5, 101.15, 38.25);
+  --bs-btn-hover-border-color: rgb(246, 92.1, 25.5);
+  --bs-btn-focus-shadow-rgb: 208, 63, 0;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: rgb(195.8, 154.2, 99);
-  --bs-btn-active-border-color: rgb(188.4, 141.6, 79.5);
+  --bs-btn-active-bg: rgb(247, 110.2, 51);
+  --bs-btn-active-border-color: rgb(246, 92.1, 25.5);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #B5813C;
-  --bs-btn-disabled-border-color: #B5813C;
+  --bs-btn-disabled-bg: #F54A00;
+  --bs-btn-disabled-border-color: #F54A00;
 }
 
 .btn-autunno-feel-ligh {
@@ -4364,36 +4484,36 @@ textarea.form-control-lg {
 }
 
 .btn-outline-autunno-feel-primary {
-  --bs-btn-color: #7E2A0C;
-  --bs-btn-border-color: #7E2A0C;
+  --bs-btn-color: #82181A;
+  --bs-btn-border-color: #82181A;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #7E2A0C;
-  --bs-btn-hover-border-color: #7E2A0C;
-  --bs-btn-focus-shadow-rgb: 126, 42, 12;
+  --bs-btn-hover-bg: #82181A;
+  --bs-btn-hover-border-color: #82181A;
+  --bs-btn-focus-shadow-rgb: 130, 24, 26;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #7E2A0C;
-  --bs-btn-active-border-color: #7E2A0C;
+  --bs-btn-active-bg: #82181A;
+  --bs-btn-active-border-color: #82181A;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #7E2A0C;
+  --bs-btn-disabled-color: #82181A;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #7E2A0C;
+  --bs-btn-disabled-border-color: #82181A;
   --bs-gradient: none;
 }
 
 .btn-outline-autunno-feel-secondary {
-  --bs-btn-color: #B5813C;
-  --bs-btn-border-color: #B5813C;
+  --bs-btn-color: #F54A00;
+  --bs-btn-border-color: #F54A00;
   --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #B5813C;
-  --bs-btn-hover-border-color: #B5813C;
-  --bs-btn-focus-shadow-rgb: 181, 129, 60;
+  --bs-btn-hover-bg: #F54A00;
+  --bs-btn-hover-border-color: #F54A00;
+  --bs-btn-focus-shadow-rgb: 245, 74, 0;
   --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #B5813C;
-  --bs-btn-active-border-color: #B5813C;
+  --bs-btn-active-bg: #F54A00;
+  --bs-btn-active-border-color: #F54A00;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #B5813C;
+  --bs-btn-disabled-color: #F54A00;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #B5813C;
+  --bs-btn-disabled-border-color: #F54A00;
   --bs-gradient: none;
 }
 
@@ -8284,8 +8404,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-autunno-feel-primary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-autunno-feel-primary:hover, .link-autunno-feel-primary:focus {
-  color: RGBA(101, 34, 10, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(101, 34, 10, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(104, 19, 21, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(104, 19, 21, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-autunno-feel-secondary {
@@ -8293,8 +8413,8 @@ textarea.form-control-lg {
   text-decoration-color: RGBA(var(--bs-autunno-feel-secondary-rgb), var(--bs-link-underline-opacity, 1)) !important;
 }
 .link-autunno-feel-secondary:hover, .link-autunno-feel-secondary:focus {
-  color: RGBA(196, 154, 99, var(--bs-link-opacity, 1)) !important;
-  text-decoration-color: RGBA(196, 154, 99, var(--bs-link-underline-opacity, 1)) !important;
+  color: RGBA(247, 110, 51, var(--bs-link-opacity, 1)) !important;
+  text-decoration-color: RGBA(247, 110, 51, var(--bs-link-underline-opacity, 1)) !important;
 }
 
 .link-autunno-feel-ligh {

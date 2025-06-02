@@ -276,4 +276,25 @@
   <data name="SpuntaCasella" xml:space="preserve">
     <value>Check the box</value>
   </data>
+  <data name="Ciao" xml:space="preserve">
+    <value>Hi</value>
+  </data>
+  <data name="DashboardEccoObiettivi" xml:space="preserve">
+    <value>here are your goals</value>
+  </data>
+  <data name="VerificaAggiornamenti" xml:space="preserve">
+    <value>Checking for updates...</value>
+  </data>
+  <data name="Attuale" xml:space="preserve">
+    <value>Actual</value>
+  </data>
+  <data name="GiorniScadenza" xml:space="preserve">
+    <value>days to maturity</value>
+  </data>
+  <data name="Mancano" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="TermineObiettivo" xml:space="preserve">
+    <value>End</value>
+  </data>
 </root>

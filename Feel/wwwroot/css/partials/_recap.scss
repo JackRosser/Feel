@@ -1,0 +1,38 @@
+﻿@mixin recap($light) {
+    color: $light;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    &:first-of-type {
+        margin-top: 1rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+
+        & span {
+            font-size: 0.7rem;
+            text-decoration: underline;
+        }
+    }
+}
+
+@mixin recap-descrizione($light) {
+    font-size: 0.7rem;
+    color: $light;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed $light;
+}
+
+.recap {
+        &.autunno {@include recap($autunno-feel-light)}
+    }
+
+.description {
+    &.autunno {
+        @include recap-descrizione($autunno-feel-light)
+    }
+}

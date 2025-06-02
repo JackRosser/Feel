@@ -106,6 +106,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Attuale.
+        /// </summary>
+        public static string Attuale {
+            get {
+                return ResourceManager.GetString("Attuale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auto.
         /// </summary>
         public static string Auto {
@@ -178,11 +187,29 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Ciao.
+        /// </summary>
+        public static string Ciao {
+            get {
+                return ResourceManager.GetString("Ciao", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cultura.
         /// </summary>
         public static string Cultura {
             get {
                 return ResourceManager.GetString("Cultura", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ecco i tuoi obiettivi.
+        /// </summary>
+        public static string DashboardEccoObiettivi {
+            get {
+                return ResourceManager.GetString("DashboardEccoObiettivi", resourceCulture);
             }
         }
         
@@ -219,6 +246,15 @@ namespace Feel.Resources {
         public static string Famiglia {
             get {
                 return ResourceManager.GetString("Famiglia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to giorni alla scadenza.
+        /// </summary>
+        public static string GiorniScadenza {
+            get {
+                return ResourceManager.GetString("GiorniScadenza", resourceCulture);
             }
         }
         
@@ -291,6 +327,15 @@ namespace Feel.Resources {
         public static string Lavoro {
             get {
                 return ResourceManager.GetString("Lavoro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mancano.
+        /// </summary>
+        public static string Mancano {
+            get {
+                return ResourceManager.GetString("Mancano", resourceCulture);
             }
         }
         
@@ -525,6 +570,24 @@ namespace Feel.Resources {
         public static string TempoLibero {
             get {
                 return ResourceManager.GetString("TempoLibero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Termine.
+        /// </summary>
+        public static string TermineObiettivo {
+            get {
+                return ResourceManager.GetString("TermineObiettivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verifica aggiornamenti in corso....
+        /// </summary>
+        public static string VerificaAggiornamenti {
+            get {
+                return ResourceManager.GetString("VerificaAggiornamenti", resourceCulture);
             }
         }
         

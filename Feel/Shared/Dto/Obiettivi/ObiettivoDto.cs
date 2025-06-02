@@ -10,6 +10,7 @@ namespace Feel.Shared.Dto.Obiettivi
         public string? Descrizione { get; set; }
         public DateOnly DataCreazione { get; set; }
         public DateOnly? Scadenza { get; set; }
+        public DateOnly? DataCompletamento { get; set; }
         public bool Completed { get; set; }
         public int? Target { get; set; }
         public bool CheckMark { get; set; }

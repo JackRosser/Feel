@@ -1,12 +1,15 @@
-﻿namespace Feel.Layout
+﻿using Feel.Service.Proxy;
+using Feel.Shared.Dto.User;
+
+namespace Feel.Layout
 {
-    public partial class MainLayout
+    public partial class MainLayout(ProxyUser userSdk)
     {
         public string? MainTheme { get; set; }
         private string? AssistenteNome { get; set; }
         public string Assistente => $"{AssistenteNome}.png";
-
-        protected override void OnInitialized()
+        private UserDto? User { get; set; }
+        protected override async Task OnInitializedAsync()
         {
             // Qua arriva l'id dal localstorage ed è il tema
             int IdDaLocalStorage = 1;
@@ -24,6 +27,17 @@
                 2 => "kitty",
                 _ => ""
             };
+            // Qua arriva il nome utente
+            User = await userSdk.SendRequestAsync(a => a.GetUser());
+            if (User is null)
+            {
+                User = new UserDto
+                {
+                    Id = 0,
+                    Name = "UserTest",
+                };
+            }
+            StateHasChanged();
         }
 
     }

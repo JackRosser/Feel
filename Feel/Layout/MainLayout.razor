@@ -5,16 +5,18 @@
 {
     <CascadingValue Value="MainTheme" Name="MainTheme">
         <CascadingValue Value="Assistente" Name="Assistente">
+            <CascadingValue Value="User" Name="User">
             <div id="modal-container"></div>
-            <Assistente />
             <main class="@($"bg-{MainTheme}-feel-main-bg")">
                 <div class="main-gradient" />
                 <div class="main-content">
                     <section class="main-section">
                         @Body
+                        <Assistente />
                     </section>
                 </div>
             </main>            
+        </CascadingValue>
         </CascadingValue>
     </CascadingValue>
 }

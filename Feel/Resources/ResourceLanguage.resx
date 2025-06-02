@@ -276,4 +276,25 @@
   <data name="SpuntaCasella" xml:space="preserve">
     <value>Spunta la casella</value>
   </data>
+  <data name="Ciao" xml:space="preserve">
+    <value>Ciao</value>
+  </data>
+  <data name="DashboardEccoObiettivi" xml:space="preserve">
+    <value>ecco i tuoi obiettivi</value>
+  </data>
+  <data name="VerificaAggiornamenti" xml:space="preserve">
+    <value>Verifica aggiornamenti in corso...</value>
+  </data>
+  <data name="Attuale" xml:space="preserve">
+    <value>Attuale</value>
+  </data>
+  <data name="GiorniScadenza" xml:space="preserve">
+    <value>giorni alla scadenza</value>
+  </data>
+  <data name="Mancano" xml:space="preserve">
+    <value>Mancano</value>
+  </data>
+  <data name="TermineObiettivo" xml:space="preserve">
+    <value>Termine</value>
+  </data>
 </root>

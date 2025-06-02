@@ -1,0 +1,18 @@
+﻿.waiting-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 2rem;
+    transition: all 1s ease-in-out;
+}

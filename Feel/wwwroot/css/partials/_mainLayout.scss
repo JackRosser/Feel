@@ -18,9 +18,8 @@ main {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        mix-blend-mode: overlay;
+        mix-blend-mode: soft-light;
         pointer-events: none;
-        opacity: 0.9;
     }
 
     & .main-section {

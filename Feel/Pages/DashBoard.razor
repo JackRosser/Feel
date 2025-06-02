@@ -1,7 +1,9 @@
-﻿@page "/dashboard"
+﻿@page "/"
+@* @page "/dashboard" *@
 @inherits MainClassBase
 
 <div class="container-fluid">
+    <DashboardMessage />
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-2 gap-md-0">
 
         @if(Obiettivi is not null)
