@@ -1,0 +1,44 @@
+﻿@inherits MainClassBase
+
+<div class="row align-items-center mb-3">
+    <div class="col">Filtra</div>
+
+    <div class="col">
+        <select class="form-select" @onchange="OnCompletedChanged">
+            <option value="">-- Completamento --</option>
+            <option value="true">Completati</option>
+            <option value="false">Non completati</option>
+        </select>
+    </div>
+
+    <div class="col">
+        <select class="form-select" @onchange="OnCategoriaChanged">
+            <option value="">-- Categoria --</option>
+            @foreach (var cat in Enum.GetValues<Category>())
+            {
+                <option value="@cat">@cat</option>
+            }
+        </select>
+    </div>
+
+    <div class="col">
+        @if (CompletedFilter.HasValue)
+        {
+            <span class="badge bg-secondary me-1">
+                @((CompletedFilter.Value ? "Completati" : "Non completati"))
+                <button class="btn btn-sm btn-close ms-1" @onclick="ClearCompletedFilter"></button>
+            </span>
+        }
+        @if (CategoriaFilter.HasValue)
+        {
+            <span class="badge bg-secondary me-1">
+                @CategoriaFilter.Value
+                <button class="btn btn-sm btn-close ms-1" @onclick="ClearCategoriaFilter"></button>
+            </span>
+        }
+        @if (CompletedFilter.HasValue || CategoriaFilter.HasValue)
+        {
+            <button class="btn btn-link text-danger" @onclick="ResetFilters">Reset</button>
+        }
+    </div>
+</div>

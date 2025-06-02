@@ -306,4 +306,7 @@
   <data name="NessunaDescrizione" xml:space="preserve">
     <value>--No description available--</value>
   </data>
+  <data name="Filtra" xml:space="preserve">
+    <value>Filter</value>
+  </data>
 </root>

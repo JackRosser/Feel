@@ -259,6 +259,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Filtra.
+        /// </summary>
+        public static string Filtra {
+            get {
+                return ResourceManager.GetString("Filtra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to giorni alla scadenza.
         /// </summary>
         public static string GiorniScadenza {

@@ -8,6 +8,7 @@ namespace Feel.Pages
     public partial class DashBoard(ProxyObiettivi sdk, ObiettiviStateService stato) : MainClassBase
     {
         private IEnumerable<ObiettivoDto>? Obiettivi { get; set; }
+        private IEnumerable<ObiettivoDto>? ObiettiviFiltrati { get; set; }
 
         private Func<Task>? _handler;
 
@@ -18,13 +19,9 @@ namespace Feel.Pages
             await GetRecords();
         }
 
-        private async Task OnObiettiviAggiornati()
-        {
-            await GetRecords();
-        }
-
         private async Task GetRecords()
         {
+            Obiettivi = await sdk.SendRequestAsync(a => a.GetAllObiettiviAsync());
             // QUESTO SERVE SOLO PER TEST DI OBIETTIVO COMPLETATO
 
 
@@ -42,10 +39,17 @@ namespace Feel.Pages
             //    CheckMark = true
             //};
             //await sdk.SendRequestAsync(a => a.CreateTestingNewObiettivoAsync(nuovo));
-            Obiettivi = await sdk.SendRequestAsync(a => a.GetAllObiettiviAsync());
+            ObiettiviFiltrati = Obiettivi;
             StateHasChanged();
         }
 
+        private Task OnObiettiviAggiornati() => GetRecords();
+
+        private void AggiornaListaFiltrata(IEnumerable<ObiettivoDto> lista)
+        {
+            ObiettiviFiltrati = lista;
+            StateHasChanged();
+        }
 
         protected override void OnDispose()
         {
@@ -54,3 +58,7 @@ namespace Feel.Pages
         }
     }
 }
+
+
+
+
