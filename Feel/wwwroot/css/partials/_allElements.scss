@@ -1,4 +1,4 @@
-﻿// ASSISTENTE
+﻿// ASSISTENTE //
 
 .assistente {
     &.autunno {
@@ -20,5 +20,42 @@
 .cm-toggle {
     &.autunno {
         @include radio($autunno-feel-light);
+    }
+}
+
+// DASHBOARD //
+
+// Messaggio iniziale
+
+.dash-message {
+    &.autunno {
+        @include dashboard-message($autunno-feel-secondary);
+    }
+}
+
+// Filter
+
+.filterbox {
+    &.autunno {
+        @include filtri($autunno-feel-secondary, $autunno-feel-ultra-light);
+    }
+}
+
+// Progress card
+
+.progress-bar-section {
+    &.autunno {
+        @include progress-card($autunno-feel-light, $autunno-feel-primary, $autunno-feel-gray)
+    }
+}
+
+
+// MODALI //
+
+// Footer
+
+.modal-footer {
+    &.autunno {
+        @include footer($autunno-feel-light)
     }
 }
