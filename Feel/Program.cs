@@ -36,6 +36,13 @@ builder.Services.AddScoped<LocalDbService>();
 builder.Services.AddScoped<ObiettivoService>();
 builder.Services.AddScoped<UserService>();
 
+// Service per la localizzazione
+
+builder.Services.AddScoped<LocalizationService>();
+builder.Services.AddScoped<ProxyLocalization>();
+
+
+
 // Services di ascolto
 
 builder.Services.AddScoped<ObiettiviStateService>();
@@ -45,4 +52,17 @@ builder.Services.AddScoped<UserStateService>();
 builder.Services.AddScoped<ProxyObiettivi>();
 builder.Services.AddScoped<ProxyUser>();
 
-await builder.Build().RunAsync();
+// Questo era lo standard prima di mettere la localizzazione
+//await builder.Build().RunAsync();
+
+var host = builder.Build();
+
+// Imposta la cultura dal localStorage
+var localizationService = host.Services.GetRequiredService<LocalizationService>();
+var currentCulture = await localizationService.GetCurrentCultureAsync();
+CultureInfo.DefaultThreadCurrentCulture = currentCulture;
+CultureInfo.DefaultThreadCurrentUICulture = currentCulture;
+
+// Avvia l'app Blazor
+await host.RunAsync();
+

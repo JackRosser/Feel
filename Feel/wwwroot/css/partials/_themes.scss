@@ -1,0 +1,92 @@
+﻿// Override colori
+$acqua: #B4CDBE;
+$light-gray: #C8C3B9;
+
+// TEMA autunno
+
+$autunno-feel-primary: #82181A;
+$autunno-feel-secondary: #F54A00;
+$autunno-feel-light: #F6DCA1;
+$autunno-feel-ultra-light: #fff;
+$autunno-feel-gray: #6c757d;
+$autunno-feel-main-bg: #F8D9A8;
+$autunno-text-disabled: rgba($autunno-feel-ultra-light, 0.7);
+$autunno-feel-error: #F6DCA1;
+
+// TEMA inverno
+
+$inverno-feel-primary: #003366;
+$inverno-feel-secondary: #336699;
+$inverno-feel-light: #DCE9F4;
+$inverno-feel-ultra-light: #fff;
+$inverno-feel-gray: #6c757d;
+$inverno-feel-main-bg: #B5D0E5;
+$inverno-text-disabled: rgba($inverno-feel-ultra-light, 0.7);
+$inverno-feel-error: #DCE9F4;
+
+// TEMA primavera
+
+$primavera-feel-primary: #4CAF50;
+$primavera-feel-secondary: #81C784;
+$primavera-feel-light: #E0F2E9;
+$primavera-feel-ultra-light: #fff;
+$primavera-feel-gray: #6c757d;
+$primavera-feel-main-bg: #BCE0C8;
+$primavera-text-disabled: rgba($primavera-feel-ultra-light, 0.7);
+$primavera-feel-error: #E0F2E9;
+
+// TEMA estate
+
+$estate-feel-primary: #007BFF;
+$estate-feel-secondary: #66B2FF;
+$estate-feel-light: #D6ECFF;
+$estate-feel-ultra-light: #fff;
+$estate-feel-gray: #6c757d;
+$estate-feel-main-bg: #ADD8F4;
+$estate-text-disabled: rgba($estate-feel-ultra-light, 0.7);
+$estate-feel-error: #D6ECFF;
+
+
+$theme-colors: map-merge($theme-colors, (
+
+  // Utility
+  "acqua": $acqua,
+  "light-gray": $light-gray,
+
+  // AUTUNNO
+  "autunno-feel-primary": $autunno-feel-primary,
+  "autunno-feel-secondary": $autunno-feel-secondary,
+  "autunno-feel-ligh": $autunno-feel-light,
+  "autunno-feel-gray": $autunno-feel-gray,
+  "autunno-feel-main-bg": $autunno-feel-main-bg,
+  "autunno-text-disabled": $autunno-text-disabled,
+  "autunno-feel-error": $autunno-feel-error,
+
+  // INVERNO
+  "inverno-feel-primary": $inverno-feel-primary,
+  "inverno-feel-secondary": $inverno-feel-secondary,
+  "inverno-feel-ligh": $inverno-feel-light,
+  "inverno-feel-gray": $inverno-feel-gray,
+  "inverno-feel-main-bg": $inverno-feel-main-bg,
+  "inverno-text-disabled": $inverno-text-disabled,
+  "inverno-feel-error": $inverno-feel-error,
+
+  // PRIMAVERA
+  "primavera-feel-primary": $primavera-feel-primary,
+  "primavera-feel-secondary": $primavera-feel-secondary,
+  "primavera-feel-ligh": $primavera-feel-light,
+  "primavera-feel-gray": $primavera-feel-gray,
+  "primavera-feel-main-bg": $primavera-feel-main-bg,
+  "primavera-text-disabled": $primavera-text-disabled,
+  "primavera-feel-error": $primavera-feel-error,
+
+  // ESTATE
+  "estate-feel-primary": $estate-feel-primary,
+  "estate-feel-secondary": $estate-feel-secondary,
+  "estate-feel-ligh": $estate-feel-light,
+  "estate-feel-gray": $estate-feel-gray,
+  "estate-feel-main-bg": $estate-feel-main-bg,
+  "estate-text-disabled": $estate-text-disabled,
+  "estate-feel-error": $estate-feel-error
+
+));

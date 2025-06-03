@@ -4,4 +4,4 @@
 <AssistantMessage CssClass="@($"{WhoIs} {ShowMessages}")" ModalId="07" AssistantChoice="ModalType.CambiaTema" SitAssistant="SitAssistant" />
 <AssistantMessage CssClass="@($"{WhoIs} {ShowMessages}")" ModalId="2023" AssistantChoice="ModalType.AreaUtente" SitAssistant="SitAssistant" />
 <AssistantMessage CssClass="@($"{WhoIs} {ShowMessages}")" ModalId="2" AssistantChoice="ModalType.InformazioniApp" SitAssistant="SitAssistant" />
-<img class="assistente" src="@($"/css/images/Assistenti/{IsSelectedClass}-{AssistenteNome}")" @onclick="PadOnAssistant"/>
+<img class="@($"assistente {MainTheme}")" src="@($"/css/images/Assistenti/{IsSelectedClass}-{AssistenteNome}")" @onclick="PadOnAssistant" />

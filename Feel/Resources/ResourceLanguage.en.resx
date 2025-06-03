@@ -163,7 +163,7 @@
     <value>Job</value>
   </data>
   <data name="MassimoVentiCaratteri" xml:space="preserve">
-    <value>Maximum 20 characters</value>
+    <value>Maximum 18 characters</value>
   </data>
   <data name="MessaggioAssistenteAbout" xml:space="preserve">
     <value>About the app</value>
@@ -323,5 +323,14 @@
   </data>
   <data name="NascondiFiltri" xml:space="preserve">
     <value>Hide filters</value>
+  </data>
+  <data name="Ordina" xml:space="preserve">
+    <value>Order</value>
+  </data>
+  <data name="OrdinaPiuRecente" xml:space="preserve">
+    <value>From the most recent</value>
+  </data>
+  <data name="OrdinaMenoRecente" xml:space="preserve">
+    <value>From the oldest</value>
   </data>
 </root>

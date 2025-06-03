@@ -9,7 +9,7 @@ namespace Feel.Shared.Dto.Obiettivi
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciCategoria")]
         public Category? Categoria { get; set; }
         [Required(ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "InserisciTitolo")]
-        [StringLength(20, ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "MassimoVentiCaratteri")]
+        [StringLength(18, ErrorMessageResourceType = typeof(ResourceLanguage), ErrorMessageResourceName = "MassimoVentiCaratteri")]
         public string? Titolo { get; set; }
         public string? Descrizione { get; set; }
         public DateOnly DataCreazione { get; set; }

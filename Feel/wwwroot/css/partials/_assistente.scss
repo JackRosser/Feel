@@ -14,11 +14,11 @@
     & .message-text {
         font-size: 0.8rem;
         color: $color;
-    }
-
     &:active {
         background-color: $active-bg-color !important;
     }
+    }
+
 }
 
 @mixin assistente-messaggio($translateY, $translateX, $rotate, $scale: 1) {

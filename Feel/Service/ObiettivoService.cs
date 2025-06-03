@@ -8,10 +8,17 @@ namespace Feel.Service
         private const string Key = "obiettivi";
         private static List<ObiettivoDto> DefaultFactory() => new();
 
+        // Obiettivi ordinati prima per Completed (False prima di True) e poi per Id (più recenti per primi)
+
         public async Task<IEnumerable<ObiettivoDto>> GetAllObiettiviAsync()
         {
-            return await service.GetAsync<ObiettivoDto>(Key, DefaultFactory);
+            var tutti = await service.GetAsync<ObiettivoDto>(Key, DefaultFactory);
+
+            return tutti
+                .OrderBy(o => o.Completed)           // False prima di True
+                .ThenByDescending(o => o.Id);        // Più recenti (Id più alto) per primi
         }
+
 
         public async Task<ObiettivoDto?> GetObiettivoAsync(int id)
         {

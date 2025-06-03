@@ -376,7 +376,7 @@ namespace Feel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Massimo 20 caratteri.
+        ///   Looks up a localized string similar to Massimo 18 caratteri.
         /// </summary>
         public static string MassimoVentiCaratteri {
             get {
@@ -498,6 +498,33 @@ namespace Feel.Resources {
         public static string Ok {
             get {
                 return ResourceManager.GetString("Ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ordina.
+        /// </summary>
+        public static string Ordina {
+            get {
+                return ResourceManager.GetString("Ordina", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dal meno recente.
+        /// </summary>
+        public static string OrdinaMenoRecente {
+            get {
+                return ResourceManager.GetString("OrdinaMenoRecente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dal più recente.
+        /// </summary>
+        public static string OrdinaPiuRecente {
+            get {
+                return ResourceManager.GetString("OrdinaPiuRecente", resourceCulture);
             }
         }
         
