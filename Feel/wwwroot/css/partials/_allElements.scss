@@ -17,3 +17,8 @@
 
 // Checkradio
 
+.cm-toggle {
+    &.autunno {
+        @include radio($autunno-feel-light);
+    }
+}
