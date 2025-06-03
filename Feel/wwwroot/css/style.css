@@ -371,61 +371,6 @@ main .main-section {
   margin-right: 0.2rem;
 }
 
-.tooltip-container.autunno {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-}
-.tooltip-container.autunno .tooltip-text {
-  visibility: hidden;
-  width: max-content;
-  max-width: 200px;
-  background-color: #F6DCA1;
-  color: #82181A;
-  text-align: left;
-  padding: 10px 8px;
-  border-radius: 4px;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: opacity 0.3s;
-  font-size: 0.7rem;
-}
-.tooltip-container.autunno:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-
-.recap.autunno {
-  color: #F6DCA1;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-.recap.autunno:first-of-type {
-  margin-top: 1rem;
-}
-.recap.autunno:last-child {
-  margin-bottom: 0;
-}
-.recap.autunno:last-child span {
-  font-size: 0.7rem;
-  text-decoration: underline;
-}
-
-.description.autunno {
-  font-size: 0.7rem;
-  color: #F6DCA1;
-  margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px dashed #F6DCA1;
-}
-
 .assistente.autunno {
   position: fixed;
   z-index: 14;
@@ -1177,9 +1122,64 @@ main .main-section {
   color: white !important;
 }
 
+.recap.autunno {
+  color: #F6DCA1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.recap.autunno:first-of-type {
+  margin-top: 1rem;
+}
+.recap.autunno:last-child {
+  margin-bottom: 0;
+}
+.recap.autunno:last-child span {
+  font-size: 0.7rem;
+  text-decoration: underline;
+}
+
+.description.autunno {
+  font-size: 0.7rem;
+  color: #F6DCA1;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px dashed #F6DCA1;
+}
+
 .modal-footer.autunno {
   border-top: 2px solid #F6DCA1;
   margin-top: 2.5rem;
+}
+
+.tooltip-container.autunno {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+}
+.tooltip-container.autunno .tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  max-width: 200px;
+  background-color: #F6DCA1;
+  color: #82181A;
+  text-align: left;
+  padding: 10px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.7rem;
+}
+.tooltip-container.autunno:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
 
 /*!

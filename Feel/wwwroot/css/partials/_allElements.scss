@@ -49,6 +49,22 @@
     }
 }
 
+// Progress bar RECAP
+
+.recap {
+    &.autunno {
+        @include recap($autunno-feel-light)
+    }
+}
+
+// Progress DESCRIPTION
+
+.description {
+    &.autunno {
+        @include recap-descrizione($autunno-feel-light)
+    }
+}
+
 
 // MODALI //
 
@@ -57,5 +73,13 @@
 .modal-footer {
     &.autunno {
         @include footer($autunno-feel-light)
+    }
+}
+
+// TOOLTIP //
+
+.tooltip-container {
+    &.autunno {
+        @include tooltip($autunno-feel-light, $autunno-feel-primary);
     }
 }
