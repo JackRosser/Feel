@@ -179,32 +179,6 @@ input[type=number] {
 /*
 <input type="checkbox" name="checkbox" class="cm-toggle red" checked > 
 */
-.cm-checkbox.autunno {
-  appearance: none;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin: 1rem;
-  border: 2px solid #F6DCA1;
-  position: relative;
-  outline: 2px solid #82181A;
-  border-radius: 3px;
-}
-.cm-checkbox.autunno:checked {
-  border: 2px solid greenyellow;
-  box-shadow: 3px 3px 0 1px rgba(173, 255, 47, 0.5);
-}
-.cm-checkbox.autunno:checked::after {
-  content: "✓";
-  position: absolute;
-  top: 30%;
-  right: -1rem;
-  transform: translateY(-50%) rotate(40deg);
-  background-color: transparent;
-  font-size: 3rem;
-  font-weight: bold;
-  color: forestgreen;
-}
-
 /*// SCROLLBAR ARANCIONE*/
 /* Scrollbar per Chrome, Edge, Safari */
 /*::-webkit-scrollbar {
@@ -1212,6 +1186,32 @@ main .main-section {
       opacity: 1;
     }
   }
+}
+
+.cm-checkbox.autunno {
+  appearance: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 1rem;
+  border: 2px solid #F6DCA1;
+  position: relative;
+  outline: 2px solid #82181A;
+  border-radius: 3px;
+}
+.cm-checkbox.autunno:checked {
+  border: 2px solid greenyellow;
+  box-shadow: 3px 3px 0 1px rgba(173, 255, 47, 0.5);
+}
+.cm-checkbox.autunno:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 30%;
+  right: -1rem;
+  transform: translateY(-50%) rotate(40deg);
+  background-color: transparent;
+  font-size: 3rem;
+  font-weight: bold;
+  color: forestgreen;
 }
 
 /*!

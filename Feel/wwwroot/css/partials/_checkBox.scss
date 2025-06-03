@@ -26,8 +26,4 @@
     }
 }
 
-.cm-checkbox {
-    &.autunno {
-        @include checkbox-style($autunno-feel-light, $autunno-feel-primary);
-    }
-}
+
