@@ -124,6 +124,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Avanti.
+        /// </summary>
+        public static string Avanti {
+            get {
+                return ResourceManager.GetString("Avanti", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Inserisci un importo o un valore numerico inerente al tuo obiettivo per avvicinarti o raggiungere il Target..
         /// </summary>
         public static string AvvicinatiTarget {
@@ -286,6 +295,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Indietro.
+        /// </summary>
+        public static string Indietro {
+            get {
+                return ResourceManager.GetString("Indietro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Stabilisci se questo obiettivo sarà aggiornato attraverso check periodici. Ad esempio, se il tuo obiettivo è leggere 10 libri, fissa il tuo &lt;b&gt;Target&lt;/b&gt; a 10 e spunta &lt;b&gt;Check Periodico&lt;/b&gt; così da eseguire un +1 ad ogni check..
         /// </summary>
         public static string InfoCheck {
@@ -327,6 +345,15 @@ namespace Feel.Resources {
         public static string InserisciData {
             get {
                 return ResourceManager.GetString("InserisciData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci il tuo nome.
+        /// </summary>
+        public static string InserisciNome {
+            get {
+                return ResourceManager.GetString("InserisciNome", resourceCulture);
             }
         }
         
@@ -378,9 +405,18 @@ namespace Feel.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Massimo 18 caratteri.
         /// </summary>
-        public static string MassimoVentiCaratteri {
+        public static string MassimoDiciottoCaratteri {
             get {
-                return ResourceManager.GetString("MassimoVentiCaratteri", resourceCulture);
+                return ResourceManager.GetString("MassimoDiciottoCaratteri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Massimo 10 caratteri.
+        /// </summary>
+        public static string MassimoDieciCaratteri {
+            get {
+                return ResourceManager.GetString("MassimoDieciCaratteri", resourceCulture);
             }
         }
         

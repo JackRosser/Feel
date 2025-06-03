@@ -3,6 +3,11 @@
 @inherits MainClassBase
 
 <div class="container-fluid">
+    @if(User.Name == "admin_jack")
+    {
+        <button type="button" class="btn btn-danger" @onclick="ClearAllFromAdmin">Cancella tutto</button>
+    }
+
     <DashboardMessage />
 
     <Filtro ListaObiettivi="@Obiettivi" OnListaFiltrata="AggiornaListaFiltrata" />

@@ -1,0 +1,84 @@
+﻿<EditForm Model="@CreateUserModel" OnValidSubmit="Salva">
+    <DataAnnotationsValidator />
+    @if(PageOne)
+    {
+        <div class="setup-page">
+            <span class="descrizione"></span>
+            <InputText @bind-Value="CreateUserModel.Name"/>
+            <ValidationMessage For="() => CreateUserModel.Name" class="errormessage" />
+            <div class="buttons-box">
+                <button type="button" class="bottone-avanti" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+            </div>
+        </div> 
+    }
+    else if (PageTwo)
+    {
+        <div class="setup-page">
+            <span class="descrizione"></span>
+            <div class="row row-cols-2">
+                @foreach(var assistente in Assistenti)
+                {
+                    bool isSelected = CreateUserModel?.Assistente == assistente;
+                    string posizione = isSelected ? "gioca" : "dorme";
+                    <div class="col assistente-box" @onclick="() => SelectAssistente(assistente)">
+                        <img src="@($"/css/images/Assistenti/Setup/{posizione}-giulio.png")" />
+                    </div>
+                }
+            </div>
+            <div class="buttons-box">
+                @if(CreateUserModel?.Assistente is not null)
+                {
+                <button type="button" class="bottone-avanti" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                }
+                <button type="button" class="bottone-avanti" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+            </div>
+        </div>
+    }
+    else if (PageThree)
+    {
+        <div class="setup-page">
+            <span class="descrizione"></span>
+            <div class="row row-cols-2">
+                @foreach (var tema in Themes)
+                {
+                    bool isSelected = CreateUserModel?.Tema == tema;
+                    string selected = isSelected ? "selected" : "";
+                    <div class="col tema-box" @onclick="() => SelectTema(tema)">
+                    <div class="smartphone">
+                        <div class="modal">
+                            <div class="text-primo" />
+                            <div class="text-secondo" />
+                            
+                            <div class="example-buttons">
+                                <div class="ok" />
+                                <div class="indietro" />
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                }
+            </div>
+            <div class="buttons-box">
+                @if (CreateUserModel?.Tema is not null)
+                {
+                    <button type="button" class="bottone-avanti" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                }
+                <button type="button" class="bottone-avanti" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+            </div>
+        </div>
+
+    }
+    else if (PageFour)
+    {
+        <div class="setup-page">
+            <span class="descrizione"></span>
+            <div class="recap">
+                @* Scrivere qui la card dell'utente' *@
+            </div>
+            <div class="buttons-box">
+                <button type="submit" class="bottone-avanti">@Localizer[ResourceLanguage.Salva]</button>
+                <button type="button" class="bottone-avanti" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+            </div>
+        </div>
+    }
+    </EditForm>

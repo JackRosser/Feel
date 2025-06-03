@@ -1,7 +1,8 @@
 ﻿@inherits MainClassBase
 
 @if (IsLoaded)
-{
+{     
+    
     @if(CreateModel is not null)
     {       
         <EditForm Model="@CreateModel" OnValidSubmit="HandleValidSubmit">
@@ -54,4 +55,5 @@
             </div>
         </EditForm>
     }
+
 }

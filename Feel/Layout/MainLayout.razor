@@ -1,22 +1,26 @@
 ﻿@using Feel.Components.Assistant
 @inherits LayoutComponentBase
 
+    <CascadingValue Value="@Theme" Name="MainTheme">
 @if (User is not null)
 {
-    <CascadingValue Value="@User?.Tema?.Nome" Name="MainTheme">
         <CascadingValue Value="@User?.Assistente?.PicName" Name="Assistente">
             <CascadingValue Value="User" Name="User">
-            <div id="modal-container"></div>
-                <main class="@($"bg-{@User?.Tema?.Nome}-feel-main-bg")">
-                <div class="main-gradient" />
-                <div class="main-content">
-                    <section class="main-section">
-                        @Body
-                        <Assistente />
-                    </section>
-                </div>
-            </main>            
+                <div id="modal-container"></div>
+                <main class="@($"bg-{Theme}-feel-main-bg")">
+                    <div class="main-gradient" />
+                    <div class="main-content">
+                        <section class="main-section">
+                            @Body
+                            <Assistente />
+                        </section>
+                    </div>
+                </main>            
+            </CascadingValue>
         </CascadingValue>
-        </CascadingValue>
-    </CascadingValue>
 }
+else
+{
+    <Setup />
+}
+    </CascadingValue>

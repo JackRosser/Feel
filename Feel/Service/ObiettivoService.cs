@@ -59,5 +59,10 @@ namespace Feel.Service
         {
             await service.DeleteAsync<ObiettivoDto>(Key, DefaultFactory, id);
         }
+
+        public async Task ClearAllDb()
+        {
+            await service.ClearAllAsync();
+        }
     }
 }

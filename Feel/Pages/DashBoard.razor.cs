@@ -19,6 +19,12 @@ namespace Feel.Pages
             await GetRecords();
         }
 
+        private async Task ClearAllFromAdmin()
+        {
+            await sdk.SendRequestAsync(a => a.ClearAllDb());
+            await GetRecords();
+        }
+
         private async Task GetRecords()
         {
             Obiettivi = await sdk.SendRequestAsync(a => a.GetAllObiettiviAsync());

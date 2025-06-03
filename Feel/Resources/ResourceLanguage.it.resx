@@ -162,7 +162,7 @@
   <data name="Lavoro" xml:space="preserve">
     <value>Lavoro</value>
   </data>
-  <data name="MassimoVentiCaratteri" xml:space="preserve">
+  <data name="MassimoDiciottoCaratteri" xml:space="preserve">
     <value>Massimo 18 caratteri</value>
   </data>
   <data name="MessaggioAssistenteAbout" xml:space="preserve">
@@ -332,5 +332,17 @@
   </data>
   <data name="OrdinaMenoRecente" xml:space="preserve">
     <value>Dal meno recente</value>
+  </data>
+  <data name="InserisciNome" xml:space="preserve">
+    <value>Inserisci il tuo nome</value>
+  </data>
+  <data name="MassimoDieciCaratteri" xml:space="preserve">
+    <value>Massimo 10 caratteri</value>
+  </data>
+  <data name="Avanti" xml:space="preserve">
+    <value>Avanti</value>
+  </data>
+  <data name="Indietro" xml:space="preserve">
+    <value>Indietro</value>
   </data>
 </root>
