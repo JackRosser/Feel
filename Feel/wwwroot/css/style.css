@@ -519,495 +519,6 @@ main .main-section {
   color: white !important;
 }
 
-.assistente {
-  position: fixed;
-  z-index: 14;
-  bottom: 0;
-  left: 0;
-  max-width: 250px;
-}
-@media only screen and (min-width: 577px) {
-  .assistente {
-    max-width: 300px;
-  }
-}
-
-.assistente-aggiungi-obiettivo.giulio {
-  position: fixed;
-  z-index: 15;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-18rem) translateX(3rem) rotate(-60deg) scale(1);
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-  transition: transform 300ms ease-out;
-  display: none;
-  opacity: 0;
-}
-.assistente-aggiungi-obiettivo.giulio:active {
-  transform: translateY(-18rem) translateX(3rem) rotate(-60deg) scale(1.1);
-}
-.assistente-aggiungi-obiettivo.giulio.show {
-  display: block;
-  animation: appear 300ms ease-in-out forwards;
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .assistente-aggiungi-obiettivo.giulio {
-    position: fixed;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-21rem) translateX(3rem) rotate(-60deg) scale(1);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-    transition: transform 300ms ease-out;
-    display: none;
-    opacity: 0;
-  }
-  .assistente-aggiungi-obiettivo.giulio:active {
-    transform: translateY(-21rem) translateX(3rem) rotate(-60deg) scale(1.1);
-  }
-  .assistente-aggiungi-obiettivo.giulio.show {
-    display: block;
-    animation: appear 300ms ease-in-out forwards;
-  }
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-.assistente-aggiungi-obiettivo.kitty {
-  position: fixed;
-  z-index: 15;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1);
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-  transition: transform 300ms ease-out;
-  display: none;
-  opacity: 0;
-}
-.assistente-aggiungi-obiettivo.kitty:active {
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1.1);
-}
-.assistente-aggiungi-obiettivo.kitty.show {
-  display: block;
-  animation: appear 300ms ease-in-out forwards;
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .assistente-aggiungi-obiettivo.kitty {
-    position: fixed;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-17rem) translateX(0) rotate(-65deg) scale(1);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-    transition: transform 300ms ease-out;
-    display: none;
-    opacity: 0;
-  }
-  .assistente-aggiungi-obiettivo.kitty:active {
-    transform: translateY(-17rem) translateX(0) rotate(-65deg) scale(1.1);
-  }
-  .assistente-aggiungi-obiettivo.kitty.show {
-    display: block;
-    animation: appear 300ms ease-in-out forwards;
-  }
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-
-.assistente-cambia-tema.giulio {
-  position: fixed;
-  z-index: 15;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-14rem) translateX(9rem) rotate(-40deg) scale(0.9);
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-  transition: transform 300ms ease-out;
-  display: none;
-  opacity: 0;
-}
-.assistente-cambia-tema.giulio:active {
-  transform: translateY(-14rem) translateX(9rem) rotate(-40deg) scale(1.1);
-}
-.assistente-cambia-tema.giulio.show {
-  display: block;
-  animation: appear 300ms ease-in-out forwards;
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .assistente-cambia-tema.giulio {
-    position: fixed;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-17rem) translateX(10rem) rotate(-40deg) scale(0.9);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-    transition: transform 300ms ease-out;
-    display: none;
-    opacity: 0;
-  }
-  .assistente-cambia-tema.giulio:active {
-    transform: translateY(-17rem) translateX(10rem) rotate(-40deg) scale(1.1);
-  }
-  .assistente-cambia-tema.giulio.show {
-    display: block;
-    animation: appear 300ms ease-in-out forwards;
-  }
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-.assistente-cambia-tema.kitty {
-  position: fixed;
-  z-index: 15;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(0.9);
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-  transition: transform 300ms ease-out;
-  display: none;
-  opacity: 0;
-}
-.assistente-cambia-tema.kitty:active {
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(1.1);
-}
-.assistente-cambia-tema.kitty.show {
-  display: block;
-  animation: appear 300ms ease-in-out forwards;
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .assistente-cambia-tema.kitty {
-    position: fixed;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-13rem) translateX(6rem) rotate(-40deg) scale(0.9);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-    transition: transform 300ms ease-out;
-    display: none;
-    opacity: 0;
-  }
-  .assistente-cambia-tema.kitty:active {
-    transform: translateY(-13rem) translateX(6rem) rotate(-40deg) scale(1.1);
-  }
-  .assistente-cambia-tema.kitty.show {
-    display: block;
-    animation: appear 300ms ease-in-out forwards;
-  }
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-
-.assistente-about.giulio {
-  position: fixed;
-  z-index: 15;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-9rem) translateX(11rem) rotate(-20deg) scale(1);
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-  transition: transform 300ms ease-out;
-  display: none;
-  opacity: 0;
-}
-.assistente-about.giulio:active {
-  transform: translateY(-9rem) translateX(11rem) rotate(-20deg) scale(1.1);
-}
-.assistente-about.giulio.show {
-  display: block;
-  animation: appear 300ms ease-in-out forwards;
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .assistente-about.giulio {
-    position: fixed;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-11rem) translateX(13rem) rotate(-20deg) scale(1);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-    transition: transform 300ms ease-out;
-    display: none;
-    opacity: 0;
-  }
-  .assistente-about.giulio:active {
-    transform: translateY(-11rem) translateX(13rem) rotate(-20deg) scale(1.1);
-  }
-  .assistente-about.giulio.show {
-    display: block;
-    animation: appear 300ms ease-in-out forwards;
-  }
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-.assistente-about.kitty {
-  position: fixed;
-  z-index: 15;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1);
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-  transition: transform 300ms ease-out;
-  display: none;
-  opacity: 0;
-}
-.assistente-about.kitty:active {
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1.1);
-}
-.assistente-about.kitty.show {
-  display: block;
-  animation: appear 300ms ease-in-out forwards;
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .assistente-about.kitty {
-    position: fixed;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-9rem) translateX(10rem) rotate(-20deg) scale(1);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-    transition: transform 300ms ease-out;
-    display: none;
-    opacity: 0;
-  }
-  .assistente-about.kitty:active {
-    transform: translateY(-9rem) translateX(10rem) rotate(-20deg) scale(1.1);
-  }
-  .assistente-about.kitty.show {
-    display: block;
-    animation: appear 300ms ease-in-out forwards;
-  }
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-
-.assistente-area-utente.giulio {
-  position: fixed;
-  z-index: 15;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-2rem) translateX(12rem) rotate(10deg) scale(0.9);
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-  transition: transform 300ms ease-out;
-  display: none;
-  opacity: 0;
-}
-.assistente-area-utente.giulio:active {
-  transform: translateY(-2rem) translateX(12rem) rotate(10deg) scale(1.1);
-}
-.assistente-area-utente.giulio.show {
-  display: block;
-  animation: appear 300ms ease-in-out forwards;
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .assistente-area-utente.giulio {
-    position: fixed;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-4rem) translateX(15rem) rotate(10deg) scale(0.9);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-    transition: transform 300ms ease-out;
-    display: none;
-    opacity: 0;
-  }
-  .assistente-area-utente.giulio:active {
-    transform: translateY(-4rem) translateX(15rem) rotate(10deg) scale(1.1);
-  }
-  .assistente-area-utente.giulio.show {
-    display: block;
-    animation: appear 300ms ease-in-out forwards;
-  }
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-.assistente-area-utente.kitty {
-  position: fixed;
-  z-index: 15;
-  bottom: 0;
-  left: 0;
-  transform: translateY(-1rem) translateX(10rem) rotate(10deg) scale(0.9);
-  padding: 1rem 1.5rem;
-  border-radius: 50px;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-  transition: transform 300ms ease-out;
-  display: none;
-  opacity: 0;
-}
-.assistente-area-utente.kitty:active {
-  transform: translateY(-1rem) translateX(10rem) rotate(10deg) scale(1.1);
-}
-.assistente-area-utente.kitty.show {
-  display: block;
-  animation: appear 300ms ease-in-out forwards;
-}
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@media only screen and (min-width: 577px) {
-  .assistente-area-utente.kitty {
-    position: fixed;
-    z-index: 15;
-    bottom: 0;
-    left: 0;
-    transform: translateY(-2rem) translateX(12rem) rotate(10deg) scale(0.9);
-    padding: 1rem 1.5rem;
-    border-radius: 50px;
-    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-    transition: transform 300ms ease-out;
-    display: none;
-    opacity: 0;
-  }
-  .assistente-area-utente.kitty:active {
-    transform: translateY(-2rem) translateX(12rem) rotate(10deg) scale(1.1);
-  }
-  .assistente-area-utente.kitty.show {
-    display: block;
-    animation: appear 300ms ease-in-out forwards;
-  }
-  @keyframes appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-}
-
-.assistente.autunno .message-text {
-  font-size: 0.8rem;
-  color: #fff;
-}
-.assistente.autunno .message-text:active {
-  background-color: #82181A !important;
-}
-
 .form-display {
   gap: 2rem;
   margin-top: 1.5rem !important;
@@ -1214,6 +725,493 @@ main .main-section {
 .filterbox.autunno .filteractives button {
   color: #F54A00 !important;
   margin-left: 0.5rem;
+}
+
+.assistente.autunno {
+  position: fixed;
+  z-index: 14;
+  bottom: 0;
+  left: 0;
+  max-width: 250px;
+}
+@media only screen and (min-width: 577px) {
+  .assistente.autunno {
+    max-width: 300px;
+  }
+}
+.assistente.autunno.message-box {
+  background-color: #F54A00 !important;
+}
+.assistente.autunno.message-box .message-text {
+  font-size: 0.8rem;
+  color: #fff;
+}
+.assistente.autunno.message-box:active {
+  background-color: #82181A !important;
+}
+.assistente.autunno.aggiungi-obiettivo.giulio {
+  position: fixed;
+  z-index: 15;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-18rem) translateX(3rem) rotate(-60deg) scale(1);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  transition: transform 300ms ease-out;
+  display: none;
+  opacity: 0;
+}
+.assistente.autunno.aggiungi-obiettivo.giulio:active {
+  transform: translateY(-18rem) translateX(3rem) rotate(-60deg) scale(1.1);
+}
+.assistente.autunno.aggiungi-obiettivo.giulio.show {
+  display: block;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .assistente.autunno.aggiungi-obiettivo.giulio {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-21rem) translateX(3rem) rotate(-60deg) scale(1);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+  }
+  .assistente.autunno.aggiungi-obiettivo.giulio:active {
+    transform: translateY(-21rem) translateX(3rem) rotate(-60deg) scale(1.1);
+  }
+  .assistente.autunno.aggiungi-obiettivo.giulio.show {
+    display: block;
+    animation: appear 300ms ease-in-out forwards;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.assistente.autunno.aggiungi-obiettivo.kitty {
+  position: fixed;
+  z-index: 15;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  transition: transform 300ms ease-out;
+  display: none;
+  opacity: 0;
+}
+.assistente.autunno.aggiungi-obiettivo.kitty:active {
+  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1.1);
+}
+.assistente.autunno.aggiungi-obiettivo.kitty.show {
+  display: block;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .assistente.autunno.aggiungi-obiettivo.kitty {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-17rem) translateX(0) rotate(-65deg) scale(1);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+  }
+  .assistente.autunno.aggiungi-obiettivo.kitty:active {
+    transform: translateY(-17rem) translateX(0) rotate(-65deg) scale(1.1);
+  }
+  .assistente.autunno.aggiungi-obiettivo.kitty.show {
+    display: block;
+    animation: appear 300ms ease-in-out forwards;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.assistente.autunno.cambia-tema.giulio {
+  position: fixed;
+  z-index: 15;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-14rem) translateX(9rem) rotate(-40deg) scale(0.9);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  transition: transform 300ms ease-out;
+  display: none;
+  opacity: 0;
+}
+.assistente.autunno.cambia-tema.giulio:active {
+  transform: translateY(-14rem) translateX(9rem) rotate(-40deg) scale(1.1);
+}
+.assistente.autunno.cambia-tema.giulio.show {
+  display: block;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .assistente.autunno.cambia-tema.giulio {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-17rem) translateX(10rem) rotate(-40deg) scale(0.9);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+  }
+  .assistente.autunno.cambia-tema.giulio:active {
+    transform: translateY(-17rem) translateX(10rem) rotate(-40deg) scale(1.1);
+  }
+  .assistente.autunno.cambia-tema.giulio.show {
+    display: block;
+    animation: appear 300ms ease-in-out forwards;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.assistente.autunno.cambia-tema.kitty {
+  position: fixed;
+  z-index: 15;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(0.9);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  transition: transform 300ms ease-out;
+  display: none;
+  opacity: 0;
+}
+.assistente.autunno.cambia-tema.kitty:active {
+  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(1.1);
+}
+.assistente.autunno.cambia-tema.kitty.show {
+  display: block;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .assistente.autunno.cambia-tema.kitty {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-13rem) translateX(6rem) rotate(-40deg) scale(0.9);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+  }
+  .assistente.autunno.cambia-tema.kitty:active {
+    transform: translateY(-13rem) translateX(6rem) rotate(-40deg) scale(1.1);
+  }
+  .assistente.autunno.cambia-tema.kitty.show {
+    display: block;
+    animation: appear 300ms ease-in-out forwards;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.assistente.autunno.about.giulio {
+  position: fixed;
+  z-index: 15;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-9rem) translateX(11rem) rotate(-20deg) scale(1);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  transition: transform 300ms ease-out;
+  display: none;
+  opacity: 0;
+}
+.assistente.autunno.about.giulio:active {
+  transform: translateY(-9rem) translateX(11rem) rotate(-20deg) scale(1.1);
+}
+.assistente.autunno.about.giulio.show {
+  display: block;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .assistente.autunno.about.giulio {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-11rem) translateX(13rem) rotate(-20deg) scale(1);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+  }
+  .assistente.autunno.about.giulio:active {
+    transform: translateY(-11rem) translateX(13rem) rotate(-20deg) scale(1.1);
+  }
+  .assistente.autunno.about.giulio.show {
+    display: block;
+    animation: appear 300ms ease-in-out forwards;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.assistente.autunno.about.kitty {
+  position: fixed;
+  z-index: 15;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  transition: transform 300ms ease-out;
+  display: none;
+  opacity: 0;
+}
+.assistente.autunno.about.kitty:active {
+  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1.1);
+}
+.assistente.autunno.about.kitty.show {
+  display: block;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .assistente.autunno.about.kitty {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-9rem) translateX(10rem) rotate(-20deg) scale(1);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+  }
+  .assistente.autunno.about.kitty:active {
+    transform: translateY(-9rem) translateX(10rem) rotate(-20deg) scale(1.1);
+  }
+  .assistente.autunno.about.kitty.show {
+    display: block;
+    animation: appear 300ms ease-in-out forwards;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.assistente.autunno.area-utente.giulio {
+  position: fixed;
+  z-index: 15;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-2rem) translateX(12rem) rotate(10deg) scale(0.9);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  transition: transform 300ms ease-out;
+  display: none;
+  opacity: 0;
+}
+.assistente.autunno.area-utente.giulio:active {
+  transform: translateY(-2rem) translateX(12rem) rotate(10deg) scale(1.1);
+}
+.assistente.autunno.area-utente.giulio.show {
+  display: block;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .assistente.autunno.area-utente.giulio {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-4rem) translateX(15rem) rotate(10deg) scale(0.9);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+  }
+  .assistente.autunno.area-utente.giulio:active {
+    transform: translateY(-4rem) translateX(15rem) rotate(10deg) scale(1.1);
+  }
+  .assistente.autunno.area-utente.giulio.show {
+    display: block;
+    animation: appear 300ms ease-in-out forwards;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+.assistente.autunno.area-utente.kitty {
+  position: fixed;
+  z-index: 15;
+  bottom: 0;
+  left: 0;
+  transform: translateY(-1rem) translateX(10rem) rotate(10deg) scale(0.9);
+  padding: 1rem 1.5rem;
+  border-radius: 50px;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  transition: transform 300ms ease-out;
+  display: none;
+  opacity: 0;
+}
+.assistente.autunno.area-utente.kitty:active {
+  transform: translateY(-1rem) translateX(10rem) rotate(10deg) scale(1.1);
+}
+.assistente.autunno.area-utente.kitty.show {
+  display: block;
+  animation: appear 300ms ease-in-out forwards;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 577px) {
+  .assistente.autunno.area-utente.kitty {
+    position: fixed;
+    z-index: 15;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-2rem) translateX(12rem) rotate(10deg) scale(0.9);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+    transition: transform 300ms ease-out;
+    display: none;
+    opacity: 0;
+  }
+  .assistente.autunno.area-utente.kitty:active {
+    transform: translateY(-2rem) translateX(12rem) rotate(10deg) scale(1.1);
+  }
+  .assistente.autunno.area-utente.kitty.show {
+    display: block;
+    animation: appear 300ms ease-in-out forwards;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 /*!

@@ -1,6 +1,7 @@
-﻿namespace Feel.wwwroot.css.partials
-{
-    public class _allElements
-    {
+﻿// ASSISTENTE
+
+.assistente {
+    &.autunno {
+        @include assistente($autunno-feel-ultra-light, $autunno-feel-primary, $autunno-feel-secondary);
     }
 }

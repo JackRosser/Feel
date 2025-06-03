@@ -1,5 +1,8 @@
 ﻿@inherits MainClassBase
 
+
+
+
 <!-- Button trigger modal -->
 @if(ModalType is ModalType.Button)
 {
@@ -11,7 +14,7 @@
 else if(ModalType is ModalType.AggiungiObiettivo || ModalType is ModalType.CambiaTema || ModalType is ModalType.InformazioniApp || ModalType is ModalType.AreaUtente)
 {
 
-    <div class="@($"assistente {MainTheme} assistente-{ActionClass} {CssClass} bg-{MainTheme}-feel-secondary")" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
+    <div class="@($"assistente message-box {MainTheme} {ActionClass} {CssClass}")" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
         <span class="@($"message-text text-{MainTheme}-feel-ultra-light")">@ActionText</span>
     </div>
 }
