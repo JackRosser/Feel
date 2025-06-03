@@ -53,29 +53,11 @@
     -o-transition: ease .3s;
 }
 
-.red:checked:after {
-    background: #dc281e;
-}
 
-.blue:checked:after {
-    background: #396afc;
-}
 
-.orange:checked:after {
-    background: #fc4a1a;
-}
-
-.purple:checked:after {
-    background: #f953c6;
-}
-
-.autunno-feel-light:checked:after {
+.autunno-radio:checked:after {
     background: $autunno-feel-light;
 }
 
-// ESEMPIO
-/*
-<input type="checkbox" name="checkbox" class="cm-toggle red" checked > 
-*/
 
 
