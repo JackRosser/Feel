@@ -1,4 +1,4 @@
-﻿@if(!string.IsNullOrWhiteSpace(ToolTip)) {
+﻿@if(ToolTip is not null) {
     <ToolTip Text="@ToolTip">
     <span class="text-@Color" @onclick="Action"><i class="@Element"></i></span>
     </ToolTip>
@@ -12,5 +12,5 @@ else {
     [Parameter, EditorRequired] public string? Element { get; set; }
     [Parameter] public string Color { get; set; } = "primary";
     [Parameter] public EventCallback Action { get; set; }
-    [Parameter] public string? ToolTip { get; set; }
+    [Parameter] public MarkupString? ToolTip { get; set; }
 }

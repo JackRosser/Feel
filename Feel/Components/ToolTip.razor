@@ -5,6 +5,6 @@
 
 @code {
     [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
-    [Parameter, EditorRequired] public string Text { get; set; } = string.Empty;
+    [Parameter, EditorRequired] public MarkupString? Text { get; set; }
     [Parameter] public RenderFragment? ChildContent { get; set; }
 }

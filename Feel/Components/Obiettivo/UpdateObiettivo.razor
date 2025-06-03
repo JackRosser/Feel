@@ -14,7 +14,7 @@ else if (EditModelValore is not null)
     <FormLayout UpdateModelValore="EditModelValore" OnSubmit="SaveValore">
         <FormNumberInteger LabelTitle="@Localizer[ResourceLanguage.Aggiornamento]"
                            Placeholder="@Localizer[ResourceLanguage.InserisciValore]"
-                           Info="@Localizer[ResourceLanguage.AvvicinatiTarget]"
+                           Info="@((MarkupString)Localizer[ResourceLanguage.AvvicinatiTarget].Value)"
                            @bind-Value="EditModelValore.Importo">
         </FormNumberInteger>
     </FormLayout>   
@@ -28,4 +28,3 @@ else if (EditModelCheck is not null)
             </FormCheckBox>       
     </FormLayout>
 }
-

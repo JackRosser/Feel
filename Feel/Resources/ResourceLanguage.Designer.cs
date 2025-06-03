@@ -286,7 +286,7 @@ namespace Feel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stabilisci se questo obiettivo sarà aggiornato attraverso check periodici. Ad esempio, se il tuo obiettivo è leggere 10 libri, fissa il tuo Target a 10 e spunta Check Periodico così da eseguire un +1 ad ogni check..
+        ///   Looks up a localized string similar to Stabilisci se questo obiettivo sarà aggiornato attraverso check periodici. Ad esempio, se il tuo obiettivo è leggere 10 libri, fissa il tuo &lt;b&gt;Target&lt;/b&gt; a 10 e spunta &lt;b&gt;Check Periodico&lt;/b&gt; così da eseguire un +1 ad ogni check..
         /// </summary>
         public static string InfoCheck {
             get {
@@ -295,7 +295,7 @@ namespace Feel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Definisci un valore numerico che vuoi raggiungere in base all&apos;obiettivo prefissato. Ad esempio, se vuoi risparmiare 1.000 euro, il Target che dovrai scrivere sarà 1.000, e quando lo raggiungerai, l&apos;obiettivo sarà classificato come Completato. Se invece vuoi correre 10km ogni giorno per una settimana, fissa il tuo Target a 7 e spunta Check Periodico, così da aggiungere automaticamente un +1 ogni volta che eseguirai un check..
+        ///   Looks up a localized string similar to Definisci un valore numerico che vuoi raggiungere in base all&apos;obiettivo prefissato. Ad esempio, se vuoi risparmiare 1.000 euro, il &lt;b&gt;Target&lt;/b&gt; che dovrai scrivere sarà 1.000, e quando lo raggiungerai, l&apos;obiettivo sarà classificato come &lt;b&gt;Completato&lt;/b&gt;. Se invece vuoi correre 10km ogni giorno per una settimana, fissa il tuo &lt;b&gt;Target&lt;/b&gt; a 7 e spunta &lt;b&gt;Check Periodico&lt;/b&gt;, così da aggiungere automaticamente un +1 ogni volta che eseguirai un check..
         /// </summary>
         public static string InfoTarget {
             get {

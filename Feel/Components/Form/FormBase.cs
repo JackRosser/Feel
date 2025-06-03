@@ -8,7 +8,7 @@ namespace Feel.Components.Form
         [Parameter] public int Col { get; set; } = 12;
         [Parameter] public int ColMd { get; set; } = 12;
         [Parameter] public RenderFragment? ChildContent { get; set; }
-        [Parameter] public string? Info { get; set; }
+        [Parameter] public MarkupString? Info { get; set; }
         [Parameter] public string? Placeholder { get; set; }
 
         protected string ModalId { get; set; } = string.Empty;
