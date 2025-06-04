@@ -2,6 +2,7 @@
 using Feel.Shared.Dto.Assistente;
 using Feel.Shared.Dto.Tema;
 using Feel.Shared.Dto.User;
+using Microsoft.AspNetCore.Components;
 
 namespace Feel.Components
 {
@@ -21,14 +22,32 @@ namespace Feel.Components
             new TemaDto { Id = 4, Nome = "estate" },
         };
         // Scelta nome
-        private bool PageOne { get; set; } = true;
+        private bool PageOne { get; set; } = false;
         // Scelta assistente
         private bool PageTwo { get; set; } = false;
         // Scelta tema
         private bool PageThree { get; set; } = false;
         // recap e conferma
-        private bool PageFour { get; set; } = false;
+        private bool PageFour { get; set; } = true;
         private int? AssistantId { get; set; }
+        private bool IsNameValid => !string.IsNullOrWhiteSpace(CreateUserModel?.Name);
+
+        private void OnNameInput(ChangeEventArgs e)
+        {
+            if (CreateUserModel is not null)
+            {
+                CreateUserModel.Name = e.Value?.ToString();
+            }
+        }
+
+        public static string PrimaMaiuscola(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input))
+                return input;
+
+            return char.ToUpper(input[0]) + input.Substring(1);
+        }
+
 
         private void Indietro()
         {
@@ -67,6 +86,7 @@ namespace Feel.Components
                 PageFour = true;
             }
         }
+
 
         private void SelectAssistente(AssistenteDto assistente)
         {

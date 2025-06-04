@@ -655,6 +655,34 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;span&gt;Sembra che qualcuno voglia farti compagnia durante l&apos;avventura 😎&lt;/span&gt;&lt;span&gt;Scegli l&apos;&lt;b&gt;Assistente&lt;/b&gt; che preferisci!.
+        /// </summary>
+        public static string SetupAssistente {
+            get {
+                return ResourceManager.GetString("SetupAssistente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;span&gt;Ti diamo il benvenuto su&lt;/span&gt;&lt;img src=&quot;/css/images/Loghi/192.png&quot; /&gt;&lt;span&gt;per cominciare, grazie per aver deciso di utilizzare questa applicazione 😄!
+        ///&lt;br /&gt; &lt;b&gt;Inserisci il tuo nome qui sotto...&lt;/b&gt;&lt;/span&gt;.
+        /// </summary>
+        public static string SetupBenvenuto {
+            get {
+                return ResourceManager.GetString("SetupBenvenuto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;span&gt;Che ne dici di un po&apos; di colore? 🌈&lt;/span&gt;&lt;span&gt;Seleziona il &lt;b&gt;Tema&lt;/b&gt; che più ti piace!&lt;/span&gt;.
+        /// </summary>
+        public static string SetupThemes {
+            get {
+                return ResourceManager.GetString("SetupThemes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sport.
         /// </summary>
         public static string Sport {

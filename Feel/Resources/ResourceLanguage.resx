@@ -345,4 +345,14 @@
   <data name="Indietro" xml:space="preserve">
     <value>Indietro</value>
   </data>
+  <data name="SetupBenvenuto" xml:space="preserve">
+    <value>&lt;span&gt;Ti diamo il benvenuto su&lt;/span&gt;&lt;img src="/css/images/Loghi/192.png" /&gt;&lt;span&gt;per cominciare, grazie per aver deciso di utilizzare questa applicazione 😄!
+&lt;br /&gt; &lt;b&gt;Inserisci il tuo nome qui sotto...&lt;/b&gt;&lt;/span&gt;</value>
+  </data>
+  <data name="SetupAssistente" xml:space="preserve">
+    <value>&lt;span&gt;Sembra che qualcuno voglia farti compagnia durante l'avventura 😎&lt;/span&gt;&lt;span&gt;Scegli l'&lt;b&gt;Assistente&lt;/b&gt; che preferisci!</value>
+  </data>
+  <data name="SetupThemes" xml:space="preserve">
+    <value>&lt;span&gt;Che ne dici di un po' di colore? 🌈&lt;/span&gt;&lt;span&gt;Seleziona il &lt;b&gt;Tema&lt;/b&gt; che più ti piace!&lt;/span&gt;</value>
+  </data>
 </root>

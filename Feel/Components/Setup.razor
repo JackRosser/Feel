@@ -3,67 +3,95 @@
     @if(PageOne)
     {
         <div class="setup-page">
-            <span class="descrizione"></span>
-            <InputText @bind-Value="CreateUserModel.Name"/>
-            <ValidationMessage For="() => CreateUserModel.Name" class="errormessage" />
+            <span class="descrizione">@((MarkupString)Localizer[ResourceLanguage.SetupBenvenuto].Value)</span>
+            <InputText class="form-control" @bind-Value="CreateUserModel.Name" @oninput="OnNameInput" />
+
             <div class="buttons-box">
-                <button type="button" class="bottone-avanti" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                @if (IsNameValid)
+                {
+                    <button type="button" class="next" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                }
+                else
+                {
+                    <button type="button" disabled @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                }
             </div>
+
         </div> 
     }
     else if (PageTwo)
     {
         <div class="setup-page">
-            <span class="descrizione"></span>
+            <span class="descrizione">@((MarkupString)Localizer[ResourceLanguage.SetupAssistente].Value)</span>
             <div class="row row-cols-2">
                 @foreach(var assistente in Assistenti)
                 {
                     bool isSelected = CreateUserModel?.Assistente == assistente;
                     string posizione = isSelected ? "gioca" : "dorme";
                     <div class="col assistente-box" @onclick="() => SelectAssistente(assistente)">
-                        <img src="@($"/css/images/Assistenti/Setup/{posizione}-giulio.png")" />
+                        <img class="@($"{isSelected}")" src="@($"/css/images/Assistenti/Setup/{posizione}-{assistente.PicName}")" />
                     </div>
                 }
             </div>
             <div class="buttons-box">
                 @if(CreateUserModel?.Assistente is not null)
                 {
-                <button type="button" class="bottone-avanti" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                    <button type="button" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+                    <button type="button" class="next" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
                 }
-                <button type="button" class="bottone-avanti" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+                else
+                {
+                    <button type="button" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+                    <button type="button" disabled @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                }
+
             </div>
         </div>
     }
     else if (PageThree)
     {
         <div class="setup-page">
-            <span class="descrizione"></span>
+            <span class="descrizione">@((MarkupString)Localizer[ResourceLanguage.SetupThemes].Value)</span>
             <div class="row row-cols-2">
                 @foreach (var tema in Themes)
                 {
                     bool isSelected = CreateUserModel?.Tema == tema;
                     string selected = isSelected ? "selected" : "";
-                    <div class="col tema-box" @onclick="() => SelectTema(tema)">
-                    <div class="smartphone">
-                        <div class="modal">
-                            <div class="text-primo" />
-                            <div class="text-secondo" />
-                            
-                            <div class="example-buttons">
-                                <div class="ok" />
-                                <div class="indietro" />
+                    <div class="col mb-2">
+                        <div class="row gap-2">
+                            <div class="col-12 p-2">
+                                <div class="tema-box" @onclick="() => SelectTema(tema)">
+                                    <div class="@($"smartphone {selected} bg-{tema.Nome}-feel-main-bg")">
+                                        <div class="@($"modalexample bg-{tema.Nome}-feel-primary")">
+                                            <div class="@($"text-primo bg-{tema.Nome}-feel-light")"></div>
+                                            <div class="@($"text-secondo bg-{tema.Nome}-feel-light")" ></div>
+                                            <div class="example-buttons">
+                                            <div class="@($"ok bg-{tema.Nome}-feel-light")"></div>
+                                                <div class="@($"indietro bg-{tema.Nome}-feel-gray")"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <span class="@($"tema-nome {selected}")">@PrimaMaiuscola(tema.Nome)</span>
                             </div>
                         </div>
-                    </div>
-                    </div>
+                    </div>               
                 }
             </div>
             <div class="buttons-box">
                 @if (CreateUserModel?.Tema is not null)
                 {
-                    <button type="button" class="bottone-avanti" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                    <button type="button" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+                    <button type="button" class="next" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
                 }
-                <button type="button" class="bottone-avanti" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+                else
+                {
+                    <button type="button" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+                    <button type="button" disabled @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                }
+
             </div>
         </div>
 
@@ -76,8 +104,8 @@
                 @* Scrivere qui la card dell'utente' *@
             </div>
             <div class="buttons-box">
-                <button type="submit" class="bottone-avanti">@Localizer[ResourceLanguage.Salva]</button>
                 <button type="button" class="bottone-avanti" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
+                <button type="submit" class="bottone-avanti">@Localizer[ResourceLanguage.Salva]</button>
             </div>
         </div>
     }
