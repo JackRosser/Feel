@@ -22,7 +22,7 @@ namespace Feel.Pages
         private async Task ClearAllFromAdmin()
         {
             await sdk.SendRequestAsync(a => a.ClearAllDb());
-            await GetRecords();
+            NavManager.NavigateTo("/", forceLoad: true);
         }
 
         private async Task GetRecords()

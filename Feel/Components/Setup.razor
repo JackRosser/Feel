@@ -7,17 +7,9 @@
           
         <div class="setup-page">
             <LanguageSelector />
-<div class="buttons-box">
-                @if (IsNameValid)
-                {
-                    <button type="button" class="next" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
-                }
-                else
-                {
-                    <button type="button" disabled @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
-                }
+        <div class="buttons-box">               
+            <button type="button" class="next" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
             </div>
-
         </div>
     }
     else if(PageTwo)
@@ -29,10 +21,12 @@
             <div class="buttons-box">
                 @if (IsNameValid)
                 {
+                    <button type="button" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
                     <button type="button" class="next" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
                 }
                 else
                 {
+                    <button type="button" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
                     <button type="button" disabled @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
                 }
             </div>
@@ -122,7 +116,7 @@
             <div class="setup-recap">
              <div class="section">
                 <h2>@Localizer[ResourceLanguage.Nome]</h2>
-             <span>@CreateUserModel?.Name</span>
+                    <span>@NameConverter.NameToCapitalize(CreateUserModel?.Name)</span>
              </div>
                 <div class="section">
                     <h2>@Localizer[ResourceLanguage.Assistente]</h2>

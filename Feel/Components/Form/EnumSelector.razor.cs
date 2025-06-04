@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using Feel.Shared.Enum;
+using Feel.Shared.Helper;
+using Microsoft.AspNetCore.Components;
 using System.Linq.Expressions;
 
 namespace Feel.Components.Form;
@@ -28,6 +30,14 @@ public partial class EnumSelector<TEnum> : FormBase
     private IEnumerable<TEnum> EnumValues => Enum.GetValues(UnderlyingType).Cast<TEnum>();
 
     private static Type UnderlyingType => Nullable.GetUnderlyingType(typeof(TEnum)) ?? typeof(TEnum);
+
+    private string GetLabel<T>(T value)
+    {
+        if (typeof(T) == typeof(Category))
+            return HelperTraduzione.Traduzione((Category)(object)value, Localizer);
+
+        return value?.ToString() ?? "";
+    }
 
 
 }

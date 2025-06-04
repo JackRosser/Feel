@@ -2,17 +2,18 @@
 @* @page "/dashboard" *@
 @inherits MainClassBase
 
-<div class="container-fluid">
-    @if(User.Name == "admin_jack")
+<div class="container-fluid">   
+
+    <DashboardMessage />
+
+    @if (User.Name == "Admin_jack")
     {
         <button type="button" class="btn btn-danger" @onclick="ClearAllFromAdmin">Cancella tutto</button>
     }
 
-    <DashboardMessage />
-
     <Filtro ListaObiettivi="@Obiettivi" OnListaFiltrata="AggiornaListaFiltrata" />
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-2 gap-md-0">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-2 gap-md-0 mt-2">
         @if (ObiettiviFiltrati is not null)
         {
             @foreach (var obiettivo in ObiettiviFiltrati)

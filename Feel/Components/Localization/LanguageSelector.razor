@@ -3,9 +3,10 @@
         <div class="row row-cols-2">
             @foreach (var language in Languages)
             {
-                <div class="col" @onclick="@(() => ChangeCulture(language.Value))">
-                    <img src="@($"/css/images/Flags/{language.PicName}")" />
+                <div class="col p-2 d-flex justify-content-center align-items-center" @onclick="@(() => ChangeCulture(language.Value))">
+                    <div class="flag" style="background-image: url(@($"/css/images/Flags/{language.PicName}"))"></div>
                 </div>
+
             }
         </div>
         <div class="row">

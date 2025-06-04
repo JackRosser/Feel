@@ -1,5 +1,9 @@
-﻿@mixin footer($light) {
+﻿@mixin modal-footer($light) {
     border-top: 2px solid $light;
     margin-top: 2.5rem;
+}
+
+@mixin modal-content($primary) {
+    background-color: $primary !important;
 }
 

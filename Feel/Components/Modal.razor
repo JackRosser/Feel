@@ -15,7 +15,7 @@ else if(ModalType is ModalType.AggiungiObiettivo || ModalType is ModalType.Cambi
 {
 
     <div class="@($"assistente message-box {MainTheme} {ActionClass} {CssClass}")" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
-        <span class="@($"message-text text-{MainTheme}-feel-ultra-light")">@ActionText</span>
+        <span class="@($"message-text {MainTheme}")">@ActionText</span>
     </div>
 }
 
@@ -23,7 +23,7 @@ else if (ModalType is ModalType.EditObiettivo)
 {
     <div class="col-2 go-to-details" @onclick="OnActionClick">
         <div data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
-            <span class="@($"text-{MainTheme}-primary")">></span>
+            <span class="@($"text-{MainTheme}-feel-primary")">></span>
         </div>
     </div>
 
@@ -33,7 +33,7 @@ else if (ModalType is ModalType.EditObiettivo)
 <!-- Modal -->
 <div class="modal fade" id="@($"{ModalId}")" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="@($"modal-content bg-{MainTheme}-feel-primary")">
+        <div class="@($"modal-content {MainTheme}")">
                 @if(!string.IsNullOrWhiteSpace(Title))
                 {                    
             <div class="modal-header">

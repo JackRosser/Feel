@@ -4,28 +4,32 @@
     primary:     $autunno-feel-primary,
     secondary:   $autunno-feel-secondary,
     light:       $autunno-feel-light,
-    gray:        $autunno-feel-gray
+    gray:        $autunno-feel-gray,
+    error:       $autunno-feel-error
   ),
   inverno: (
     ultra-light: $inverno-feel-ultra-light,
     primary:     $inverno-feel-primary,
     secondary:   $inverno-feel-secondary,
     light:       $inverno-feel-light,
-    gray:        $inverno-feel-gray
+    gray:        $inverno-feel-gray,
+    error:       $inverno-feel-error
   ),
   primavera: (
     ultra-light: $primavera-feel-ultra-light,
     primary:     $primavera-feel-primary,
     secondary:   $primavera-feel-secondary,
     light:       $primavera-feel-light,
-    gray:        $primavera-feel-gray
+    gray:        $primavera-feel-gray,
+    error:       $primavera-feel-error
   ),
   estate: (
     ultra-light: $estate-feel-ultra-light,
     primary:     $estate-feel-primary,
     secondary:   $estate-feel-secondary,
     light:       $estate-feel-light,
-    gray:        $estate-feel-gray
+    gray:        $estate-feel-gray,
+    error:       $estate-feel-error
   )
 );
 
@@ -36,6 +40,7 @@
     $secondary: map-get($valori, secondary);
     $light: map-get($valori, light);
     $gray: map-get($valori, gray);
+    $error: map-get($valori, error);
 
     .assistente.#{$stagione} {
         @include assistente($ultra-light, $primary, $secondary);
@@ -69,100 +74,25 @@
         @include recap-descrizione($light);
     }
 
+    .modal-content.#{$stagione} {
+        @include modal-content($primary);
+    }
+
     .modal-footer.#{$stagione} {
-        @include footer($light);
+        @include modal-footer($light);
     }
 
     .tooltip-container.#{$stagione} {
         @include tooltip($light, $primary);
     }
+
+    .error-message.#{$stagione} {
+        @include error-message($error);
+    }
+
 }
 
 
 
 
-/*// ASSISTENTE //
 
-.assistente {
-    &.autunno {
-        @include assistente($autunno-feel-ultra-light, $autunno-feel-primary, $autunno-feel-secondary);
-    }
-}
-
-// FORM //
-
-// Checkbox
-.cm-checkbox {
-    &.autunno {
-        @include checkbox-style($autunno-feel-light, $autunno-feel-primary);
-    }
-}
-
-// Checkradio
-
-.cm-toggle {
-    &.autunno {
-        @include radio($autunno-feel-light);
-    }
-}
-
-// DASHBOARD //
-
-// Messaggio iniziale
-
-.dash-message {
-    &.autunno {
-        @include dashboard-message($autunno-feel-secondary);
-    }
-}
-
-// Filter
-
-.filterbox {
-    &.autunno {
-        @include filtri($autunno-feel-secondary, $autunno-feel-ultra-light);
-    }
-}
-
-// Progress card
-
-.progress-bar-section {
-    &.autunno {
-        @include progress-card($autunno-feel-light, $autunno-feel-primary, $autunno-feel-gray)
-    }
-}
-
-// Progress bar RECAP
-
-.recap {
-    &.autunno {
-        @include recap($autunno-feel-light)
-    }
-}
-
-// Progress DESCRIPTION
-
-.description {
-    &.autunno {
-        @include recap-descrizione($autunno-feel-light)
-    }
-}
-
-
-// MODALI //
-
-// Footer
-
-.modal-footer {
-    &.autunno {
-        @include footer($autunno-feel-light)
-    }
-}
-
-// TOOLTIP //
-
-.tooltip-container {
-    &.autunno {
-        @include tooltip($autunno-feel-light, $autunno-feel-primary);
-    }
-}*/

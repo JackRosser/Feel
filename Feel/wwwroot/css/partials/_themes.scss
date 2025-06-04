@@ -15,36 +15,39 @@ $autunno-feel-error: #F6DCA1;
 
 // TEMA inverno
 
-$inverno-feel-primary: #003366;
-$inverno-feel-secondary: #336699;
+$inverno-feel-primary: #1A4A75;
+$inverno-feel-secondary: #4D7FB3;
 $inverno-feel-light: #DCE9F4;
 $inverno-feel-ultra-light: #fff;
 $inverno-feel-gray: #6c757d;
-$inverno-feel-main-bg: #B5D0E5;
+$inverno-feel-main-bg: #D8E8F2;
 $inverno-text-disabled: rgba($inverno-feel-ultra-light, 0.7);
-$inverno-feel-error: #DCE9F4;
+$inverno-feel-error: #FFF9C4;
 
 // TEMA primavera
 
-$primavera-feel-primary: #4CAF50;
-$primavera-feel-secondary: #81C784;
-$primavera-feel-light: #E0F2E9;
-$primavera-feel-ultra-light: #fff;
+$primavera-feel-primary: #B76E79;
+$primavera-feel-secondary: #800080;
+$primavera-feel-light: #F3E0FF;
+$primavera-feel-ultra-light: #FFFFFF;
 $primavera-feel-gray: #6c757d;
-$primavera-feel-main-bg: #BCE0C8;
+$primavera-feel-main-bg: #F8E6FF;
 $primavera-text-disabled: rgba($primavera-feel-ultra-light, 0.7);
-$primavera-feel-error: #E0F2E9;
+$primavera-feel-error: #B22222;
+
 
 // TEMA estate
 
-$estate-feel-primary: #007BFF;
-$estate-feel-secondary: #66B2FF;
-$estate-feel-light: #D6ECFF;
-$estate-feel-ultra-light: #fff;
+$estate-feel-primary: #FF6F00;
+$estate-feel-secondary: #40C4FF;
+$estate-feel-light: #B2F2BB;
+$estate-feel-ultra-light: #FFFFFF;
 $estate-feel-gray: #6c757d;
-$estate-feel-main-bg: #ADD8F4;
+$estate-feel-main-bg: #EDFCCF;
 $estate-text-disabled: rgba($estate-feel-ultra-light, 0.7);
-$estate-feel-error: #D6ECFF;
+$estate-feel-error: #343A40;
+
+
 
 
 $theme-colors: map-merge($theme-colors, (

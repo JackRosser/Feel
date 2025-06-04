@@ -128,7 +128,8 @@ namespace Feel.Components
                 Assistente = CreateUserModel.Assistente,
                 Tema = CreateUserModel.Tema
             }));
-            NavManager.NavigateTo("/");
+            NavManager.NavigateTo("/", forceLoad: true);
+
         }
 
         protected override void OnInitialized()
