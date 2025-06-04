@@ -1,4 +1,4 @@
-﻿namespace Feel.Shared.Helper
+namespace Feel.Shared.Helper
 {
     public static class NameConverter
     {
