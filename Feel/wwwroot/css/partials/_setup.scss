@@ -103,14 +103,14 @@
                     height: 10px;
                 }
 
-                & .example-buttons{
+                & .example-buttons {
                     width: 100%;
                     margin-top: auto;
                     display: flex;
                     justify-content: space-between;
 
                     & .ok,
-                      .indietro{
+                    .indietro {
                         width: 30%;
                         height: 10px;
                     }
@@ -131,9 +131,22 @@
             color: limegreen;
         }
     }
+
+
+    & .setup-recap {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        & .section {
+            border: 1px solid $secondary;
+            padding: 1rem;
+            box-shadow: $custom-shadow;
+            background-color: rgba(255, 255, 255, 0.5);
+
+            & img {
+                max-height: 150px;
+            }
+        }
+    }
 }
-
-
-/*& input[type="text"] {
-    border: 1px solid red;
-}*/

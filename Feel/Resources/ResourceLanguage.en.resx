@@ -354,4 +354,16 @@
   <data name="SetupThemes" xml:space="preserve">
     <value>&lt;span&gt;How about some color? 🌈&lt;/span&gt;&lt;span&gt;Select the &lt;b&gt;Theme&lt;/b&gt; you like the most!&lt;/span&gt;</value>
   </data>
+  <data name="Nome" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Assistente" xml:space="preserve">
+    <value>Assistant</value>
+  </data>
+  <data name="Tema" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="LinguaSelezionata" xml:space="preserve">
+    <value>Language selected: &lt;b class="text-success"&gt;English&lt;/b&gt;</value>
+  </data>
 </root>

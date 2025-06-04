@@ -1,6 +1,26 @@
-﻿<EditForm Model="@CreateUserModel" OnValidSubmit="Salva">
+﻿@using Feel.Components.Localization
+<EditForm Model="@CreateUserModel" OnValidSubmit="Salva">
     <DataAnnotationsValidator />
-    @if(PageOne)
+    @if (PageOne)
+    {
+
+          
+        <div class="setup-page">
+            <LanguageSelector />
+<div class="buttons-box">
+                @if (IsNameValid)
+                {
+                    <button type="button" class="next" @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                }
+                else
+                {
+                    <button type="button" disabled @onclick="Avanti">@Localizer[ResourceLanguage.Avanti]</button>
+                }
+            </div>
+
+        </div>
+    }
+    else if(PageTwo)
     {
         <div class="setup-page">
             <span class="descrizione">@((MarkupString)Localizer[ResourceLanguage.SetupBenvenuto].Value)</span>
@@ -19,7 +39,7 @@
 
         </div> 
     }
-    else if (PageTwo)
+    else if (PageThree)
     {
         <div class="setup-page">
             <span class="descrizione">@((MarkupString)Localizer[ResourceLanguage.SetupAssistente].Value)</span>
@@ -48,7 +68,7 @@
             </div>
         </div>
     }
-    else if (PageThree)
+    else if (PageFour)
     {
         <div class="setup-page">
             <span class="descrizione">@((MarkupString)Localizer[ResourceLanguage.SetupThemes].Value)</span>
@@ -96,16 +116,26 @@
         </div>
 
     }
-    else if (PageFour)
+    else if (PageFive)
     {
         <div class="setup-page">
-            <span class="descrizione"></span>
-            <div class="recap">
-                @* Scrivere qui la card dell'utente' *@
+            <div class="setup-recap">
+             <div class="section">
+                <h2>@Localizer[ResourceLanguage.Nome]</h2>
+             <span>@CreateUserModel?.Name</span>
+             </div>
+                <div class="section">
+                    <h2>@Localizer[ResourceLanguage.Assistente]</h2>
+                    <img src="@($"/css/images/Assistenti/fronte-{CreateUserModel?.Assistente?.PicName}")" />
+                </div>
+                <div class="section">
+                    <h2>@Localizer[ResourceLanguage.Tema]</h2>
+                    <span class="@($"text-{CreateUserModel?.Tema?.Nome}-feel-primary")">@PrimaMaiuscola(CreateUserModel.Tema.Nome)</span>
+                </div>
             </div>
             <div class="buttons-box">
                 <button type="button" class="bottone-avanti" @onclick="Indietro">@Localizer[ResourceLanguage.Indietro]</button>
-                <button type="submit" class="bottone-avanti">@Localizer[ResourceLanguage.Salva]</button>
+                <button type="button" class="next" @onclick="Salva">@Localizer[ResourceLanguage.Salva]</button>
             </div>
         </div>
     }
