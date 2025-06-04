@@ -162,8 +162,8 @@
   <data name="Lavoro" xml:space="preserve">
     <value>Lavoro</value>
   </data>
-  <data name="MassimoVentiCaratteri" xml:space="preserve">
-    <value>Massimo 20 caratteri</value>
+  <data name="MassimoDiciottoCaratteri" xml:space="preserve">
+    <value>Massimo 18 caratteri</value>
   </data>
   <data name="MessaggioAssistenteAbout" xml:space="preserve">
     <value>Informazioni sull'app</value>
@@ -244,10 +244,10 @@
     <value>Check periodico</value>
   </data>
   <data name="InfoTarget" xml:space="preserve">
-    <value>Definisci un valore numerico che vuoi raggiungere in base all'obiettivo prefissato. Ad esempio, se vuoi risparmiare 1.000 euro, il Target che dovrai scrivere sarà 1.000, e quando lo raggiungerai, l'obiettivo sarà classificato come Completato. Se invece vuoi correre 10km ogni giorno per una settimana, fissa il tuo Target a 7 e spunta Check Periodico, così da aggiungere automaticamente un +1 ogni volta che eseguirai un check.</value>
+    <value>Definisci un valore numerico che vuoi raggiungere in base all'obiettivo prefissato. Ad esempio, se vuoi risparmiare 1.000 euro, il &lt;b&gt;Target&lt;/b&gt; che dovrai scrivere sarà 1.000, e quando lo raggiungerai, l'obiettivo sarà classificato come &lt;b&gt;Completato&lt;/b&gt;. Se invece vuoi correre 10km ogni giorno per una settimana, fissa il tuo &lt;b&gt;Target&lt;/b&gt; a 7 e spunta &lt;b&gt;Check Periodico&lt;/b&gt;, così da aggiungere automaticamente un +1 ogni volta che eseguirai un check.</value>
   </data>
   <data name="InfoCheck" xml:space="preserve">
-    <value>Stabilisci se questo obiettivo sarà aggiornato attraverso check periodici. Ad esempio, se il tuo obiettivo è leggere 10 libri, fissa il tuo Target a 10 e spunta Check Periodico così da eseguire un +1 ad ogni check.</value>
+    <value>Stabilisci se questo obiettivo sarà aggiornato attraverso check periodici. Ad esempio, se il tuo obiettivo è leggere 10 libri, fissa il tuo &lt;b&gt;Target&lt;/b&gt; a 10 e spunta &lt;b&gt;Check Periodico&lt;/b&gt; così da eseguire un +1 ad ogni check.</value>
   </data>
   <data name="Chiudi" xml:space="preserve">
     <value>Chiudi</value>
@@ -323,5 +323,48 @@
   </data>
   <data name="NascondiFiltri" xml:space="preserve">
     <value>Nascondi filtri</value>
+  </data>
+  <data name="Ordina" xml:space="preserve">
+    <value>Ordina</value>
+  </data>
+  <data name="OrdinaPiuRecente" xml:space="preserve">
+    <value>Dal più recente</value>
+  </data>
+  <data name="OrdinaMenoRecente" xml:space="preserve">
+    <value>Dal meno recente</value>
+  </data>
+  <data name="InserisciNome" xml:space="preserve">
+    <value>Inserisci il tuo nome</value>
+  </data>
+  <data name="MassimoDieciCaratteri" xml:space="preserve">
+    <value>Massimo 10 caratteri</value>
+  </data>
+  <data name="Avanti" xml:space="preserve">
+    <value>Avanti</value>
+  </data>
+  <data name="Indietro" xml:space="preserve">
+    <value>Indietro</value>
+  </data>
+  <data name="SetupBenvenuto" xml:space="preserve">
+    <value>&lt;span&gt;Ti diamo il benvenuto su&lt;/span&gt;&lt;img src="/css/images/Loghi/192.png" /&gt;&lt;span&gt;per cominciare, grazie per aver deciso di utilizzare questa applicazione 😄!
+&lt;br /&gt; &lt;b&gt;Inserisci il tuo nome qui sotto...&lt;/b&gt;&lt;/span&gt;</value>
+  </data>
+  <data name="SetupAssistente" xml:space="preserve">
+    <value>&lt;span&gt;Sembra che qualcuno voglia farti compagnia durante l'avventura 😎&lt;/span&gt;&lt;span&gt;Scegli l'&lt;b&gt;Assistente&lt;/b&gt; che preferisci!</value>
+  </data>
+  <data name="SetupThemes" xml:space="preserve">
+    <value>&lt;span&gt;Che ne dici di un po' di colore? 🌈&lt;/span&gt;&lt;span&gt;Seleziona il &lt;b&gt;Tema&lt;/b&gt; che più ti piace!&lt;/span&gt;</value>
+  </data>
+  <data name="Nome" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Assistente" xml:space="preserve">
+    <value>Assistente</value>
+  </data>
+  <data name="Tema" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="LinguaSelezionata" xml:space="preserve">
+    <value>Lingua selezionata: &lt;b class="text-success"&gt;Italiano&lt;/b&gt;</value>
   </data>
 </root>

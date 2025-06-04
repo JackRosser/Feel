@@ -2,7 +2,7 @@
 
 <div class="@($"col-{Col} col-md-{ColMd}")">
     <div class="@($"form-group-radio {MainTheme}")">
-        @if (!string.IsNullOrWhiteSpace(Info))
+        @if (Info is not null)
         {
             <label>@LabelTitle <span><Icon Element="@Icons.Info" Color="@($"{MainTheme}")" ToolTip="@Info" /></span></label>
 
@@ -13,7 +13,7 @@
         }
         <div class="row">
             <div class="col-2">
-        <InputCheckbox class="@($"cm-toggle {MainTheme}-feel-light")" Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" id="@InputId" />
+        <InputCheckbox class="@($"cm-toggle {MainTheme}")" Value="@Value" ValueChanged="@ValueChanged" ValueExpression="@ValueExpression" id="@InputId" />
             </div>
         </div>
     </div>

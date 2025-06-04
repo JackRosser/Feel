@@ -16,8 +16,14 @@ namespace Feel.Service
 
         public async Task CreateNewUserAsync(UserDto user)
         {
+            if (!string.IsNullOrWhiteSpace(user.Name))
+            {
+                user.Name = char.ToUpper(user.Name[0]) + user.Name[1..];
+            }
+
             await service.CreateAsync<UserDto>(Key, DefaultFactory, user);
         }
+
 
         public async Task UpdateUserAsync(UserDto user)
         {
@@ -29,5 +35,7 @@ namespace Feel.Service
         {
             await service.DeleteFirstAsync<UserDto>(Key, DefaultFactory);
         }
+
+
     }
 }

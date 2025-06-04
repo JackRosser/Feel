@@ -47,3 +47,9 @@ Link https://www.nuget.org/packages/TG.Blazor.IndexedDB
     <script src="_content/TG.Blazor.IndexedDB/indexedDb.Blazor.js"></script>
 
 Assicurarsi che la versione nel proj sia <PackageReference Include="TG.Blazor.IndexedDB" Version="1.5.0-preview" />
+
+_____________________________________________________________________________________
+
+Esempio Markup String
+
+Info="@((MarkupString)Localizer[ResourceLanguage.AvvicinatiTarget].Value)"

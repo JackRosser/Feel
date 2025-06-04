@@ -1,53 +1,9 @@
 ﻿@import "../lib/bootstrap/scss/functions";
 @import "../lib/bootstrap/scss/_variables.scss";
 
-// Breakpoints custom
-$mobile: "max-width: 576px";
-$tablet: "max-width: 991px";
-$from-tablet: "min-width: 577px";
-$laptop: "max-width: 1199px";
-$desktop: "min-width: 1200px";
-
-//Breakpoints BS
-$bs-sm: "min-width: 576px";
-$bs-md: "min-width: 768px";
-$bs-lg: "min-width: 992px";
-$bs-xl: "min-width: 1200px";
-$bs-xxl: "min-width: 1400px";
-
 
 // Var utility
 $custom-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
-
-// Override colori
-$acqua: #B4CDBE;
-$light-gray: #C8C3B9;
-
-// TEMA autunno
-
-$autunno-feel-primary: #82181A;
-$autunno-feel-secondary: #F54A00;
-$autunno-feel-light: #F6DCA1;
-$autunno-feel-ultra-light: #fff;
-$autunno-feel-gray: #6c757d;
-$autunno-feel-main-bg: #F8D9A8;
-$autunno-text-disabled: rgba($autunno-feel-ultra-light, 0.7);
-$autunno-feel-error: #F6DCA1;
-
-
-// Merge nel theme-colors dei nuovi colori
-$theme-colors: map-merge( $theme-colors, ( 
-
-    // TEMA autunno
-    "autunno-feel-primary": $autunno-feel-primary,
-    "autunno-feel-secondary": $autunno-feel-secondary,
-    "autunno-feel-ligh": $autunno-feel-light,
-    "autunno-feel-gray": $autunno-feel-gray,
-    "autunno-feel-main-bg": $autunno-feel-main-bg,
-    "autunno-text-disabled": $autunno-text-disabled,
-    "autunno-feel-error": $autunno-feel-error
-
-) );
 
 
 a {
@@ -82,6 +38,8 @@ input[type=number] {
 
 // qui importo i miei partials
 @import "partials/_mixins.scss";
+@import "partials/_themes.scss";
+@import "partials/_breakpoints.scss";
 @import "partials/_loading.scss";
 @import "partials/_modal.scss";
 @import "partials/_waitingPage.scss";
@@ -97,6 +55,8 @@ input[type=number] {
 @import "partials/_dashboardMessage.scss";
 @import "partials/_recap.scss";
 @import "partials/_filter.scss";
+@import "partials/_setup.scss";
+@import "partials/_localization.scss";
 // Classe con tutti gli elementi da aggiornare con i temi
 @import "partials/_allElements.scss";
 

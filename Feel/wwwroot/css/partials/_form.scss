@@ -120,11 +120,35 @@
         &.autunno {
             @include theme-settings($autunno-feel-light, $autunno-feel-light, $autunno-feel-primary, $autunno-feel-ultra-light, $autunno-text-disabled);
         }
+
+        &.inverno {
+            @include theme-settings($inverno-feel-light, $inverno-feel-light, $inverno-feel-primary, $inverno-feel-ultra-light, $inverno-text-disabled);
+        }
+
+        &.primavera {
+            @include theme-settings($primavera-feel-light, $primavera-feel-light, $primavera-feel-primary, $primavera-feel-ultra-light, $primavera-text-disabled);
+        }
+
+        &.estate {
+            @include theme-settings($estate-feel-light, $estate-feel-light, $estate-feel-primary, $estate-feel-ultra-light, $estate-text-disabled);
+        }
     }
 
     & .form-group-radio {
         &.autunno {
             @include radio-form($autunno-feel-light);
+        }
+
+        &.inverno {
+            @include radio-form($inverno-feel-light);
+        }
+
+        &.primavera {
+            @include radio-form($primavera-feel-light);
+        }
+
+        &.estate {
+            @include radio-form($estate-feel-light);
         }
     }
 
@@ -132,13 +156,25 @@
         &.autunno {
             @include check-form($autunno-feel-light);
         }
+
+        &.inverno {
+            @include check-form($inverno-feel-light);
+        }
+
+        &.primavera {
+            @include check-form($primavera-feel-light);
+        }
+
+        &.estate {
+            @include check-form($estate-feel-light);
+        }
     }
 }
 
 //VALIDAZIONE
 
-@mixin error-message($color) {
-    color: $color;
+@mixin error-message($error) {
+    color: $error;
     font-size: 0.8rem;
     margin-top: 0.5rem;
     font-style: italic;
@@ -149,9 +185,5 @@
     }
 }
 
-.error-message {
-    &.autunno {
-    @include error-message($autunno-feel-error);
-    }
-}
+
 

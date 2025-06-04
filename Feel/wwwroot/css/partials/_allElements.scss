@@ -1,6 +1,98 @@
-﻿namespace Feel.wwwroot.css.partials
-{
-    public class _allElements
-    {
+﻿$temi-feel: (
+  autunno: (
+    ultra-light: $autunno-feel-ultra-light,
+    primary:     $autunno-feel-primary,
+    secondary:   $autunno-feel-secondary,
+    light:       $autunno-feel-light,
+    gray:        $autunno-feel-gray,
+    error:       $autunno-feel-error
+  ),
+  inverno: (
+    ultra-light: $inverno-feel-ultra-light,
+    primary:     $inverno-feel-primary,
+    secondary:   $inverno-feel-secondary,
+    light:       $inverno-feel-light,
+    gray:        $inverno-feel-gray,
+    error:       $inverno-feel-error
+  ),
+  primavera: (
+    ultra-light: $primavera-feel-ultra-light,
+    primary:     $primavera-feel-primary,
+    secondary:   $primavera-feel-secondary,
+    light:       $primavera-feel-light,
+    gray:        $primavera-feel-gray,
+    error:       $primavera-feel-error
+  ),
+  estate: (
+    ultra-light: $estate-feel-ultra-light,
+    primary:     $estate-feel-primary,
+    secondary:   $estate-feel-secondary,
+    light:       $estate-feel-light,
+    gray:        $estate-feel-gray,
+    error:       $estate-feel-error
+  )
+);
+
+
+@each $stagione, $valori in $temi-feel {
+    $ultra-light: map-get($valori, ultra-light);
+    $primary: map-get($valori, primary);
+    $secondary: map-get($valori, secondary);
+    $light: map-get($valori, light);
+    $gray: map-get($valori, gray);
+    $error: map-get($valori, error);
+
+    .assistente.#{$stagione} {
+        @include assistente($ultra-light, $primary, $secondary);
     }
+
+    .cm-checkbox.#{$stagione} {
+        @include checkbox-style($light, $primary);
+    }
+
+    .cm-toggle.#{$stagione} {
+        @include radio($light);
+    }
+
+    .dash-message.#{$stagione} {
+        @include dashboard-message($secondary);
+    }
+
+    .filterbox.#{$stagione} {
+        @include filtri($secondary, $ultra-light);
+    }
+
+    .progress-bar-section.#{$stagione} {
+        @include progress-card($light, $primary, $gray);
+    }
+
+    .recap.#{$stagione} {
+        @include recap($light);
+    }
+
+    .description.#{$stagione} {
+        @include recap-descrizione($light);
+    }
+
+    .modal-content.#{$stagione} {
+        @include modal-content($primary);
+    }
+
+    .modal-footer.#{$stagione} {
+        @include modal-footer($light);
+    }
+
+    .tooltip-container.#{$stagione} {
+        @include tooltip($light, $primary);
+    }
+
+    .error-message.#{$stagione} {
+        @include error-message($error);
+    }
+
 }
+
+
+
+
+

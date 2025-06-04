@@ -29,7 +29,16 @@
         </select>
     </div>
 
-    <div class="@($"col-12 filterform filteractives {MainTheme}")">
+        <div class="@($"col-12 filterform mb-4 {MainTheme}")">
+            <label for="ordinamento">@Localizer[ResourceLanguage.Ordina]</label>
+            <select class="form-select" @onchange="OnOrdinamentoChanged" id="ordinamento">
+                <option value="desc">@Localizer[ResourceLanguage.OrdinaPiuRecente]</option>
+                <option value="asc">@Localizer[ResourceLanguage.OrdinaMenoRecente]</option>
+            </select>
+        </div>
+
+
+    <div class="@($"col-12 filterform filteractives mb-4 {MainTheme}")">
         @if (CompletedFilter.HasValue)
         {
             <span class="badge">

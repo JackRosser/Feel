@@ -106,6 +106,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Assistente.
+        /// </summary>
+        public static string Assistente {
+            get {
+                return ResourceManager.GetString("Assistente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Attuale.
         /// </summary>
         public static string Attuale {
@@ -120,6 +129,15 @@ namespace Feel.Resources {
         public static string Auto {
             get {
                 return ResourceManager.GetString("Auto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Avanti.
+        /// </summary>
+        public static string Avanti {
+            get {
+                return ResourceManager.GetString("Avanti", resourceCulture);
             }
         }
         
@@ -286,7 +304,16 @@ namespace Feel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Stabilisci se questo obiettivo sarà aggiornato attraverso check periodici. Ad esempio, se il tuo obiettivo è leggere 10 libri, fissa il tuo Target a 10 e spunta Check Periodico così da eseguire un +1 ad ogni check..
+        ///   Looks up a localized string similar to Indietro.
+        /// </summary>
+        public static string Indietro {
+            get {
+                return ResourceManager.GetString("Indietro", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stabilisci se questo obiettivo sarà aggiornato attraverso check periodici. Ad esempio, se il tuo obiettivo è leggere 10 libri, fissa il tuo &lt;b&gt;Target&lt;/b&gt; a 10 e spunta &lt;b&gt;Check Periodico&lt;/b&gt; così da eseguire un +1 ad ogni check..
         /// </summary>
         public static string InfoCheck {
             get {
@@ -295,7 +322,7 @@ namespace Feel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Definisci un valore numerico che vuoi raggiungere in base all&apos;obiettivo prefissato. Ad esempio, se vuoi risparmiare 1.000 euro, il Target che dovrai scrivere sarà 1.000, e quando lo raggiungerai, l&apos;obiettivo sarà classificato come Completato. Se invece vuoi correre 10km ogni giorno per una settimana, fissa il tuo Target a 7 e spunta Check Periodico, così da aggiungere automaticamente un +1 ogni volta che eseguirai un check..
+        ///   Looks up a localized string similar to Definisci un valore numerico che vuoi raggiungere in base all&apos;obiettivo prefissato. Ad esempio, se vuoi risparmiare 1.000 euro, il &lt;b&gt;Target&lt;/b&gt; che dovrai scrivere sarà 1.000, e quando lo raggiungerai, l&apos;obiettivo sarà classificato come &lt;b&gt;Completato&lt;/b&gt;. Se invece vuoi correre 10km ogni giorno per una settimana, fissa il tuo &lt;b&gt;Target&lt;/b&gt; a 7 e spunta &lt;b&gt;Check Periodico&lt;/b&gt;, così da aggiungere automaticamente un +1 ogni volta che eseguirai un check..
         /// </summary>
         public static string InfoTarget {
             get {
@@ -327,6 +354,15 @@ namespace Feel.Resources {
         public static string InserisciData {
             get {
                 return ResourceManager.GetString("InserisciData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inserisci il tuo nome.
+        /// </summary>
+        public static string InserisciNome {
+            get {
+                return ResourceManager.GetString("InserisciNome", resourceCulture);
             }
         }
         
@@ -367,6 +403,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lingua selezionata: &lt;b class=&quot;text-success&quot;&gt;Italiano&lt;/b&gt;.
+        /// </summary>
+        public static string LinguaSelezionata {
+            get {
+                return ResourceManager.GetString("LinguaSelezionata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mancano.
         /// </summary>
         public static string Mancano {
@@ -376,11 +421,20 @@ namespace Feel.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Massimo 20 caratteri.
+        ///   Looks up a localized string similar to Massimo 18 caratteri.
         /// </summary>
-        public static string MassimoVentiCaratteri {
+        public static string MassimoDiciottoCaratteri {
             get {
-                return ResourceManager.GetString("MassimoVentiCaratteri", resourceCulture);
+                return ResourceManager.GetString("MassimoDiciottoCaratteri", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Massimo 10 caratteri.
+        /// </summary>
+        public static string MassimoDieciCaratteri {
+            get {
+                return ResourceManager.GetString("MassimoDieciCaratteri", resourceCulture);
             }
         }
         
@@ -475,6 +529,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        public static string Nome {
+            get {
+                return ResourceManager.GetString("Nome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Non completati.
         /// </summary>
         public static string NonCompletati {
@@ -498,6 +561,33 @@ namespace Feel.Resources {
         public static string Ok {
             get {
                 return ResourceManager.GetString("Ok", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ordina.
+        /// </summary>
+        public static string Ordina {
+            get {
+                return ResourceManager.GetString("Ordina", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dal meno recente.
+        /// </summary>
+        public static string OrdinaMenoRecente {
+            get {
+                return ResourceManager.GetString("OrdinaMenoRecente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dal più recente.
+        /// </summary>
+        public static string OrdinaPiuRecente {
+            get {
+                return ResourceManager.GetString("OrdinaPiuRecente", resourceCulture);
             }
         }
         
@@ -592,6 +682,34 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;span&gt;Sembra che qualcuno voglia farti compagnia durante l&apos;avventura 😎&lt;/span&gt;&lt;span&gt;Scegli l&apos;&lt;b&gt;Assistente&lt;/b&gt; che preferisci!.
+        /// </summary>
+        public static string SetupAssistente {
+            get {
+                return ResourceManager.GetString("SetupAssistente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;span&gt;Ti diamo il benvenuto su&lt;/span&gt;&lt;img src=&quot;/css/images/Loghi/192.png&quot; /&gt;&lt;span&gt;per cominciare, grazie per aver deciso di utilizzare questa applicazione 😄!
+        ///&lt;br /&gt; &lt;b&gt;Inserisci il tuo nome qui sotto...&lt;/b&gt;&lt;/span&gt;.
+        /// </summary>
+        public static string SetupBenvenuto {
+            get {
+                return ResourceManager.GetString("SetupBenvenuto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;span&gt;Che ne dici di un po&apos; di colore? 🌈&lt;/span&gt;&lt;span&gt;Seleziona il &lt;b&gt;Tema&lt;/b&gt; che più ti piace!&lt;/span&gt;.
+        /// </summary>
+        public static string SetupThemes {
+            get {
+                return ResourceManager.GetString("SetupThemes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sport.
         /// </summary>
         public static string Sport {
@@ -642,6 +760,15 @@ namespace Feel.Resources {
         public static string Tecnologia {
             get {
                 return ResourceManager.GetString("Tecnologia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tema.
+        /// </summary>
+        public static string Tema {
+            get {
+                return ResourceManager.GetString("Tema", resourceCulture);
             }
         }
         

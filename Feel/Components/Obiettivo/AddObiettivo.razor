@@ -22,12 +22,11 @@
 
             <FormNumberInteger LabelTitle="@Localizer[ResourceLanguage.Target]"
                       Placeholder="@Localizer[ResourceLanguage.PlaceholderTarget]"
-                      @bind-Value="CreateObiettivo.Target" Info="@Localizer[ResourceLanguage.InfoTarget]">
+                           @bind-Value="CreateObiettivo.Target" Info="@((MarkupString)Localizer[ResourceLanguage.InfoTarget].Value)">
             </FormNumberInteger>
 
             <FormRadio LabelTitle="@Localizer[ResourceLanguage.CheckPeriodico]"
-                      @bind-Value="CreateObiettivo.CheckMark" Info="@Localizer[ResourceLanguage.InfoCheck]">
+                   @bind-Value="CreateObiettivo.CheckMark" Info="@((MarkupString)Localizer[ResourceLanguage.InfoCheck].Value)">
             </FormRadio>
 </FormLayout>   
     }
-

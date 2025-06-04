@@ -1,4 +1,4 @@
-﻿@mixin tooltip($bg, $text) {
+﻿@mixin tooltip($light, $primary) {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -8,8 +8,8 @@
         visibility: hidden;
         width: max-content;
         max-width: 200px;
-        background-color: $bg;
-        color: $text;
+        background-color: $light;
+        color: $primary;
         text-align: left;
         padding: 10px 8px;
         border-radius: 4px;
@@ -30,10 +30,6 @@
 }
 
 
-.tooltip-container {
-    &.autunno {
-        @include tooltip($autunno-feel-light, $autunno-feel-primary);
-    }
-}
+
 
 

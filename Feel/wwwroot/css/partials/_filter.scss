@@ -32,8 +32,3 @@
     }
 }
 
-.filterbox {
-    &.autunno {
-        @include filtri($autunno-feel-secondary, $autunno-feel-ultra-light);
-    }
-}

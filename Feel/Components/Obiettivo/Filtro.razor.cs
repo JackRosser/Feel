@@ -11,6 +11,8 @@ namespace Feel.Components.Obiettivo
 
         private bool? CompletedFilter { get; set; }
         private bool FilterToggle { get; set; } = false;
+        private bool OrdinaDecrescente { get; set; } = true;
+
 
         private List<Category> CategorieSelezionate { get; set; } = [];
 
@@ -34,14 +36,24 @@ namespace Feel.Components.Obiettivo
             FilterToggle = !FilterToggle;
         }
 
+        private void OnOrdinamentoChanged(ChangeEventArgs e)
+        {
+            OrdinaDecrescente = e.Value?.ToString() != "asc";
+            AggiornaLista();
+        }
+
+
         private void AggiornaLista()
         {
             var filtrata = ListaObiettivi
                 .Where(o => !CompletedFilter.HasValue || o.Completed == CompletedFilter.Value)
-                .Where(o => CategorieSelezionate.Count == 0 || (o.Categoria.HasValue && CategorieSelezionate.Contains(o.Categoria.Value)));
+                .Where(o => CategorieSelezionate.Count == 0 || (o.Categoria.HasValue && CategorieSelezionate.Contains(o.Categoria.Value)))
+                .OrderBy(o => o.Completed) // False prima di True
+                .ThenBy(o => OrdinaDecrescente ? -o.Id : o.Id); // ordinamento dinamico
 
             OnListaFiltrata.InvokeAsync(filtrata);
         }
+
 
         private void OnCompletedChanged(ChangeEventArgs e)
         {

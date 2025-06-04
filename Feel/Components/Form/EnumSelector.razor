@@ -4,7 +4,7 @@
 
 <div class="@($"col-{Col} col-md-{ColMd}")">
     <div class="@($"form-group {MainTheme}")">
-        @if(!string.IsNullOrWhiteSpace(Info))
+        @if(Info is not null)
         {
             <label>@LabelTitle <span><Icon Element="@Icons.Info" Color="@($"{MainTheme}")" /></span></label>
             
@@ -18,16 +18,24 @@
     {
     <option selected disabled value="" style="color: rgba(255, 255, 255, 0.7)">@(DefaultOptionText ?? Localizer[ResourceLanguage.Seleziona])</option>
     }
-    @foreach (var value in EnumValues)
-    {
-        string label = typeof(TEnum) switch
-        {
-            var t when t == typeof(Category) => HelperTraduzione.Traduzione((Category)(object)value, Localizer),
-            _ => value?.ToString() ?? ""
-        };
+            @foreach (var value in EnumValues)
+            {
+                string label;
 
-        <option value="@value">@label</option>
-    }
+                if (typeof(TEnum) == typeof(Category) || typeof(TEnum) == typeof(Category?))
+                {
+                    var casted = (Category)Enum.Parse(typeof(Category), value!.ToString()!);
+                    label = HelperTraduzione.Traduzione(casted, Localizer);
+                }
+                else
+                {
+                    label = value?.ToString() ?? "";
+                }
+
+                <option value="@value">@label</option>
+            }
+
+
 </InputSelect>
     </div>
     <ValidationMessage For="ValueExpression" class="@($"error-message {MainTheme}")" />

@@ -1,0 +1,18 @@
+<div class="language-selector">
+    <div class="container-fluid">
+        <div class="row row-cols-2">
+            @foreach (var language in Languages)
+            {
+                <div class="col p-2 d-flex justify-content-center align-items-center" @onclick="@(() => ChangeCulture(language.Value))">
+                    <div class="flag" style="background-image: url(@($"/css/images/Flags/{language.PicName}"))"></div>
+                </div>
+
+            }
+        </div>
+        <div class="row">
+            <div class="col">
+                <span>@((MarkupString)Localizer[ResourceLanguage.LinguaSelezionata].Value)</span>
+            </div>
+        </div>
+    </div>
+</div>

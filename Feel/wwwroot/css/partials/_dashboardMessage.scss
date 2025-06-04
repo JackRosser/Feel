@@ -1,6 +1,6 @@
-﻿@mixin dashboard-message($color) {
+﻿@mixin dashboard-message($secondary) {
     & h1 {
-        color: $color;
+        color: $secondary;
     }
 
     & span {
@@ -23,8 +23,3 @@
     }
 }
 
-.dash-message {
-    &.autunno {
-        @include dashboard-message($autunno-feel-secondary);
-    }
-}

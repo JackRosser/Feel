@@ -27,12 +27,3 @@
     border-bottom: 2px dashed $light;
 }
 
-.recap {
-        &.autunno {@include recap($autunno-feel-light)}
-    }
-
-.description {
-    &.autunno {
-        @include recap-descrizione($autunno-feel-light)
-    }
-}
