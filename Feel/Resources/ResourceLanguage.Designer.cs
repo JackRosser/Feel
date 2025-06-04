@@ -106,6 +106,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Assistente.
+        /// </summary>
+        public static string Assistente {
+            get {
+                return ResourceManager.GetString("Assistente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Attuale.
         /// </summary>
         public static string Attuale {
@@ -394,6 +403,15 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Lingua selezionata: &lt;b class=&quot;text-success&quot;&gt;Italiano&lt;/b&gt;.
+        /// </summary>
+        public static string LinguaSelezionata {
+            get {
+                return ResourceManager.GetString("LinguaSelezionata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mancano.
         /// </summary>
         public static string Mancano {
@@ -507,6 +525,15 @@ namespace Feel.Resources {
         public static string NessunaDescrizione {
             get {
                 return ResourceManager.GetString("NessunaDescrizione", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nome.
+        /// </summary>
+        public static string Nome {
+            get {
+                return ResourceManager.GetString("Nome", resourceCulture);
             }
         }
         
@@ -733,6 +760,15 @@ namespace Feel.Resources {
         public static string Tecnologia {
             get {
                 return ResourceManager.GetString("Tecnologia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tema.
+        /// </summary>
+        public static string Tema {
+            get {
+                return ResourceManager.GetString("Tema", resourceCulture);
             }
         }
         

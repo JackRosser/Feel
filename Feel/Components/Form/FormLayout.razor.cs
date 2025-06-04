@@ -20,8 +20,6 @@ namespace Feel.Components.Form
         [Parameter] public string CloseText { get; set; } = Localizer[ResourceLanguage.Annulla];
         private bool IsLoaded { get; set; } = false;
 
-        private ElementReference SubmitButtonRef;
-
         private async Task HandleValidSubmit()
         {
             await JS.InvokeVoidAsync("closeModalById", ModalId);

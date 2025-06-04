@@ -1,4 +1,17 @@
-﻿<select class="form-select" @onchange="OnCultureChanged" value="@CurrentCulture.Name">
-    <option value="it">🇮🇹 Italiano</option>
-    <option value="en">🇬🇧 English</option>
-</select>
+﻿<div class="language-selector">
+    <div class="container-fluid">
+        <div class="row row-cols-2">
+            @foreach (var language in Languages)
+            {
+                <div class="col" @onclick="@(() => ChangeCulture(language.Value))">
+                    <img src="@($"/css/images/Flags/{language.PicName}")" />
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="col">
+                <span>@((MarkupString)Localizer[ResourceLanguage.LinguaSelezionata].Value)</span>
+            </div>
+        </div>
+    </div>
+</div>

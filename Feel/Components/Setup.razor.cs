@@ -22,13 +22,14 @@ namespace Feel.Components
             new TemaDto { Id = 4, Nome = "estate" },
         };
         // Scelta nome
-        private bool PageOne { get; set; } = false;
+        private bool PageOne { get; set; } = true;
         // Scelta assistente
         private bool PageTwo { get; set; } = false;
         // Scelta tema
         private bool PageThree { get; set; } = false;
         // recap e conferma
-        private bool PageFour { get; set; } = true;
+        private bool PageFour { get; set; } = false;
+        private bool PageFive { get; set; } = false;
         private int? AssistantId { get; set; }
         private bool IsNameValid => !string.IsNullOrWhiteSpace(CreateUserModel?.Name);
 
@@ -66,6 +67,12 @@ namespace Feel.Components
                 PageFour = false;
                 PageThree = true;
             }
+
+            else if (PageFive)
+            {
+                PageFive = false;
+                PageFour = true;
+            }
         }
 
         private void Avanti()
@@ -84,6 +91,12 @@ namespace Feel.Components
             {
                 PageThree = false;
                 PageFour = true;
+            }
+
+            else if (PageFour)
+            {
+                PageFour = false;
+                PageFive = true;
             }
         }
 

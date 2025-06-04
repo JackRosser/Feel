@@ -1,4 +1,5 @@
 ﻿using Feel.Service.Proxy;
+using Feel.Shared.Helper;
 using Microsoft.AspNetCore.Components;
 using System.Globalization;
 
@@ -8,17 +9,34 @@ namespace Feel.Components.Localization
     {
         private CultureInfo CurrentCulture = CultureInfo.CurrentUICulture;
 
-        private async Task OnCultureChanged(ChangeEventArgs e)
+        private List<LanguageOption> Languages = new()
         {
-            var selected = e.Value?.ToString();
-            if (!string.IsNullOrWhiteSpace(selected))
+            new LanguageOption { Value = "it" },
+            new LanguageOption { Value = "en" }
+        };
+
+        private async Task ChangeCulture(string culture)
+        {
+            if (!string.IsNullOrWhiteSpace(culture) && culture != CurrentCulture.Name)
             {
-                await Proxy.SendRequestAsync(s => s.SetCultureAsync(selected));
+                await Proxy.SendRequestAsync(s => s.SetCultureAsync(culture));
                 Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
             }
+
+        }
+
+        private class LanguageOption
+        {
+            public string? Value { get; set; }
+            public string PicName => NameConverter.NameToPng(Value);
         }
     }
+
+
 }
+
+
+
 
 // Procedure aggiunta lingua
 
