@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @import "../lib/boostrap-icons/font/bootstrap-icons.css";
 a {
   text-decoration: none !important;
@@ -78,6 +78,15 @@ input[type=number] {
     transform: rotate(-22deg);
   }
 }
+.progress-card-delete {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dc3545;
+}
+
 .waiting-container {
   position: fixed;
   top: 0;

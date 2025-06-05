@@ -21,18 +21,26 @@ namespace Feel.Components.Obiettivo
         private async Task GetRecord()
         {
             if (Obiettivo is null) return;
+
+            EditModelValore = null;
+            EditModelCheck = null;
+
             var result = await sdk.SendRequestAsync(a => a.GetObiettivoAsync(Obiettivo.Id));
             Obiettivo = result;
-            if (Obiettivo is not null && Obiettivo.CheckMark)
+
+            if (Obiettivo?.CheckMark == true)
             {
                 EditModelCheck = new();
             }
-            else if (Obiettivo is not null && !Obiettivo.CheckMark)
+            else
             {
                 EditModelValore = new();
             }
+
             await InvokeAsync(StateHasChanged);
         }
+
+
 
         private async Task SaveValore()
         {

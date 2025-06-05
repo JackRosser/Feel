@@ -193,10 +193,10 @@
     <value>Religione</value>
   </data>
   <data name="Risparmio" xml:space="preserve">
-    <value>Risparmio</value>
+    <value>Saving</value>
   </data>
   <data name="Salute" xml:space="preserve">
-    <value>Salute</value>
+    <value>Health</value>
   </data>
   <data name="Scadenza" xml:space="preserve">
     <value>Expiration</value>

@@ -1,48 +1,44 @@
 ﻿using Feel.Components.Obiettivo;
 using Feel.Service;
+using Feel.Service.ChangeStateHelper;
 using Feel.Shared.Dto.Obiettivi;
 using Microsoft.AspNetCore.Components;
 
 namespace Feel.Components
 {
-    /// <summary>
-    /// Componente per le card in home
-    /// </summary>
-    public partial class ProgressCard(ObiettivoService obiettivoSdk) : MainClassBase
+    public partial class ProgressCard(ObiettivoService obiettivoSdk, ObiettiviStateService stato) : MainClassBase
     {
-        [Parameter, EditorRequired] public ObiettivoDto? Obiettivo { get; set; }
-        private string? FillColor { get; set; }
-        private string? IsCompleted { get; set; }
-        private UpdateObiettivo? _updateObiettivo;
-        private bool DeleteObiettivoToggle { get; set; } = false;
-        protected override void OnParametersSet()
-        {
-            int height = Obiettivo?.Percentage ?? 0;
-            string color = height switch
-            {
-                >= 100 => "green",
-                >= 25 and < 50 => "yellow",
-                >= 50 and < 100 => "blue",
-                _ => "red",
-            };
-            FillColor = color;
-            IsCompleted = Obiettivo?.Completed == true ? "completed" : "";
-        }
-        private void Action()
-        {
-            _updateObiettivo?.OpenPopup();
-        }
+        [Parameter, EditorRequired] public IEnumerable<ObiettivoDto>? Obiettivi { get; set; }
 
-        public void ShowDeleteObiettivi()
+        private bool DeleteObiettivoToggle { get; set; } = false;
+
+        private void ShowDeleteObiettivi()
         {
-            DeleteObiettivoToggle = true;
+            DeleteObiettivoToggle = !DeleteObiettivoToggle;
             InvokeAsync(StateHasChanged);
         }
 
         public async Task DeleteObiettivo(int id)
         {
             await obiettivoSdk.DeleteObiettivoAsync(id);
-            await InvokeAsync(StateHasChanged);
+            await stato.NotificaAggiornamentoAsync();
+        }
+
+        private class RefWrapper
+        {
+            public UpdateObiettivo? Ref { get; set; }
+        }
+
+
+        private Dictionary<int, RefWrapper> _updateObiettivi = new();
+
+
+        private async Task ApriPopup(int id)
+        {
+            if (_updateObiettivi.TryGetValue(id, out var wrapper) && wrapper.Ref is not null)
+            {
+                await wrapper.Ref.OpenPopup();
+            }
         }
 
     }

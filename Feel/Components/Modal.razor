@@ -6,7 +6,7 @@
 <!-- Button trigger modal -->
 @if(ModalType is ModalType.Button)
 {
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
+    <button type="button" class="btn btn-primary" @onclick="Esegui">
         Launch demo modal
     </button>
 }
@@ -14,15 +14,15 @@
 else if(ModalType is ModalType.AggiungiObiettivo || ModalType is ModalType.CambiaTema || ModalType is ModalType.InformazioniApp || ModalType is ModalType.AreaUtente)
 {
 
-    <div class="@($"assistente message-box {MainTheme} {ActionClass} {CssClass}")" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
+    <div class="@($"assistente message-box {MainTheme} {ActionClass} {CssClass}")" @onclick="Esegui">
         <span class="@($"message-text {MainTheme}")">@ActionText</span>
     </div>
 }
 
 else if (ModalType is ModalType.EditObiettivo)
 {
-    <div class="col-2 go-to-details" @onclick="OnActionClick">
-        <div data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
+    <div class="col-2 go-to-details" @onclick="Esegui">
+        <div>
             <span class="@($"text-{MainTheme}-feel-primary")">></span>
         </div>
     </div>
@@ -32,14 +32,17 @@ else if (ModalType is ModalType.EditObiettivo)
 else if (ModalType is ModalType.DeleteObietttivo)
 {
 
-    <div class="col-1" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
-        <div class="progress-card-delete"><Icon Element="@Icons.Delete" /></div>
+    <div class="col-1 p-0" @onclick="SimpleOpenPopUp">
+        <div class="progress-card-delete"><Icon Element="@Icons.Delete" Color="white" /></div>
     </div>
 }
 
+@{
+    var modalId = ModalType == ModalType.DeleteObietttivo ? $"delete{ModalId}" : $"{ModalId}";
+}
 
 <!-- Modal -->
-<div class="modal fade" id="@($"{ModalId}")" tabindex="-1">
+<div class="modal fade" id="@modalId" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="@($"modal-content {MainTheme}")">
             @if(!string.IsNullOrWhiteSpace(Title))
@@ -62,7 +65,7 @@ else if (ModalType is ModalType.DeleteObietttivo)
                 </div>
             <div class="@($"modal-footer {MainTheme}")">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer[ResourceLanguage.Annulla]</button>
-                    <button type="submit" class="btn btn-danger" @onclick="OnActionClick">@Localizer[ResourceLanguage.Elimina]</button>
+                    <button type="submit" class="btn btn-danger" @onclick="Elimina">@Localizer[ResourceLanguage.Elimina]</button>
             </div>
             }   
         </div>
