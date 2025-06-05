@@ -6,5 +6,6 @@
         public static string User = "bi bi-person-fill";
         public static string Settings = "bi bi-gear";
         public static string Info = "bi bi-info-circle";
+        public static string Delete = "bi bi-trash";
     }
 }

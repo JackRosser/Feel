@@ -367,4 +367,13 @@
   <data name="LinguaSelezionata" xml:space="preserve">
     <value>Lingua selezionata: &lt;b class="text-success"&gt;Italiano&lt;/b&gt;</value>
   </data>
+  <data name="Elimina" xml:space="preserve">
+    <value>Elimina</value>
+  </data>
+  <data name="TestoDeleteObiettivo" xml:space="preserve">
+    <value>Vuoi eliminare questo obiettivo?</value>
+  </data>
+  <data name="EliminaObiettivi" xml:space="preserve">
+    <value>Elimina obiettivi</value>
+  </data>
 </root>
