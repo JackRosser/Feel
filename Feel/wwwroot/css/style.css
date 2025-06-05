@@ -1696,7 +1696,6 @@ main .main-section {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 }
 .tooltip-container.autunno .tooltip-text {
   visibility: hidden;
@@ -2522,7 +2521,6 @@ main .main-section {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 }
 .tooltip-container.inverno .tooltip-text {
   visibility: hidden;
@@ -3348,7 +3346,6 @@ main .main-section {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 }
 .tooltip-container.primavera .tooltip-text {
   visibility: hidden;
@@ -4174,7 +4171,6 @@ main .main-section {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
 }
 .tooltip-container.estate .tooltip-text {
   visibility: hidden;
