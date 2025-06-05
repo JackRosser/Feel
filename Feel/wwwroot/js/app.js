@@ -8,6 +8,17 @@ window.closeModalById = (modalId) => {
     }
 };
 
+// APERTURA MODALE
+
+window.showModalById = (modalId) => {
+    const modalEl = document.getElementById(modalId);
+    if (modalEl) {
+        const instance = bootstrap.Modal.getOrCreateInstance(modalEl);
+        instance.show();
+    }
+};
+
+
 // APRE IL MODAL NEL DIV CHE DECIDO IO COSI DA EVITARE CHE SI APRA IN ALTRI POSTI
 
 window.moveModalToContainer = (modalId, containerId = 'modal-container') => {
@@ -16,6 +27,8 @@ window.moveModalToContainer = (modalId, containerId = 'modal-container') => {
     if (modal && container && !container.contains(modal)) {
         container.appendChild(modal);
     }
+    bootstrap.Modal.getOrCreateInstance(modal);
 };
+
 
 

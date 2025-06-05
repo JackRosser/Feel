@@ -21,7 +21,6 @@ namespace Feel.Components
         /// Da usare solo per istanziare qualcosa all'apertura di un form, metterlo su un div che contiene il toggle per aprire il modale
         /// </summary>
         [Parameter] public EventCallback OnActionClick { get; set; }
-
         private string? TypeButton { get; set; }
 
         protected override void OnParametersSet()
@@ -34,10 +33,40 @@ namespace Feel.Components
         {
             if (firstRender)
             {
-                await JS.InvokeVoidAsync("moveModalToContainer", ModalId);
+                var modalId = ModalType == ModalType.DeleteObietttivo ? $"delete{ModalId}" : $"{ModalId}";
+                await JS.InvokeVoidAsync("moveModalToContainer", modalId);
             }
         }
 
+        public async Task Esegui()
+        {
+            var modalId = ModalType == ModalType.DeleteObietttivo ? $"delete{ModalId}" : $"{ModalId}";
+
+            if (OnActionClick.HasDelegate)
+            {
+                await OnActionClick.InvokeAsync();
+            }
+
+            await JS.InvokeVoidAsync("showModalById", modalId);
+        }
+
+        public async Task SimpleOpenPopUp()
+        {
+            var modalId = ModalType == ModalType.DeleteObietttivo ? $"delete{ModalId}" : $"{ModalId}";
+            await JS.InvokeVoidAsync("showModalById", modalId);
+        }
+
+        public async Task Elimina()
+        {
+            var modalId = ModalType == ModalType.DeleteObietttivo ? $"delete{ModalId}" : $"{ModalId}";
+
+            if (OnActionClick.HasDelegate)
+            {
+                await OnActionClick.InvokeAsync();
+            }
+
+            await JS.InvokeVoidAsync("closeModalById", modalId);
+        }
 
 
     }

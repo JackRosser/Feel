@@ -1,40 +1,73 @@
 ﻿@using Feel.Components.Obiettivo
 @inherits MainClassBase
 
-@if(Obiettivo is not null)
-{   
-    string isDeleteObiettiviChecked = DeleteObiettivoToggle ? "col-6" : "col-7";
+@if (Obiettivi is not null)
+{
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gap-2 gap-md-0 my-2">
+        @foreach (var obiettivo in Obiettivi)
+        {
+            var localObiettivo = obiettivo;
 
-    <div class="col recap-box">
-        <div class="@($"row progress-bar-section {MainTheme} {IsCompleted}")">
-            @if(DeleteObiettivoToggle)
+            if (!_updateObiettivi.ContainsKey(localObiettivo.Id))
             {
-                <Modal ModalType="ModalType.DeleteObietttivo" ModalId="@Obiettivo.Id" OnActionClick="() => DeleteObiettivo(Obiettivo.Id)"/>
+                _updateObiettivi[localObiettivo.Id] = new RefWrapper();
             }
-            <div class="col-3 progress-bar-bottle-container">
-                <div class="@($"progress-card {MainTheme}")">
-                    <div class="bottle rounded-pill">
-                        <span class="bottle-fill" style="@($"height: {Obiettivo.Percentage}%; background-color: {FillColor};")"></span>
+
+            var wrapper = _updateObiettivi[localObiettivo.Id];
+
+            var height = localObiettivo.Percentage;
+            var fillColor = height switch
+            {
+                >= 100 => "green",
+                >= 50 => "blue",
+                >= 25 => "yellow",
+                _ => "red"
+            };
+            var isCompleted = localObiettivo.Completed ? "completed" : "";
+            var colClass = DeleteObiettivoToggle ? "col-6" : "col-7";
+
+            <div class="col recap-box">
+                <div class="@($"row progress-bar-section {MainTheme} {isCompleted}")">
+
+                    @if (DeleteObiettivoToggle)
+                    {
+                        <Modal ModalType="ModalType.DeleteObietttivo" ModalId="@localObiettivo.Id" OnActionClick="() => DeleteObiettivo(localObiettivo.Id)" />
+                    }
+
+                    <div class="col-3 progress-bar-bottle-container">
+                        <div class="@($"progress-card {MainTheme}")">
+                            <div class="bottle rounded-pill">
+                                <span class="bottle-fill" style="@($"height: {height}%; background-color: {fillColor};")"></span>
+                            </div>
+                            <span class="@($"percentuale {MainTheme}")">@($"{height}%")</span>
+                        </div>
                     </div>
-                    <span class="@($"percentuale {MainTheme}")">@($"{Obiettivo.Percentage}%")</span>
+
+                    <div class="@($"{colClass} progress-bar-recap")">
+                        <span>@HelperTraduzione.Traduzione(localObiettivo.Categoria, Localizer)</span>
+                        <span>@localObiettivo.Titolo</span>
+                        @if (localObiettivo.Completed)
+                        {
+                            <span class="@($"{MainTheme}")">@Localizer[ResourceLanguage.DataCompletamento]: <strong>@localObiettivo.DataCompletamento</strong></span>
+                        }
+                        else
+                        {
+                            <span class="@($"{MainTheme}")">@Localizer[ResourceLanguage.Scadenza]: <strong>@localObiettivo.Scadenza</strong></span>
+                        }
+                    </div>
+
+                    <Modal ModalType="ModalType.EditObiettivo" OnActionClick="@(() => ApriPopup(localObiettivo.Id))" ModalId="@localObiettivo.Id">
+                        <UpdateObiettivo @ref="@wrapper.Ref" Obiettivo="@localObiettivo" />
+                    </Modal>
                 </div>
             </div>
-            <div class="@($"{isDeleteObiettiviChecked} progress-bar-recap")">
-                <span>@HelperTraduzione.Traduzione(Obiettivo.Categoria, Localizer)</span>
-                <span>@Obiettivo?.Titolo</span>
-                @if(Obiettivo.Completed)
-                {                  
-                <span class="@($"{MainTheme}")">@Localizer[ResourceLanguage.DataCompletamento]: <strong>@Obiettivo.DataCompletamento</strong></span>
-                }
-                else
-                {
-                    <span class="@($"{MainTheme}")">@Localizer[ResourceLanguage.Scadenza]: <strong>@Obiettivo.Scadenza</strong></span>
-                }
-        </div>
-        <Modal ModalType="ModalType.EditObiettivo" OnActionClick="Action" ModalId="@Obiettivo.Id">
-        <UpdateObiettivo @ref="_updateObiettivo" ObiettivoId="@Obiettivo.Id"/>
-        </Modal>
-    </div>
-</div>
-}
+        }
 
+    </div>
+
+    <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+            <button class="btn btn-danger" @onclick="ShowDeleteObiettivi">@Localizer[ResourceLanguage.EliminaObiettivi]</button>
+        </div>
+    </div>
+}
