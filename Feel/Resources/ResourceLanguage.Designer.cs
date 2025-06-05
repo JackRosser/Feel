@@ -268,6 +268,24 @@ namespace Feel.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Elimina.
+        /// </summary>
+        public static string Elimina {
+            get {
+                return ResourceManager.GetString("Elimina", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Elimina obiettivi.
+        /// </summary>
+        public static string EliminaObiettivi {
+            get {
+                return ResourceManager.GetString("EliminaObiettivi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Eventi.
         /// </summary>
         public static string Eventi {
@@ -787,6 +805,15 @@ namespace Feel.Resources {
         public static string TermineObiettivo {
             get {
                 return ResourceManager.GetString("TermineObiettivo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vuoi eliminare questo obiettivo?.
+        /// </summary>
+        public static string TestoDeleteObiettivo {
+            get {
+                return ResourceManager.GetString("TestoDeleteObiettivo", resourceCulture);
             }
         }
         

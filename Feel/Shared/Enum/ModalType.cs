@@ -7,6 +7,7 @@
         EditObiettivo,
         CambiaTema,
         InformazioniApp,
-        AreaUtente
+        AreaUtente,
+        DeleteObietttivo
     }
 }

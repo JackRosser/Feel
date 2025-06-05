@@ -29,25 +29,42 @@ else if (ModalType is ModalType.EditObiettivo)
 
 }
 
-  
+else if (ModalType is ModalType.DeleteObietttivo)
+{
+
+    <div class="col-1" data-bs-toggle="modal" data-bs-target="@($"#{ModalId}")">
+        <div class="progress-card-delete"><Icon Element="@Icons.Delete" /></div>
+    </div>
+}
+
+
 <!-- Modal -->
 <div class="modal fade" id="@($"{ModalId}")" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
         <div class="@($"modal-content {MainTheme}")">
-                @if(!string.IsNullOrWhiteSpace(Title))
-                {                    
-            <div class="modal-header">
+            @if(!string.IsNullOrWhiteSpace(Title))
+            {                    
+                <div class="modal-header">
                     <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-feel-light="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-feel-light="Close"></button>
+                </div>
+            }
+            @if (ModalType != ModalType.DeleteObietttivo)
+            {
+                <div class="modal-body">
+                    @ChildContent
+                </div>
+            }
+            else
+            {
+                <div class="modal-body">
+                    @Localizer[ResourceLanguage.TestoDeleteObiettivo]
+                </div>
+            <div class="@($"modal-footer {MainTheme}")">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer[ResourceLanguage.Annulla]</button>
+                    <button type="submit" class="btn btn-danger" @onclick="OnActionClick">@Localizer[ResourceLanguage.Elimina]</button>
             </div>
-                }
-            <div class="modal-body">
-                @ChildContent
-            </div>
-            @* <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="@($"{TypeButton}")" class="btn btn-primary">@SubmitText</button>
-            </div> *@
+            }   
         </div>
     </div>
 </div>
