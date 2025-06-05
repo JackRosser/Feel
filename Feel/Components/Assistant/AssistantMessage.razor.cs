@@ -1,4 +1,4 @@
-﻿using Feel.Components.Obiettivo;
+﻿using Feel.Components.AssistantChoices;
 using Feel.Resources;
 using Feel.Shared.Enum;
 using Microsoft.AspNetCore.Components;
@@ -14,7 +14,7 @@ namespace Feel.Components.Assistant
         [Parameter] public EventCallback SitAssistant { get; set; }
         [Parameter, EditorRequired] public ModalType AssistantChoice { get; set; }
         private AddObiettivo? _addObiettivo;
-
+        private ChangeTheme? _changeTheme;
         private void Action()
         {
             SitAssistant.InvokeAsync();
@@ -24,7 +24,7 @@ namespace Feel.Components.Assistant
                     _addObiettivo?.StartForm();
                     break;
                 case ModalType.CambiaTema:
-                    Console.WriteLine("Cambia tema clicked");
+                    _changeTheme?.StartForm();
                     break;
                 case ModalType.InformazioniApp:
                     Console.WriteLine("Cambia tema clicked");

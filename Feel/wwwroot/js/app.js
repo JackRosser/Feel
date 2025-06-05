@@ -30,5 +30,35 @@ window.moveModalToContainer = (modalId, containerId = 'modal-container') => {
     bootstrap.Modal.getOrCreateInstance(modal);
 };
 
+// CAMBIA IL TEMA
+
+window.ThemeCarouselInterop = {
+    startListening: function (dotNetHelper) {
+        const carousel = document.getElementById("themeCarousel");
+        if (!carousel) {
+            console.log("Carosello non trovato");
+            return;
+        }
+
+        const instance = bootstrap.Carousel.getInstance(carousel);
+        if (!instance) {
+            new bootstrap.Carousel(carousel, {
+                interval: false,
+                ride: false
+            });
+        }
+
+        carousel.addEventListener('slid.bs.carousel', function () {
+            const active = carousel.querySelector('.carousel-item.active');
+            if (!active) return;
+
+            const index = parseInt(active.getAttribute('data-bs-theme-index'));
+            if (!isNaN(index)) {
+                dotNetHelper.invokeMethodAsync("AggiornaTemaDaIndice", index);
+            }
+        });
+    }
+};
+
 
 

@@ -26,6 +26,20 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+#themeCarousel .themescontainer {
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 180px;
+  max-height: 180px;
+  border: 2px solid #6c757d;
+  box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
+  outline: 2px solid white;
+  outline-offset: -10px;
+}
+
 .loader {
   width: 60px;
   height: 60px;

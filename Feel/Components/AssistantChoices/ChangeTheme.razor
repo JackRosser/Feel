@@ -1,0 +1,51 @@
+﻿@using Feel.Shared.Dto.Tema
+@inherits MainClassBase
+
+@if(UserClassEdit is not null)
+{
+
+    <div id="themeCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            @for (int i = 0; i < Themes.ThemesList.Count; i++)
+            {
+                var theme = Themes.ThemesList[i];
+                bool isActive = UserClassEdit.Tema?.Id == theme.Id;
+
+                <div class="carousel-item @(isActive ? "active" : "")" id="@($"theme-{i}")" data-bs-theme-index="@i">
+                    <div class="row">
+                        <div class="col-12 p-4 d-flex justify-content-center align-items-center">
+                            <div class="themescontainer">
+                                <div class="row row-cols-2">
+                                    <div class="@($"col p-5 bg-{theme.Nome}-feel-primary")"></div>
+                                    <div class="@($"col p-5 bg-{theme.Nome}-feel-light")"></div>
+                                    <div class="@($"col p-5 bg-{theme.Nome}-feel-error")"></div>
+                                    <div class="@($"col p-5 bg-{theme.Nome}-feel-secondary")"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row p-3">
+                        <div class="col-12 d-flex justify-content-center">
+                            <span class="@($"text-{theme.Nome}-feel-primary rounded-pill bg-{theme.Nome}-feel-light px-3 py-2")">@NameConverter.NameToCapitalize(theme.Nome)</span>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#themeCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#themeCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="@($"modal-footer {MainTheme}")">
+        <button type="button" class="btn btn-secondary" @onclick="Close">@Localizer[ResourceLanguage.Chiudi]</button>
+    </div>
+
+}
