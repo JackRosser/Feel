@@ -10,10 +10,9 @@ namespace Feel.Components.Obiettivo
 {
     public partial class UpdateObiettivo(ProxyObiettivi sdk, ObiettiviStateService stato) : MainClassBase
     {
-        [Parameter, EditorRequired] public int ObiettivoId { get; set; }
+        [Parameter, EditorRequired] public ObiettivoDto? Obiettivo { get; set; }
         private EditObiettivoValore? EditModelValore { get; set; }
         private EditObiettivoCheck? EditModelCheck { get; set; }
-        private ObiettivoDto? Obiettivo { get; set; }
         public async Task OpenPopup()
         {
             await GetRecord();
@@ -21,7 +20,8 @@ namespace Feel.Components.Obiettivo
 
         private async Task GetRecord()
         {
-            var result = await sdk.SendRequestAsync(a => a.GetObiettivoAsync(ObiettivoId));
+            if (Obiettivo is null) return;
+            var result = await sdk.SendRequestAsync(a => a.GetObiettivoAsync(Obiettivo.Id));
             Obiettivo = result;
             if (Obiettivo is not null && Obiettivo.CheckMark)
             {
@@ -41,7 +41,7 @@ namespace Feel.Components.Obiettivo
 
             Obiettivo.Progressivo = Sum(Obiettivo.Progressivo, EditModelValore.Importo.Value);
             await sdk.SendRequestAsync(a => a.UpdateObiettivoAsync(Obiettivo));
-            await JS.InvokeVoidAsync("closeModalById", ObiettivoId);
+            await JS.InvokeVoidAsync("closeModalById", Obiettivo.Id);
             await stato.NotificaAggiornamentoAsync();
 
         }
@@ -53,7 +53,7 @@ namespace Feel.Components.Obiettivo
 
             Obiettivo.Progressivo = Sum(Obiettivo.Progressivo, 1);
             await sdk.SendRequestAsync(a => a.UpdateObiettivoAsync(Obiettivo));
-            await JS.InvokeVoidAsync("closeModalById", ObiettivoId);
+            await JS.InvokeVoidAsync("closeModalById", Obiettivo.Id);
             await stato.NotificaAggiornamentoAsync();
 
         }

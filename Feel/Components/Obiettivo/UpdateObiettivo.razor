@@ -1,8 +1,10 @@
 ﻿@inherits MainClassBase
 
 
-<Recap Obiettivo="@Obiettivo"/>
 
+@if(Obiettivo is not null)
+{ 
+<Recap Obiettivo="@Obiettivo"/>
 @if(Obiettivo.Completed)
 {
     <div class="@($"modal-footer {MainTheme}")">
@@ -27,4 +29,5 @@ else if (EditModelCheck is not null)
             @bind-Value="EditModelCheck.Check">
             </FormCheckBox>       
     </FormLayout>
+}
 }

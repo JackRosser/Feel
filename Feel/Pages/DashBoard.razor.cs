@@ -13,8 +13,6 @@ namespace Feel.Pages
 
         private Func<Task>? _handler;
 
-        private ProgressCard _progressCard { get; set; } = default!;
-
         protected override async Task OnInitializedAsync()
         {
             _handler = OnObiettiviAggiornati;
@@ -30,6 +28,7 @@ namespace Feel.Pages
 
         private async Task GetRecords()
         {
+            await Task.Delay(1000);
             Obiettivi = new List<ObiettivoDto>
     {
         new()
