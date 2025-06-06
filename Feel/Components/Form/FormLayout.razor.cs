@@ -1,5 +1,6 @@
 ﻿using Feel.Resources;
 using Feel.Shared.Dto.Obiettivi;
+using Feel.Shared.Dto.User;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using Microsoft.JSInterop;
@@ -14,6 +15,7 @@ namespace Feel.Components.Form
         [Parameter] public CreateObiettivoDto? CreateModel { get; set; }
         [Parameter] public EditObiettivoValore? UpdateModelValore { get; set; }
         [Parameter] public EditObiettivoCheck? UpdateModelCheck { get; set; }
+        [Parameter] public EditUserDto? UpdateModelUser { get; set; }
         [Parameter] public bool UpdateModelCheckValidation { get; set; }
         [Parameter] public RenderFragment? ChildContent { get; set; }
         [Parameter] public string SubmitText { get; set; } = Localizer[ResourceLanguage.Salva];

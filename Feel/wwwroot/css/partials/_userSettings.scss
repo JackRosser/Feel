@@ -1,0 +1,16 @@
+.user-settings-assistant {
+
+    & img {
+        width: 100%;
+    }
+
+    &:first-child {
+        & img {
+            transform: scaleX(-1);
+        }
+    }
+
+    &.selected {
+        border: 1px dashed greenyellow;
+    }
+}

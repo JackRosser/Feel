@@ -24,7 +24,7 @@
 
 
         &.kitty {
-            @include assistente-messaggio(-11rem, 0rem, -60deg);
+            @include assistente-messaggio(-13rem, 0rem, -60deg);
 
             @include media-query($from-tablet) {
                 @include assistente-messaggio(-17rem, 0, -65deg);
@@ -45,7 +45,7 @@
 
 
         &.kitty {
-            @include assistente-messaggio(-10rem, 5rem, -40deg, 0.9);
+            @include assistente-messaggio(-9rem, 5rem, -45deg, 0.9);
 
             @include media-query($from-tablet) {
                 @include assistente-messaggio(-13rem, 6rem, -40deg, 0.9);
@@ -65,7 +65,7 @@
         }
 
         &.kitty {
-            @include assistente-messaggio(-6rem, 10rem, -20deg);
+            @include assistente-messaggio(-7rem, 10rem, -20deg);
 
             @include media-query($from-tablet) {
                 @include assistente-messaggio(-9rem, 10rem, -20deg);

@@ -1,1 +1,22 @@
-﻿@inherits MainClassBase
+﻿@using Feel.Shared.Dto.Assistente
+@inherits MainClassBase
+
+@if (UserSettingsEdit is not null)
+{
+    <FormLayout UpdateModelUser="@UserSettingsEdit" OnSubmit="Save">
+        <FormText LabelTitle="@Localizer[ResourceLanguage.Nome]"
+        @bind-Value="UserSettingsEdit.Name" />
+        <div class="col-12">
+            <div class="row row-cols-2">
+                @foreach (var assistente in Assistants.AssistantsList)
+                {
+                    var isSelected = UserSettingsEdit.Assistente?.Id == assistente.Id ? "selected" : "";
+
+                    <div class="@($"col p-3 user-settings-assistant {isSelected}")" @onclick="() => AssistantSelected(assistente)">
+                        <img src="@($"/css/images/Assistenti/fronte-{assistente.PicName}")" />
+                    </div>
+                }
+            </div>
+        </div>        
+    </FormLayout>
+}
