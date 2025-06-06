@@ -44,7 +44,10 @@
             </div>
             <div class="@($"modal-footer {MainTheme}")">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer[ResourceLanguage.Chiudi]</button>
-                <button type="submit" class="@($"btn btn-{MainTheme}-feel-light text-{MainTheme}-feel-primary")">@SubmitText</button>
+                @if (IsSave)
+                {
+                    <button type="submit" class="@($"btn btn-{MainTheme}-feel-light text-{MainTheme}-feel-primary")">@SubmitText</button>
+                }
             </div>
         </EditForm>
     }

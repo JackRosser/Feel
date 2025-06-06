@@ -61,7 +61,7 @@ else if (ModalType is ModalType.DeleteObietttivo)
             else
             {
                 <div class="modal-body">
-                    @Localizer[ResourceLanguage.TestoDeleteObiettivo]
+                    <span class="@($"text-{MainTheme}-feel-light")">@Localizer[ResourceLanguage.TestoDeleteObiettivo]</span>
                 </div>
             <div class="@($"modal-footer {MainTheme}")">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer[ResourceLanguage.Annulla]</button>

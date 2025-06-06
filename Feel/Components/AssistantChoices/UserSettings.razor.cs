@@ -61,12 +61,5 @@ namespace Feel.Components.AssistantChoices
             await InvokeAsync(StateHasChanged);
         }
 
-
-        private async Task Close()
-        {
-            if (UserSettingsEdit is null) return;
-            await JS.InvokeVoidAsync("closeModalById", ModalId);
-            await InvokeAsync(StateHasChanged);
-        }
     }
 }
