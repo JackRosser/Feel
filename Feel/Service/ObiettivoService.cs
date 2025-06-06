@@ -34,7 +34,6 @@ namespace Feel.Service
                 Descrizione = obiettivo.Descrizione,
                 DataCreazione = obiettivo.DataCreazione,
                 Scadenza = obiettivo.Scadenza,
-                Completed = obiettivo.Completed,
                 Target = obiettivo.Target,
                 CheckMark = obiettivo.CheckMark,
                 Progressivo = 0

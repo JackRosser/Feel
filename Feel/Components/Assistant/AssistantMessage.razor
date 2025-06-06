@@ -16,6 +16,20 @@
         </Modal>
 
     }
+    @if (AssistantChoice is ModalType.AreaUtente)
+    {
+        <Modal ActionClass="@ActionClass" CssClass="@CssClass" ActionText="@ActionText" ModalType="AssistantChoice" ModalId="@ModalId">
+            <UserSettings @ref="_userSettings" ModalId="@ModalId" />
+        </Modal>
+
+    }
+    @if (AssistantChoice is ModalType.InformazioniApp)
+    {
+        <Modal ActionClass="@ActionClass" CssClass="@CssClass" ActionText="@ActionText" ModalType="AssistantChoice" ModalId="@ModalId">
+            <About @ref="_about" ModalId="@ModalId" />
+        </Modal>
+
+    }
 </div>
 
 

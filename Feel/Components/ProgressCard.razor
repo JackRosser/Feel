@@ -65,9 +65,12 @@
 
     </div>
 
+    @if(Obiettivi.Count() > 0)
+    {       
     <div class="row">
         <div class="col-12 d-flex justify-content-end">
             <button class="btn btn-danger" @onclick="ShowDeleteObiettivi">@Localizer[ResourceLanguage.EliminaObiettivi]</button>
         </div>
     </div>
+    }
 }

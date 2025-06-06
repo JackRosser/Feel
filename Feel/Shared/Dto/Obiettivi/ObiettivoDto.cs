@@ -11,7 +11,7 @@ namespace Feel.Shared.Dto.Obiettivi
         public DateOnly DataCreazione { get; set; }
         public DateOnly? Scadenza { get; set; }
         public DateOnly? DataCompletamento { get; set; }
-        public bool Completed { get; set; }
+        public bool Completed => Percentage == 100 ? true : false;
         public int? Target { get; set; }
         public bool CheckMark { get; set; }
         public int Progressivo { get; set; } = 0;

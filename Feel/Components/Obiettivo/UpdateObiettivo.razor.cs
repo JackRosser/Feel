@@ -40,6 +40,17 @@ namespace Feel.Components.Obiettivo
             await InvokeAsync(StateHasChanged);
         }
 
+        public override async Task SetParametersAsync(ParameterView parameters)
+        {
+            var previousId = Obiettivo?.Id;
+
+            await base.SetParametersAsync(parameters);
+
+            if (Obiettivo?.Id != previousId)
+            {
+                await GetRecord();
+            }
+        }
 
 
         private async Task SaveValore()

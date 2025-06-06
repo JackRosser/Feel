@@ -15,6 +15,8 @@ namespace Feel.Components.Assistant
         [Parameter, EditorRequired] public ModalType AssistantChoice { get; set; }
         private AddObiettivo? _addObiettivo;
         private ChangeTheme? _changeTheme;
+        private UserSettings? _userSettings;
+        private About? _about;
         private void Action()
         {
             SitAssistant.InvokeAsync();
@@ -26,11 +28,11 @@ namespace Feel.Components.Assistant
                 case ModalType.CambiaTema:
                     _changeTheme?.StartForm();
                     break;
-                case ModalType.InformazioniApp:
-                    Console.WriteLine("Cambia tema clicked");
-                    break;
                 case ModalType.AreaUtente:
-                    Console.WriteLine("Cambia tema clicked");
+                    _userSettings?.StartForm();
+                    break;
+                case ModalType.InformazioniApp:
+                    _about?.Start();
                     break;
                 default:
                     break;

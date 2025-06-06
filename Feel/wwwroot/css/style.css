@@ -991,7 +991,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1);
+  transform: translateY(-11rem) translateX(0rem) rotate(-60deg) scale(1);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -1000,7 +1000,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.autunno.aggiungi-obiettivo.kitty:active {
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1.1);
+  transform: translateY(-11rem) translateX(0rem) rotate(-60deg) scale(1.1);
 }
 .assistente.autunno.aggiungi-obiettivo.kitty.show {
   display: block;
@@ -1107,7 +1107,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(0.9);
+  transform: translateY(-10rem) translateX(5rem) rotate(-40deg) scale(0.9);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -1116,7 +1116,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.autunno.cambia-tema.kitty:active {
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(1.1);
+  transform: translateY(-10rem) translateX(5rem) rotate(-40deg) scale(1.1);
 }
 .assistente.autunno.cambia-tema.kitty.show {
   display: block;
@@ -1223,7 +1223,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1);
+  transform: translateY(-6rem) translateX(10rem) rotate(-20deg) scale(1);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -1232,7 +1232,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.autunno.about.kitty:active {
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1.1);
+  transform: translateY(-6rem) translateX(10rem) rotate(-20deg) scale(1.1);
 }
 .assistente.autunno.about.kitty.show {
   display: block;
@@ -1816,7 +1816,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1);
+  transform: translateY(-11rem) translateX(0rem) rotate(-60deg) scale(1);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -1825,7 +1825,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.inverno.aggiungi-obiettivo.kitty:active {
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1.1);
+  transform: translateY(-11rem) translateX(0rem) rotate(-60deg) scale(1.1);
 }
 .assistente.inverno.aggiungi-obiettivo.kitty.show {
   display: block;
@@ -1932,7 +1932,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(0.9);
+  transform: translateY(-10rem) translateX(5rem) rotate(-40deg) scale(0.9);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -1941,7 +1941,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.inverno.cambia-tema.kitty:active {
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(1.1);
+  transform: translateY(-10rem) translateX(5rem) rotate(-40deg) scale(1.1);
 }
 .assistente.inverno.cambia-tema.kitty.show {
   display: block;
@@ -2048,7 +2048,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1);
+  transform: translateY(-6rem) translateX(10rem) rotate(-20deg) scale(1);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -2057,7 +2057,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.inverno.about.kitty:active {
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1.1);
+  transform: translateY(-6rem) translateX(10rem) rotate(-20deg) scale(1.1);
 }
 .assistente.inverno.about.kitty.show {
   display: block;
@@ -2641,7 +2641,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1);
+  transform: translateY(-11rem) translateX(0rem) rotate(-60deg) scale(1);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -2650,7 +2650,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.primavera.aggiungi-obiettivo.kitty:active {
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1.1);
+  transform: translateY(-11rem) translateX(0rem) rotate(-60deg) scale(1.1);
 }
 .assistente.primavera.aggiungi-obiettivo.kitty.show {
   display: block;
@@ -2757,7 +2757,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(0.9);
+  transform: translateY(-10rem) translateX(5rem) rotate(-40deg) scale(0.9);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -2766,7 +2766,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.primavera.cambia-tema.kitty:active {
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(1.1);
+  transform: translateY(-10rem) translateX(5rem) rotate(-40deg) scale(1.1);
 }
 .assistente.primavera.cambia-tema.kitty.show {
   display: block;
@@ -2873,7 +2873,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1);
+  transform: translateY(-6rem) translateX(10rem) rotate(-20deg) scale(1);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -2882,7 +2882,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.primavera.about.kitty:active {
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1.1);
+  transform: translateY(-6rem) translateX(10rem) rotate(-20deg) scale(1.1);
 }
 .assistente.primavera.about.kitty.show {
   display: block;
@@ -3466,7 +3466,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1);
+  transform: translateY(-11rem) translateX(0rem) rotate(-60deg) scale(1);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -3475,7 +3475,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.estate.aggiungi-obiettivo.kitty:active {
-  transform: translateY(-13rem) translateX(0) rotate(-60deg) scale(1.1);
+  transform: translateY(-11rem) translateX(0rem) rotate(-60deg) scale(1.1);
 }
 .assistente.estate.aggiungi-obiettivo.kitty.show {
   display: block;
@@ -3582,7 +3582,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(0.9);
+  transform: translateY(-10rem) translateX(5rem) rotate(-40deg) scale(0.9);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -3591,7 +3591,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.estate.cambia-tema.kitty:active {
-  transform: translateY(-10rem) translateX(6rem) rotate(-40deg) scale(1.1);
+  transform: translateY(-10rem) translateX(5rem) rotate(-40deg) scale(1.1);
 }
 .assistente.estate.cambia-tema.kitty.show {
   display: block;
@@ -3698,7 +3698,7 @@ main .main-section {
   z-index: 15;
   bottom: 0;
   left: 0;
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1);
+  transform: translateY(-6rem) translateX(10rem) rotate(-20deg) scale(1);
   padding: 1rem 1.5rem;
   border-radius: 50px;
   box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.3);
@@ -3707,7 +3707,7 @@ main .main-section {
   opacity: 0;
 }
 .assistente.estate.about.kitty:active {
-  transform: translateY(-7rem) translateX(10rem) rotate(-20deg) scale(1.1);
+  transform: translateY(-6rem) translateX(10rem) rotate(-20deg) scale(1.1);
 }
 .assistente.estate.about.kitty.show {
   display: block;
