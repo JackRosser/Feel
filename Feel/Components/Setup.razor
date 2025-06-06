@@ -1,4 +1,6 @@
 @using Feel.Components.Localization
+@using Feel.Shared.Dto.Assistente
+@using Feel.Shared.Dto.Tema
 <EditForm Model="@CreateUserModel" OnValidSubmit="Salva">
     <DataAnnotationsValidator />
     @if (PageOne)
@@ -38,7 +40,7 @@
         <div class="setup-page">
             <span class="descrizione">@((MarkupString)Localizer[ResourceLanguage.SetupAssistente].Value)</span>
             <div class="row row-cols-2">
-                @foreach(var assistente in Assistenti)
+                @foreach(var assistente in Assistants.AssistantsList)
                 {
                     bool isSelected = CreateUserModel?.Assistente == assistente;
                     string posizione = isSelected ? "gioca" : "dorme";
@@ -67,7 +69,7 @@
         <div class="setup-page">
             <span class="descrizione">@((MarkupString)Localizer[ResourceLanguage.SetupThemes].Value)</span>
             <div class="row row-cols-2">
-                @foreach (var tema in Themes)
+                @foreach (var tema in Themes.ThemesList)
                 {
                     bool isSelected = CreateUserModel?.Tema == tema;
                     string selected = isSelected ? "selected" : "";

@@ -33,6 +33,24 @@
             </div>
         </EditForm>
     }
+    else if (UpdateModelUser is not null)
+    {
+        <EditForm Model="@UpdateModelUser" OnValidSubmit="HandleValidSubmit">
+            <DataAnnotationsValidator />
+            <div class="container-fluid p-0">
+                <div class="row form-display">
+                    @ChildContent
+                </div>
+            </div>
+            <div class="@($"modal-footer {MainTheme}")">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer[ResourceLanguage.Chiudi]</button>
+                @if (IsSave)
+                {
+                    <button type="submit" class="@($"btn btn-{MainTheme}-feel-light text-{MainTheme}-feel-primary")">@SubmitText</button>
+                }
+            </div>
+        </EditForm>
+    }
     else if (UpdateModelCheck is not null)
     {
         <EditForm Model="@UpdateModelCheck" OnValidSubmit="HandleValidSubmit">

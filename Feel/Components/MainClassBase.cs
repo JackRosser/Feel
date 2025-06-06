@@ -8,7 +8,7 @@ namespace Feel.Components
     {
         [CascadingParameter(Name = "MainTheme")] public string? MainTheme { get; set; }
         [CascadingParameter(Name = "Assistente")] public string? AssistenteNome { get; set; }
-        [CascadingParameter(Name = "User")] public UserDto User { get; set; }
+        [CascadingParameter(Name = "User")] public UserDto? User { get; set; }
         [Inject] protected IJSRuntime JS { get; set; } = default!;
 
         protected CancellationTokenSource Ct = new();

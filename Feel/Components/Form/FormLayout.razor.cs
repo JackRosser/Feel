@@ -1,5 +1,6 @@
 ﻿using Feel.Resources;
 using Feel.Shared.Dto.Obiettivi;
+using Feel.Shared.Dto.User;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Localization;
 using Microsoft.JSInterop;
@@ -14,10 +15,12 @@ namespace Feel.Components.Form
         [Parameter] public CreateObiettivoDto? CreateModel { get; set; }
         [Parameter] public EditObiettivoValore? UpdateModelValore { get; set; }
         [Parameter] public EditObiettivoCheck? UpdateModelCheck { get; set; }
+        [Parameter] public EditUserDto? UpdateModelUser { get; set; }
         [Parameter] public bool UpdateModelCheckValidation { get; set; }
         [Parameter] public RenderFragment? ChildContent { get; set; }
         [Parameter] public string SubmitText { get; set; } = Localizer[ResourceLanguage.Salva];
         [Parameter] public string CloseText { get; set; } = Localizer[ResourceLanguage.Annulla];
+        [Parameter] public bool IsSave { get; set; } = true;
         private bool IsLoaded { get; set; } = false;
 
         private async Task HandleValidSubmit()
@@ -32,5 +35,15 @@ namespace Feel.Components.Form
             IsLoaded = true;
             InvokeAsync(StateHasChanged);
         }
+
+        private async Task Close()
+        {
+            Console.WriteLine($"ModalId = {ModalId}");
+            if (!string.IsNullOrWhiteSpace(ModalId))
+            {
+                await JS.InvokeVoidAsync("closeModalById", ModalId);
+            }
+        }
+
     }
 }

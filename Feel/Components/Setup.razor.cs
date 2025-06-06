@@ -9,18 +9,7 @@ namespace Feel.Components
     public partial class Setup(ProxyUser sdk)
     {
         private CreateUserDto? CreateUserModel { get; set; }
-        private List<AssistenteDto> Assistenti { get; set; } = new()
-        {
-            new AssistenteDto { Id = 1, Nome = "giulio" },
-            new AssistenteDto { Id = 2, Nome = "kitty" },
-        };
-        private List<TemaDto> Themes { get; set; } = new()
-        {
-            new TemaDto { Id = 1, Nome = "autunno" },
-            new TemaDto { Id = 2, Nome = "inverno" },
-            new TemaDto { Id = 3, Nome = "primavera" },
-            new TemaDto { Id = 4, Nome = "estate" },
-        };
+
         // Scelta nome
         private bool PageOne { get; set; } = true;
         // Scelta assistente

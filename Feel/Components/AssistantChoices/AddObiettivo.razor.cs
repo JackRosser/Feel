@@ -4,7 +4,7 @@ using Feel.Shared.Dto.Obiettivi;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
-namespace Feel.Components.Obiettivo
+namespace Feel.Components.AssistantChoices
 {
     public partial class AddObiettivo(ProxyObiettivi sdk, ObiettiviStateService stato) : MainClassBase
     {

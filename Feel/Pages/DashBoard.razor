@@ -11,9 +11,16 @@
         <button type="button" class="btn btn-danger" @onclick="ClearAllFromAdmin">Cancella tutto</button>
     }
 
+    @if(Obiettivi?.Count() > 0)
+    {
+       
     <Filtro ListaObiettivi="@Obiettivi" OnListaFiltrata="AggiornaListaFiltrata" />
+    }
   
-        @if (ObiettiviFiltrati is not null) {<ProgressCard Obiettivi="@ObiettiviFiltrati" />}
+        @if (ObiettiviFiltrati is not null) {
+            
+            <ProgressCard Obiettivi="@ObiettiviFiltrati" />
+        }
 </div>
 
 

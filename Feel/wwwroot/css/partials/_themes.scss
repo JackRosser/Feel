@@ -93,3 +93,20 @@ $theme-colors: map-merge($theme-colors, (
   "estate-feel-error": $estate-feel-error
 
 ));
+
+#themeCarousel {
+
+    & .themescontainer {
+        overflow: hidden;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 180px;
+        max-height: 180px;
+        border: 2px solid $secondary;
+        box-shadow: $custom-shadow;
+        outline: 2px solid white;
+        outline-offset: -10px;
+    }
+}
